@@ -1,0 +1,6 @@
+framework module Pods_HPY9PastureTests {
+  umbrella header "Pods-HPY9PastureTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

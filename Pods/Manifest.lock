@@ -1,0 +1,24 @@
+PODS:
+  - Alamofire (3.5.1)
+  - BaiduMapKit (3.0.0)
+  - MJRefresh (3.1.12)
+  - SwiftyJSON (2.4.0)
+  - YYCache (1.0.4)
+
+DEPENDENCIES:
+  - Alamofire
+  - BaiduMapKit
+  - MJRefresh
+  - SwiftyJSON (~> 2.4.0)
+  - YYCache
+
+SPEC CHECKSUMS:
+  Alamofire: 0dfba1184a543e2aa160f4e39cac4e8aba48d223
+  BaiduMapKit: de2a726d5296d6b2dc0e974b683af73153608dcd
+  MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
+  SwiftyJSON: 96918c1bf505efa50c4f72957018dd3452090c9c
+  YYCache: 8105b6638f5e849296c71f331ff83891a4942952
+
+PODFILE CHECKSUM: 3110ab53cc761ad203d122361076c34bc2de6aa1
+
+COCOAPODS: 1.1.1
