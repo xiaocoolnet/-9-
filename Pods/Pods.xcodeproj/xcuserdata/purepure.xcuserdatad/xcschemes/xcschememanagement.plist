@@ -29,6 +29,21 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SDAutoLayout.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SDCycleScrollView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SDWebImage.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>SwiftyJSON.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -47,7 +62,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3F7629BC5F9B217ADD245A894E477DA4</key>
+		<key>2D5BDB1F0BFA3AC284133C0AA3FDB794</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3472A9BAAF3F4F0877255F9483759AB8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>511A466D36D0A4C1C2CDD21E1C4EE325</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -57,7 +82,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>973187E76813E84863645EC49B9A5CDC</key>
+		<key>7FA658E912F93686A9DB8DFBA1D9A252</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -72,7 +97,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>EF65603C3B4AF20FDEAFF3DE6AB6C6FD</key>
+		<key>DCCFAF986DD718EDF31F5AB31C571EAC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F618306C04F0071EECE48EAA0DCE5430</key>
 		<dict>
 			<key>primary</key>
 			<true/>

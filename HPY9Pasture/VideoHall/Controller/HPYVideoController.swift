@@ -20,7 +20,7 @@ class HPYVideoController: UIViewController,UITableViewDataSource,UITableViewDele
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor.yellowColor()
+        view.backgroundColor = UIColor.whiteColor()
         let label = UILabel(frame: CGRectMake(100,100,100,50))
         label.text = "视频大厅"
 //        view.addSubview(label)
@@ -60,6 +60,7 @@ class HPYVideoController: UIViewController,UITableViewDataSource,UITableViewDele
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
         
         let cell = UITableViewCell()
+        cell.textLabel?.font = MainFont
         cell.textLabel?.text = listArray[indexPath.row]
         cell.accessoryType = .DisclosureIndicator
         cell.selectionStyle = .None

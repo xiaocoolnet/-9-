@@ -11,4 +11,9 @@
 #define HPY9Pasture_Bridging_Header_h
 
 #import "UIBounceButton.h"
+#import "SDAutoLayout.h"
+#import "GXAlertView.h"
+#import "MJRefresh.h"
+#import "SDCycleScrollView.h"
+
 #endif /* HPY9Pasture_Bridging_Header_h */

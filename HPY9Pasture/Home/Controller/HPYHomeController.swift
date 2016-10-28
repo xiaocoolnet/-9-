@@ -21,11 +21,11 @@ class HPYHomeController: UIViewController {
     }
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationController?.setNavigationBarHidden(true, animated: true)
+//        self.navigationController?.setNavigationBarHidden(true, animated: true)
     }
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
-        self.navigationController?.setNavigationBarHidden(false, animated: true)
+//        self.navigationController?.setNavigationBarHidden(false, animated: true)
     }
     func configureUI(){
         
@@ -53,6 +53,8 @@ class HPYHomeController: UIViewController {
     }
     //MARK:------Action
     func homeCareButtonAction(){
+        print(Screen_W)
+        print(Screen_H)
         let homeCareViewController = HPYHomeCareViewController()
         homeCareViewController.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(homeCareViewController, animated: true)

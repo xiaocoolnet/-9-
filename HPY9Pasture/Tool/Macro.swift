@@ -12,3 +12,12 @@ let NavColor = UIColor(red: 80/255.0, green: 150/255.0, blue: 240/255, alpha: 1)
 let MainFont = UIFont.systemFontOfSize(15)
 let Screen_H = UIScreen.mainScreen().bounds.height
 let Screen_W = UIScreen.mainScreen().bounds.width
+let px = Screen_W/375
+//个人习惯
+let HEIGHT = UIScreen.mainScreen().bounds.height
+let WIDTH = UIScreen.mainScreen().bounds.width
+
+func RGBACOLOR(r:Float,g:Float,b:Float,a:Float) -> UIColor{
+    return UIColor.init(colorLiteralRed: r/255, green: g/255, blue: b/255, alpha: a)
+}
+

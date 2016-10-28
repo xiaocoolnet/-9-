@@ -38,12 +38,11 @@ class HPYHomeCareViewController: UIViewController,UITableViewDelegate,UITableVie
         headerScrView.contentSize = CGSizeMake(Screen_W, Screen_W/4+50)
         headerScrView.backgroundColor = UIColor.whiteColor()
         for index in 0...headerTextArray.count-1 {
-            let headerCellView = MainImageAndTextButton.init(frame: CGRectMake(CGFloat(index)*Screen_W/4, 0, Screen_W/4, Screen_W/4+30), imageFrame: CGRectMake((Screen_W/4-71)/2, 15, 71, 71), textFrame: CGRectMake(0, 71+15, Screen_W/4, 50), imageName: self.headerImageNameArray[index], labelText: self.headerTextArray[index])
+            let headerCellView = MainImageAndTextButton.init(frame: CGRectMake(CGFloat(index)*Screen_W/4, 0, Screen_W/4, Screen_W/4+30), imageFrame: CGRectMake((Screen_W/4-Screen_W*71/375)/2, 15, Screen_W*71/375, Screen_W*71/375), textFrame: CGRectMake(0, Screen_W*71/375+15, Screen_W/4, 50), imageName: self.headerImageNameArray[index], labelText: self.headerTextArray[index])
             headerCellView.downTextLable.font = UIFont.systemFontOfSize(14)
             headerCellView.tag = index
             headerCellView.addTarget(self, action: #selector(self.headerCellViewAction(_:)), forControlEvents: .TouchUpInside)
             headerScrView.addSubview(headerCellView)
-            
         }
         
         //间隔为10
@@ -59,7 +58,18 @@ class HPYHomeCareViewController: UIViewController,UITableViewDelegate,UITableVie
     
     
     func headerCellViewAction(sender:UIButton){
-        
+        switch sender.tag {
+        case 0:
+            let  outpatientVC = OutpatientViewController()
+            self.navigationController?.pushViewController(outpatientVC, animated: true)
+            break
+        case 1:
+            
+            break
+        default:
+            break
+        }
+      
     }
     
     
