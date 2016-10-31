@@ -16,6 +16,8 @@ class HPYHomeController: UIViewController {
         let label = UILabel(frame: CGRectMake(100,100,100,50))
         label.text = "首页"
         view.addSubview(label)
+        self.title = "快乐9号"
+        self.tabBarItem.title = "首页"
         configureUI()
         // Do any additional setup after loading the view.
     }

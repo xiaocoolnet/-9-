@@ -73,6 +73,7 @@
 		774D325F1DC3526200DC0401 /* RetireRecordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774D325D1DC3526200DC0401 /* RetireRecordTableViewCell.swift */; };
 		774D32601DC3526200DC0401 /* RetireRecordTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 774D325E1DC3526200DC0401 /* RetireRecordTableViewCell.xib */; };
 		777E11D11DC0B99F00ABA9C6 /* GXAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 777E11D01DC0B99F00ABA9C6 /* GXAlertView.m */; };
+		77E2DCE11DC7393D00CDC80A /* CommunityIntroductionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E2DCE01DC7393D00CDC80A /* CommunityIntroductionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -256,6 +257,7 @@
 		774D325E1DC3526200DC0401 /* RetireRecordTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RetireRecordTableViewCell.xib; sourceTree = "<group>"; };
 		777E11CF1DC0B99F00ABA9C6 /* GXAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GXAlertView.h; sourceTree = "<group>"; };
 		777E11D01DC0B99F00ABA9C6 /* GXAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GXAlertView.m; sourceTree = "<group>"; };
+		77E2DCE01DC7393D00CDC80A /* CommunityIntroductionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommunityIntroductionViewController.swift; sourceTree = "<group>"; };
 		8292DDBF88AC8F918B0E7214 /* Pods_HPY9PastureTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HPY9PastureTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9548703CE33FDD94A4D23B41 /* Pods-HPY9Pasture.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HPY9Pasture.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HPY9Pasture/Pods-HPY9Pasture.debug.xcconfig"; sourceTree = "<group>"; };
 		CB8512551405374B4FD6770F /* Pods-HPY9Pasture.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HPY9Pasture.release.xcconfig"; path = "Pods/Target Support Files/Pods-HPY9Pasture/Pods-HPY9Pasture.release.xcconfig"; sourceTree = "<group>"; };
@@ -713,6 +715,7 @@
 		773CA6B41DC34BB90062D6D3 /* CommunityIntroduction */ = {
 			isa = PBXGroup;
 			children = (
+				77E2DCE01DC7393D00CDC80A /* CommunityIntroductionViewController.swift */,
 			);
 			path = CommunityIntroduction;
 			sourceTree = "<group>";
@@ -1144,6 +1147,7 @@
 				7708A6501DC08137005573D2 /* HPYFgetPasswordCtrler.swift in Sources */,
 				773E91D61DC19B7800B21853 /* OutpatientViewController.swift in Sources */,
 				7708A6C81DC081D0005573D2 /* RSADataVerifier.m in Sources */,
+				77E2DCE11DC7393D00CDC80A /* CommunityIntroductionViewController.swift in Sources */,
 				7708A64E1DC08137005573D2 /* HPYMineController.swift in Sources */,
 				7708A6C01DC081D0005573D2 /* Order.m in Sources */,
 				7708A6C21DC081D0005573D2 /* DataSigner.m in Sources */,

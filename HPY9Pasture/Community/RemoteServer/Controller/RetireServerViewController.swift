@@ -23,7 +23,7 @@ class RetireServerViewController: UIViewController,UITableViewDelegate,UITableVi
     
     func createTableView(){
         RetireTableView.frame = CGRectMake(0, 0, Screen_W, Screen_H-64)
-        RetireTableView.backgroundColor = UIColor.whiteColor()
+        RetireTableView.backgroundColor = LGBackColor
         RetireTableView.delegate = self
         RetireTableView.dataSource = self
         RetireTableView.separatorStyle = .None
@@ -66,6 +66,8 @@ class RetireServerViewController: UIViewController,UITableViewDelegate,UITableVi
             let dic = NSDictionary()
             let cell = tableView.dequeueReusableCellWithIdentifier("RetireTableViewCell", forIndexPath: indexPath)as!RetireTableViewCell
             cell.setValueWithInfo(dic)
+            cell.appointmentButton.tag = indexPath.row
+            cell.appointmentButton.addTarget(self, action: #selector(self.appointmentButtonAction(_:)), forControlEvents: .TouchUpInside)
             cell.accessoryType = .None
             cell.selectionStyle = .None
              return cell
@@ -94,6 +96,18 @@ class RetireServerViewController: UIViewController,UITableViewDelegate,UITableVi
         mysectionView.font = UIFont.systemFontOfSize(13)
         return mysectionView
         
+    }
+    
+    func appointmentButtonAction(sender:UIButton){
+        GXAlertView.showOneButtonWithTitleWithMidButton("温馨提示", message: "十分钟内系统将以短信形式通知您认证事件", buttonTitle: "知道了", middleButtonTitle: "", imageButton: UIImage(named: "shipin_chenggongzi"), click: {
+            
+            }) { 
+//                sender.setTitle("开始认证", forState: .Normal)
+//                sender.setTitleColor(UIColor.greenColor(), forState: .Normal)
+//                sender.layer.masksToBounds = true
+//                sender.layer.borderColor = UIColor.greenColor().CGColor
+//                sender.addTarget(self, action: #selector(<#T##@objc method#>), forControlEvents: .TouchUpInside)
+        }
     }
 
     override func didReceiveMemoryWarning() {

@@ -91,11 +91,15 @@ class HPYCommunityCtrler: UIViewController,UICollectionViewDelegate,UICollection
     func headerCellViewAction(sender:UIButton){
         switch sender.tag {
         case 0:
+            let vc = CommunityIntroductionViewController()
+            self.hidesBottomBarWhenPushed = true
+            self.navigationController?.pushViewController(vc, animated: true)
+            self.hidesBottomBarWhenPushed = false
             break
         case 6:
-            let vc = PublicTableViewController()
+            let vc = PublicTableViewController()//公共tableViewVC
             vc.cellHeight = 44
-            vc.textDatasource = ["退休远程认证","医保远程认证","健康远程认证","婚育远程认证"]
+            vc.textDatasource = ["退休远程认证","医保远程认证","健康远程认证","婚育远程认证"]//tableView跳转的VC
             vc.vcArray = [RetireServerViewController(),UIViewController(),UIViewController(),UIViewController()]
             vc.title = "远程服务大厅"
             self.hidesBottomBarWhenPushed = true

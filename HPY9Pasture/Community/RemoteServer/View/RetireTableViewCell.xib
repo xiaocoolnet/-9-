@@ -15,34 +15,34 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="77"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MOK-fG-H3I">
-                        <rect key="frame" x="8" y="0.0" width="177" height="27"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="退休远程认证" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MOK-fG-H3I">
+                        <rect key="frame" x="8" y="0.0" width="101" height="27"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="177" id="H5F-sb-Bm2"/>
+                            <constraint firstAttribute="width" constant="101" id="H5F-sb-Bm2"/>
                             <constraint firstAttribute="height" constant="27" id="JHm-wp-Gka"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N9I-y4-DrA">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="截止日期：2016.06.12 08:25" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N9I-y4-DrA">
                         <rect key="frame" x="8" y="28" width="177" height="21"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="177" id="0oC-Tk-dmg"/>
                             <constraint firstAttribute="height" constant="21" id="qSo-ik-kfl"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3WK-8R-tGR">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2016.12.06 08:25" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3WK-8R-tGR">
                         <rect key="frame" x="8" y="48" width="177" height="21"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="177" id="E8k-tL-i4v"/>
                             <constraint firstAttribute="height" constant="21" id="imm-Gf-7TU"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DoQ-HY-7mi">
@@ -51,22 +51,41 @@
                             <constraint firstAttribute="width" constant="95" id="jUf-Nk-SBp"/>
                             <constraint firstAttribute="height" constant="30" id="lAH-fk-vvP"/>
                         </constraints>
-                        <state key="normal" title="立即预约">
+                        <state key="normal" title="点击预约">
                             <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         </state>
                     </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="未认证" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H4u-Vl-yN6">
+                        <rect key="frame" x="109" y="4" width="46" height="16"/>
+                        <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="16" id="db6-EA-mr2"/>
+                            <constraint firstAttribute="width" constant="46" id="gMi-94-5Nv"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
                     <constraint firstItem="N9I-y4-DrA" firstAttribute="top" secondItem="MOK-fG-H3I" secondAttribute="bottom" constant="1" id="BsK-cR-afg"/>
+                    <constraint firstItem="H4u-Vl-yN6" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-4" id="Fli-V7-PnL"/>
                     <constraint firstItem="DoQ-HY-7mi" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="11" id="Fym-Ea-8he"/>
                     <constraint firstItem="DoQ-HY-7mi" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="PQ2-W1-fMI"/>
                     <constraint firstItem="3WK-8R-tGR" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="ah8-K9-8vf"/>
                     <constraint firstItem="N9I-y4-DrA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="tBg-zz-0aD"/>
+                    <constraint firstItem="H4u-Vl-yN6" firstAttribute="leading" secondItem="MOK-fG-H3I" secondAttribute="trailing" id="uP5-Qs-8uE"/>
                     <constraint firstItem="MOK-fG-H3I" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-8" id="uaz-Uc-Ln5"/>
                     <constraint firstItem="3WK-8R-tGR" firstAttribute="top" secondItem="MOK-fG-H3I" secondAttribute="bottom" constant="21" id="wia-Sq-7Cs"/>
                     <constraint firstItem="MOK-fG-H3I" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="yrM-qZ-y1G"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="appointmentButton" destination="DoQ-HY-7mi" id="xL7-ee-dWg"/>
+                <outlet property="certificationLabel" destination="H4u-Vl-yN6" id="ZM4-kd-sf3"/>
+                <outlet property="dateLabel" destination="3WK-8R-tGR" id="5st-rs-a7H"/>
+                <outlet property="deadlineLabel" destination="H2p-sc-9uM" id="5UJ-Kc-mXg"/>
+            </connections>
             <point key="canvasLocation" x="341" y="453"/>
         </tableViewCell>
     </objects>
