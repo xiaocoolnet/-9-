@@ -15,5 +15,6 @@
 #import "GXAlertView.h"
 #import "MJRefresh.h"
 #import "SDCycleScrollView.h"
+#import "FXLabel.h"
 
 #endif /* HPY9Pasture_Bridging_Header_h */

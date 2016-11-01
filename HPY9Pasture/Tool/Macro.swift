@@ -20,4 +20,7 @@ let WIDTH = UIScreen.mainScreen().bounds.width
 func RGBACOLOR(r:Float,g:Float,b:Float,a:Float) -> UIColor{
     return UIColor.init(colorLiteralRed: r/255, green: g/255, blue: b/255, alpha: a)
 }
+func NSLOG(someThing:NSObject){
+    print(someThing)
+}
 

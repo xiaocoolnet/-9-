@@ -20,8 +20,6 @@
 		7708A6461DC08137005573D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7708A6251DC08137005573D2 /* Main.storyboard */; };
 		7708A6471DC08137005573D2 /* HPYCommunityCtrler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7708A6291DC08137005573D2 /* HPYCommunityCtrler.swift */; };
 		7708A6481DC08137005573D2 /* HPYConvenienceCtrler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7708A62C1DC08137005573D2 /* HPYConvenienceCtrler.swift */; };
-		7708A6491DC08137005573D2 /* HPYHomeCareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7708A62F1DC08137005573D2 /* HPYHomeCareViewController.swift */; };
-		7708A64A1DC08137005573D2 /* HPYHomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7708A6301DC08137005573D2 /* HPYHomeController.swift */; };
 		7708A64B1DC08137005573D2 /* ImageAndTextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7708A6321DC08137005573D2 /* ImageAndTextTableViewCell.swift */; };
 		7708A64C1DC08137005573D2 /* HPYRootController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7708A6341DC08137005573D2 /* HPYRootController.swift */; };
 		7708A64D1DC08137005573D2 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7708A6351DC08137005573D2 /* Info.plist */; };
@@ -62,11 +60,9 @@
 		7708A6EF1DC0830B005573D2 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7708A6EE1DC0830B005573D2 /* CoreTelephony.framework */; };
 		7708A6F11DC08313005573D2 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7708A6F01DC08313005573D2 /* CoreFoundation.framework */; };
 		7708A6F31DC0831C005573D2 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7708A6F21DC0831C005573D2 /* CFNetwork.framework */; };
+		77363E071DC8679F00893521 /* HealthRecordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77363E061DC8679F00893521 /* HealthRecordsViewController.swift */; };
 		773CA6B21DC33B380062D6D3 /* PublicTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773CA6B11DC33B380062D6D3 /* PublicTableViewController.swift */; };
 		773CA6BF1DC34C8F0062D6D3 /* RetireServerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773CA6BE1DC34C8F0062D6D3 /* RetireServerViewController.swift */; };
-		773E91D61DC19B7800B21853 /* OutpatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773E91D51DC19B7800B21853 /* OutpatientViewController.swift */; };
-		773E91D91DC1A33A00B21853 /* OutpatientTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773E91D71DC1A33A00B21853 /* OutpatientTableViewCell.swift */; };
-		773E91DA1DC1A33A00B21853 /* OutpatientTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 773E91D81DC1A33A00B21853 /* OutpatientTableViewCell.xib */; };
 		773E91DD1DC1A45A00B21853 /* AutoScrollLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773E91DC1DC1A45A00B21853 /* AutoScrollLabel.swift */; };
 		774D325B1DC3523600DC0401 /* RetireTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774D32591DC3523600DC0401 /* RetireTableViewCell.swift */; };
 		774D325C1DC3523600DC0401 /* RetireTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 774D325A1DC3523600DC0401 /* RetireTableViewCell.xib */; };
@@ -74,6 +70,13 @@
 		774D32601DC3526200DC0401 /* RetireRecordTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 774D325E1DC3526200DC0401 /* RetireRecordTableViewCell.xib */; };
 		777E11D11DC0B99F00ABA9C6 /* GXAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 777E11D01DC0B99F00ABA9C6 /* GXAlertView.m */; };
 		77E2DCE11DC7393D00CDC80A /* CommunityIntroductionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E2DCE01DC7393D00CDC80A /* CommunityIntroductionViewController.swift */; };
+		77FBABF51DC884810068F995 /* FXLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 77FBABF41DC884810068F995 /* FXLabel.m */; };
+		77FBABF71DC899F10068F995 /* HPYHomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FBABF61DC899F10068F995 /* HPYHomeController.swift */; };
+		77FBAC001DC89A630068F995 /* HPYHomeCareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FBABF91DC89A620068F995 /* HPYHomeCareViewController.swift */; };
+		77FBAC011DC89A630068F995 /* OutpatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FBABFC1DC89A620068F995 /* OutpatientViewController.swift */; };
+		77FBAC021DC89A630068F995 /* OutpatientTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FBABFE1DC89A620068F995 /* OutpatientTableViewCell.swift */; };
+		77FBAC031DC89A630068F995 /* OutpatientTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77FBABFF1DC89A630068F995 /* OutpatientTableViewCell.xib */; };
+		77FBAC061DC89B100068F995 /* WisdomControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FBAC051DC89B100068F995 /* WisdomControllerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,8 +117,6 @@
 		7708A6261DC08137005573D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7708A6291DC08137005573D2 /* HPYCommunityCtrler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HPYCommunityCtrler.swift; sourceTree = "<group>"; };
 		7708A62C1DC08137005573D2 /* HPYConvenienceCtrler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HPYConvenienceCtrler.swift; sourceTree = "<group>"; };
-		7708A62F1DC08137005573D2 /* HPYHomeCareViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HPYHomeCareViewController.swift; sourceTree = "<group>"; };
-		7708A6301DC08137005573D2 /* HPYHomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HPYHomeController.swift; sourceTree = "<group>"; };
 		7708A6321DC08137005573D2 /* ImageAndTextTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageAndTextTableViewCell.swift; sourceTree = "<group>"; };
 		7708A6331DC08137005573D2 /* HPY9Pasture－Bridging－Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HPY9Pasture－Bridging－Header.h"; sourceTree = "<group>"; };
 		7708A6341DC08137005573D2 /* HPYRootController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HPYRootController.swift; sourceTree = "<group>"; };
@@ -245,11 +246,9 @@
 		7708A6EE1DC0830B005573D2 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		7708A6F01DC08313005573D2 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		7708A6F21DC0831C005573D2 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		77363E061DC8679F00893521 /* HealthRecordsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthRecordsViewController.swift; sourceTree = "<group>"; };
 		773CA6B11DC33B380062D6D3 /* PublicTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublicTableViewController.swift; sourceTree = "<group>"; };
 		773CA6BE1DC34C8F0062D6D3 /* RetireServerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RetireServerViewController.swift; sourceTree = "<group>"; };
-		773E91D51DC19B7800B21853 /* OutpatientViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OutpatientViewController.swift; sourceTree = "<group>"; };
-		773E91D71DC1A33A00B21853 /* OutpatientTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OutpatientTableViewCell.swift; sourceTree = "<group>"; };
-		773E91D81DC1A33A00B21853 /* OutpatientTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OutpatientTableViewCell.xib; sourceTree = "<group>"; };
 		773E91DC1DC1A45A00B21853 /* AutoScrollLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoScrollLabel.swift; sourceTree = "<group>"; };
 		774D32591DC3523600DC0401 /* RetireTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RetireTableViewCell.swift; sourceTree = "<group>"; };
 		774D325A1DC3523600DC0401 /* RetireTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RetireTableViewCell.xib; sourceTree = "<group>"; };
@@ -258,6 +257,14 @@
 		777E11CF1DC0B99F00ABA9C6 /* GXAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GXAlertView.h; sourceTree = "<group>"; };
 		777E11D01DC0B99F00ABA9C6 /* GXAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GXAlertView.m; sourceTree = "<group>"; };
 		77E2DCE01DC7393D00CDC80A /* CommunityIntroductionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommunityIntroductionViewController.swift; sourceTree = "<group>"; };
+		77FBABF31DC884810068F995 /* FXLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FXLabel.h; sourceTree = "<group>"; };
+		77FBABF41DC884810068F995 /* FXLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FXLabel.m; sourceTree = "<group>"; };
+		77FBABF61DC899F10068F995 /* HPYHomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HPYHomeController.swift; sourceTree = "<group>"; };
+		77FBABF91DC89A620068F995 /* HPYHomeCareViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HPYHomeCareViewController.swift; sourceTree = "<group>"; };
+		77FBABFC1DC89A620068F995 /* OutpatientViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OutpatientViewController.swift; sourceTree = "<group>"; };
+		77FBABFE1DC89A620068F995 /* OutpatientTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OutpatientTableViewCell.swift; sourceTree = "<group>"; };
+		77FBABFF1DC89A630068F995 /* OutpatientTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OutpatientTableViewCell.xib; sourceTree = "<group>"; };
+		77FBAC051DC89B100068F995 /* WisdomControllerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WisdomControllerViewController.swift; sourceTree = "<group>"; };
 		8292DDBF88AC8F918B0E7214 /* Pods_HPY9PastureTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HPY9PastureTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9548703CE33FDD94A4D23B41 /* Pods-HPY9Pasture.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HPY9Pasture.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HPY9Pasture/Pods-HPY9Pasture.debug.xcconfig"; sourceTree = "<group>"; };
 		CB8512551405374B4FD6770F /* Pods-HPY9Pasture.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HPY9Pasture.release.xcconfig"; path = "Pods/Target Support Files/Pods-HPY9Pasture/Pods-HPY9Pasture.release.xcconfig"; sourceTree = "<group>"; };
@@ -444,20 +451,12 @@
 		7708A62D1DC08137005573D2 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				7708A62E1DC08137005573D2 /* Controller */,
+				77FBABF61DC899F10068F995 /* HPYHomeController.swift */,
+				77FBAC041DC89AE40068F995 /* WisdomController */,
+				77FBABF81DC89A620068F995 /* CAREController */,
 				7708A6311DC08137005573D2 /* View */,
 			);
 			path = Home;
-			sourceTree = "<group>";
-		};
-		7708A62E1DC08137005573D2 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				7708A62F1DC08137005573D2 /* HPYHomeCareViewController.swift */,
-				7708A6301DC08137005573D2 /* HPYHomeController.swift */,
-				773E91D21DC19AEB00B21853 /* Outpatient */,
-			);
-			path = Controller;
 			sourceTree = "<group>";
 		};
 		7708A6311DC08137005573D2 /* View */ = {
@@ -521,6 +520,7 @@
 		7708A6531DC081D0005573D2 /* Third_part_lib */ = {
 			isa = PBXGroup;
 			children = (
+				77FBABF21DC884810068F995 /* FXLabel */,
 				7708A6541DC081D0005573D2 /* AliPay */,
 				7708A6B91DC081D0005573D2 /* AliplayLib */,
 			);
@@ -744,6 +744,7 @@
 		773CA6B81DC34BB90062D6D3 /* HealthRecords */ = {
 			isa = PBXGroup;
 			children = (
+				77363E061DC8679F00893521 /* HealthRecordsViewController.swift */,
 			);
 			path = HealthRecords;
 			sourceTree = "<group>";
@@ -790,32 +791,6 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		773E91D21DC19AEB00B21853 /* Outpatient */ = {
-			isa = PBXGroup;
-			children = (
-				773E91D31DC19B3800B21853 /* Controller */,
-				773E91D41DC19B3800B21853 /* view */,
-			);
-			path = Outpatient;
-			sourceTree = "<group>";
-		};
-		773E91D31DC19B3800B21853 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				773E91D51DC19B7800B21853 /* OutpatientViewController.swift */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		773E91D41DC19B3800B21853 /* view */ = {
-			isa = PBXGroup;
-			children = (
-				773E91D71DC1A33A00B21853 /* OutpatientTableViewCell.swift */,
-				773E91D81DC1A33A00B21853 /* OutpatientTableViewCell.xib */,
-			);
-			path = view;
-			sourceTree = "<group>";
-		};
 		773E91DB1DC1A45A00B21853 /* AutoScrollLabel */ = {
 			isa = PBXGroup;
 			children = (
@@ -831,6 +806,58 @@
 				777E11D01DC0B99F00ABA9C6 /* GXAlertView.m */,
 			);
 			path = GXAlertView;
+			sourceTree = "<group>";
+		};
+		77FBABF21DC884810068F995 /* FXLabel */ = {
+			isa = PBXGroup;
+			children = (
+				77FBABF31DC884810068F995 /* FXLabel.h */,
+				77FBABF41DC884810068F995 /* FXLabel.m */,
+			);
+			path = FXLabel;
+			sourceTree = "<group>";
+		};
+		77FBABF81DC89A620068F995 /* CAREController */ = {
+			isa = PBXGroup;
+			children = (
+				77FBABF91DC89A620068F995 /* HPYHomeCareViewController.swift */,
+				77FBABFA1DC89A620068F995 /* Outpatient */,
+			);
+			path = CAREController;
+			sourceTree = "<group>";
+		};
+		77FBABFA1DC89A620068F995 /* Outpatient */ = {
+			isa = PBXGroup;
+			children = (
+				77FBABFB1DC89A620068F995 /* Controller */,
+				77FBABFD1DC89A620068F995 /* view */,
+			);
+			path = Outpatient;
+			sourceTree = "<group>";
+		};
+		77FBABFB1DC89A620068F995 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				77FBABFC1DC89A620068F995 /* OutpatientViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		77FBABFD1DC89A620068F995 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				77FBABFE1DC89A620068F995 /* OutpatientTableViewCell.swift */,
+				77FBABFF1DC89A630068F995 /* OutpatientTableViewCell.xib */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		77FBAC041DC89AE40068F995 /* WisdomController */ = {
+			isa = PBXGroup;
+			children = (
+				77FBAC051DC89B100068F995 /* WisdomControllerViewController.swift */,
+			);
+			path = WisdomController;
 			sourceTree = "<group>";
 		};
 		8A9594E3691BE505D0DD3348 /* Pods */ = {
@@ -961,11 +988,11 @@
 			files = (
 				774D32601DC3526200DC0401 /* RetireRecordTableViewCell.xib in Resources */,
 				774D325C1DC3523600DC0401 /* RetireTableViewCell.xib in Resources */,
-				773E91DA1DC1A33A00B21853 /* OutpatientTableViewCell.xib in Resources */,
 				7708A6BC1DC081D0005573D2 /* AlipaySDK.bundle in Resources */,
 				7708A64D1DC08137005573D2 /* Info.plist in Resources */,
 				7708A6461DC08137005573D2 /* Main.storyboard in Resources */,
 				7708A6421DC08137005573D2 /* Assets.xcassets in Resources */,
+				77FBAC031DC89A630068F995 /* OutpatientTableViewCell.xib in Resources */,
 				7708A6451DC08137005573D2 /* LaunchScreen.storyboard in Resources */,
 				7708A6D51DC08237005573D2 /* Default-568h@2x.png in Resources */,
 				7708A6D81DC08237005573D2 /* README.txt in Resources */,
@@ -1136,18 +1163,20 @@
 				7708A6C51DC081D0005573D2 /* NSDataEx.m in Sources */,
 				7708A6C41DC081D0005573D2 /* MD5DataSigner.m in Sources */,
 				777E11D11DC0B99F00ABA9C6 /* GXAlertView.m in Sources */,
+				77FBABF71DC899F10068F995 /* HPYHomeController.swift in Sources */,
 				773CA6BF1DC34C8F0062D6D3 /* RetireServerViewController.swift in Sources */,
+				77363E071DC8679F00893521 /* HealthRecordsViewController.swift in Sources */,
 				7708A6411DC08137005573D2 /* AppDelegate.swift in Sources */,
 				773CA6B21DC33B380062D6D3 /* PublicTableViewController.swift in Sources */,
 				774D325F1DC3526200DC0401 /* RetireRecordTableViewCell.swift in Sources */,
-				773E91D91DC1A33A00B21853 /* OutpatientTableViewCell.swift in Sources */,
 				7708A6471DC08137005573D2 /* HPYCommunityCtrler.swift in Sources */,
-				7708A6491DC08137005573D2 /* HPYHomeCareViewController.swift in Sources */,
+				77FBAC011DC89A630068F995 /* OutpatientViewController.swift in Sources */,
 				7708A6C71DC081D0005573D2 /* RSADataSigner.m in Sources */,
+				77FBAC061DC89B100068F995 /* WisdomControllerViewController.swift in Sources */,
 				7708A6501DC08137005573D2 /* HPYFgetPasswordCtrler.swift in Sources */,
-				773E91D61DC19B7800B21853 /* OutpatientViewController.swift in Sources */,
 				7708A6C81DC081D0005573D2 /* RSADataVerifier.m in Sources */,
 				77E2DCE11DC7393D00CDC80A /* CommunityIntroductionViewController.swift in Sources */,
+				77FBAC021DC89A630068F995 /* OutpatientTableViewCell.swift in Sources */,
 				7708A64E1DC08137005573D2 /* HPYMineController.swift in Sources */,
 				7708A6C01DC081D0005573D2 /* Order.m in Sources */,
 				7708A6C21DC081D0005573D2 /* DataSigner.m in Sources */,
@@ -1156,9 +1185,10 @@
 				7708A6C31DC081D0005573D2 /* DataVerifier.m in Sources */,
 				7708A6C11DC081D0005573D2 /* base64.m in Sources */,
 				7708A6D91DC08237005573D2 /* Macro.swift in Sources */,
+				77FBAC001DC89A630068F995 /* HPYHomeCareViewController.swift in Sources */,
 				773E91DD1DC1A45A00B21853 /* AutoScrollLabel.swift in Sources */,
-				7708A64A1DC08137005573D2 /* HPYHomeController.swift in Sources */,
 				7708A64C1DC08137005573D2 /* HPYRootController.swift in Sources */,
+				77FBABF51DC884810068F995 /* FXLabel.m in Sources */,
 				7708A64F1DC08137005573D2 /* HPYVideoController.swift in Sources */,
 				7708A6511DC08137005573D2 /* HPYLoginController.swift in Sources */,
 				7708A6481DC08137005573D2 /* HPYConvenienceCtrler.swift in Sources */,
