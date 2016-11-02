@@ -22,7 +22,8 @@ class PublicTableViewController: UITableViewController {
         
         self.view.backgroundColor = UIColor.whiteColor()
          self.tableView.tableFooterView = UIView()//去掉多于的分割线
-        self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "reuseIdentifier")
+        self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "PublicTableViewCell")
+        self.tableView.separatorStyle = .None
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -54,7 +55,7 @@ class PublicTableViewController: UITableViewController {
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+        let cell = PublicTableViewCell.init(style: .Default)
         
         cell.textLabel?.text = textDatasource[indexPath.row] as? String
         cell.textLabel?.font = MainFont

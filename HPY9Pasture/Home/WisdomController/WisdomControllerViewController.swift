@@ -13,9 +13,12 @@ class WisdomControllerViewController: UIViewController,SDCycleScrollViewDelegate
     let mytableView = UITableView()
     
     
-    let imageArray = ["jujia_shoujibaozhi","","",""]
+    let imageArray = ["zhihuishequ","jigouyanglao","jujiayanglao","shishangshegnhuo"]
     let mainTitleArray = ["智慧社区","机构养老","居家养老","时尚生活"]
     let titleArray = ["涵盖了社区全部内容","涵盖了社区全部内容","涵盖了社区全部内容","你可以在这里看电影，看话剧..."]
+    let textColorArray = [RGBACOLOR(255, g: 112, b: 67, a: 1),RGBACOLOR(144, g: 195, b: 86, a: 1),RGBACOLOR(243
+        , g: 209, b: 51, a: 1),RGBACOLOR(248, g: 132, b: 162, a: 1)]
+    
     
 
     override func viewDidLoad() {
@@ -33,9 +36,9 @@ class WisdomControllerViewController: UIViewController,SDCycleScrollViewDelegate
         mytableView.delegate = self
         mytableView.dataSource = self
         mytableView.sectionHeaderHeight = 10
-        mytableView.separatorStyle = .SingleLine
+        mytableView.separatorStyle = .None
         mytableView.tableFooterView = UIView()
-        mytableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "mytableViewCell")
+        mytableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "PublicTableViewCell")
         self.view.addSubview(mytableView)
         
         
@@ -50,10 +53,19 @@ class WisdomControllerViewController: UIViewController,SDCycleScrollViewDelegate
     //MARK: ------TableViewDelegate
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat{
-        return 60
+        return 87*px
         
     }
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath){
+        switch indexPath.row {
+        case 2:
+            let homeCareViewController = HPYHomeCareViewController()
+            //        homeCareViewController.hidesBottomBarWhenPushed = true
+            self.navigationController?.pushViewController(homeCareViewController, animated: true)
+            break
+        default:
+            break
+        }
         
         print(indexPath)
     }
@@ -69,13 +81,14 @@ class WisdomControllerViewController: UIViewController,SDCycleScrollViewDelegate
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
         
 //        let cell = tableView.dequeueReusableCellWithIdentifier("mytableViewCell", forIndexPath: indexPath)
-        let cell = UITableViewCell.init(style: .Subtitle, reuseIdentifier: "mytableViewCell")
+        let cell = PublicTableViewCell.init(style: .Subtitle)
         cell.detailTextLabel?.text = titleArray[indexPath.row]
         cell.detailTextLabel?.font = UIFont.systemFontOfSize(13)
         cell.detailTextLabel?.textColor = UIColor.grayColor()
         cell.imageView?.image = UIImage(named: imageArray[indexPath.row])
         cell.textLabel?.text = mainTitleArray[indexPath.row]
         cell.textLabel?.font = MainFont
+        cell.textLabel?.textColor = textColorArray[indexPath.row]
         cell.accessoryType = .DisclosureIndicator
         cell.selectionStyle = .None
         return cell

@@ -12,10 +12,12 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    let NAVC = HPYRootController()
+    
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
-        window?.rootViewController = HPYRootController()
+        window?.rootViewController = NAVC
         window!.makeKeyAndVisible()
         //set Style
         UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.LightContent
@@ -25,6 +27,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName:UIColor.whiteColor()]
         UIBarButtonItem.appearance().setBackButtonTitlePositionAdjustment(UIOffsetMake(0, -60), forBarMetrics:.Default)
         UITabBar.appearance().translucent = false
+        
+        let ud = NSUserDefaults.standardUserDefaults()
+        if ud.boolForKey("ISLogin") {//判断是否需要登录
+            
+        }else{
+            let NAV1 = UINavigationController.init(rootViewController: HPYLoginController())
+            NAVC.presentViewController(NAV1, animated: true, completion: {
+                
+            })
+        }
         
         return true
     }

@@ -33,6 +33,7 @@ class HPYVideoController: UIViewController,UITableViewDataSource,UITableViewDele
         videoTableView.backgroundColor = UIColor.whiteColor()
         videoTableView.delegate = self
         videoTableView.dataSource = self
+        videoTableView.separatorStyle = .None
         videoTableView.tableFooterView = UIView()//去掉多于的分割线
         self.view.addSubview(videoTableView)
         
@@ -59,10 +60,10 @@ class HPYVideoController: UIViewController,UITableViewDataSource,UITableViewDele
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
         
-        let cell = UITableViewCell()
+        let cell = ImageAndTextTableViewCell()
         cell.textLabel?.font = MainFont
         cell.textLabel?.text = listArray[indexPath.row]
-        cell.accessoryType = .DisclosureIndicator
+        cell.accessoryType = .None
         cell.selectionStyle = .None
         return cell
     }

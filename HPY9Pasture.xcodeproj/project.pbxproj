@@ -68,6 +68,8 @@
 		774D325C1DC3523600DC0401 /* RetireTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 774D325A1DC3523600DC0401 /* RetireTableViewCell.xib */; };
 		774D325F1DC3526200DC0401 /* RetireRecordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774D325D1DC3526200DC0401 /* RetireRecordTableViewCell.swift */; };
 		774D32601DC3526200DC0401 /* RetireRecordTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 774D325E1DC3526200DC0401 /* RetireRecordTableViewCell.xib */; };
+		7768FBDB1DC98EB7008586F6 /* PublicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7768FBDA1DC98EB7008586F6 /* PublicTableViewCell.swift */; };
+		7768FBEB1DC9E781008586F6 /* ColorfulNameLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7768FBEA1DC9E781008586F6 /* ColorfulNameLabel.m */; };
 		777E11D11DC0B99F00ABA9C6 /* GXAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 777E11D01DC0B99F00ABA9C6 /* GXAlertView.m */; };
 		77E2DCE11DC7393D00CDC80A /* CommunityIntroductionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E2DCE01DC7393D00CDC80A /* CommunityIntroductionViewController.swift */; };
 		77FBABF51DC884810068F995 /* FXLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 77FBABF41DC884810068F995 /* FXLabel.m */; };
@@ -254,6 +256,9 @@
 		774D325A1DC3523600DC0401 /* RetireTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RetireTableViewCell.xib; sourceTree = "<group>"; };
 		774D325D1DC3526200DC0401 /* RetireRecordTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RetireRecordTableViewCell.swift; sourceTree = "<group>"; };
 		774D325E1DC3526200DC0401 /* RetireRecordTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RetireRecordTableViewCell.xib; sourceTree = "<group>"; };
+		7768FBDA1DC98EB7008586F6 /* PublicTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublicTableViewCell.swift; sourceTree = "<group>"; };
+		7768FBE91DC9E781008586F6 /* ColorfulNameLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorfulNameLabel.h; sourceTree = "<group>"; };
+		7768FBEA1DC9E781008586F6 /* ColorfulNameLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorfulNameLabel.m; sourceTree = "<group>"; };
 		777E11CF1DC0B99F00ABA9C6 /* GXAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GXAlertView.h; sourceTree = "<group>"; };
 		777E11D01DC0B99F00ABA9C6 /* GXAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GXAlertView.m; sourceTree = "<group>"; };
 		77E2DCE01DC7393D00CDC80A /* CommunityIntroductionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommunityIntroductionViewController.swift; sourceTree = "<group>"; };
@@ -397,12 +402,14 @@
 		7708A61F1DC08137005573D2 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				7768FBE51DC9E72F008586F6 /* RandomColor */,
 				773CA6B01DC33B0B0062D6D3 /* PublicTableView */,
 				773E91DB1DC1A45A00B21853 /* AutoScrollLabel */,
 				777E11CE1DC0B99F00ABA9C6 /* GXAlertView */,
 				7708A6201DC08137005573D2 /* MainImageAndTextButton.swift */,
 				7708A6211DC08137005573D2 /* UIBounceButton.h */,
 				7708A6221DC08137005573D2 /* UIBounceButton.m */,
+				7768FBDA1DC98EB7008586F6 /* PublicTableViewCell.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -799,6 +806,15 @@
 			path = AutoScrollLabel;
 			sourceTree = "<group>";
 		};
+		7768FBE51DC9E72F008586F6 /* RandomColor */ = {
+			isa = PBXGroup;
+			children = (
+				7768FBE91DC9E781008586F6 /* ColorfulNameLabel.h */,
+				7768FBEA1DC9E781008586F6 /* ColorfulNameLabel.m */,
+			);
+			path = RandomColor;
+			sourceTree = "<group>";
+		};
 		777E11CE1DC0B99F00ABA9C6 /* GXAlertView */ = {
 			isa = PBXGroup;
 			children = (
@@ -1169,6 +1185,7 @@
 				7708A6411DC08137005573D2 /* AppDelegate.swift in Sources */,
 				773CA6B21DC33B380062D6D3 /* PublicTableViewController.swift in Sources */,
 				774D325F1DC3526200DC0401 /* RetireRecordTableViewCell.swift in Sources */,
+				7768FBEB1DC9E781008586F6 /* ColorfulNameLabel.m in Sources */,
 				7708A6471DC08137005573D2 /* HPYCommunityCtrler.swift in Sources */,
 				77FBAC011DC89A630068F995 /* OutpatientViewController.swift in Sources */,
 				7708A6C71DC081D0005573D2 /* RSADataSigner.m in Sources */,
@@ -1191,6 +1208,7 @@
 				77FBABF51DC884810068F995 /* FXLabel.m in Sources */,
 				7708A64F1DC08137005573D2 /* HPYVideoController.swift in Sources */,
 				7708A6511DC08137005573D2 /* HPYLoginController.swift in Sources */,
+				7768FBDB1DC98EB7008586F6 /* PublicTableViewCell.swift in Sources */,
 				7708A6481DC08137005573D2 /* HPYConvenienceCtrler.swift in Sources */,
 				7708A6521DC08137005573D2 /* HPYRegisterController.swift in Sources */,
 				7708A6431DC08137005573D2 /* MainImageAndTextButton.swift in Sources */,

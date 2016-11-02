@@ -18,9 +18,24 @@ class HPYLoginController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "登录"
+        self.createrRightNavButton()
         configureUI()
         addTargetAction()
     }
+    
+    
+    //右侧注册按钮
+    func createrRightNavButton(){
+        let mapButton = UIButton()
+        mapButton.frame = CGRectMake(0, 0, 40, 40)
+        mapButton.setTitle("注册", forState: .Normal)
+        mapButton.titleLabel?.font = MainFont
+        mapButton.titleLabel?.textAlignment = .Right
+        mapButton.addTarget(self, action: #selector(self.goRegister), forControlEvents: .TouchUpInside)
+        mapButton.setTitleColor(UIColor.whiteColor(), forState: .Normal)
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(customView: mapButton)
+    }
+    
     func addTargetAction(){
         fgetPwdBtn.addTarget(self, action: #selector(clickedForgetPwdBtn), forControlEvents: .TouchUpInside)
         loginBtn.addTarget(self, action: #selector(clickedLoginBtn), forControlEvents: .TouchUpInside)
@@ -34,11 +49,18 @@ class HPYLoginController: UIViewController {
         navigationController?.pushViewController(HPYFgetPasswordCtrler(), animated: true)
     }
     func clickedLoginBtn(btn:UIButton){
-        
+        self.dismissViewControllerAnimated(true) { 
+            
+        }
     }
     
     func endEditState(){
         view.endEditing(true)
+    }
+    
+    func goRegister(){
+        let vc = HPYRegisterController()
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     func configureUI(){

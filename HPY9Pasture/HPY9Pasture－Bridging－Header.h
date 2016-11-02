@@ -16,5 +16,6 @@
 #import "MJRefresh.h"
 #import "SDCycleScrollView.h"
 #import "FXLabel.h"
+#import "ColorfulNameLabel.h"//自定义头像
 
 #endif /* HPY9Pasture_Bridging_Header_h */

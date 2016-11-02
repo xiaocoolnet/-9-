@@ -9,19 +9,43 @@
 import UIKit
 
 class HPYMineController: UIViewController {
+    
+    let myScrollView = UIScrollView()//底部滑动试图
+    var myHeaderImageView = ColorfulNameLabel()
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor.purpleColor()
-        let label = UILabel(frame: CGRectMake(100,100,100,50))
-        label.text = "我的"
+        view.backgroundColor = LGBackColor
+        
+        myScrollView.frame = CGRectMake(0, 0, WIDTH, HEIGHT-46)
+        myScrollView.backgroundColor = LGBackColor
+        
+        self.view.addSubview(myScrollView)
+        
         configureUI()
-        view.addSubview(label)
+        
         // Do any additional setup after loading the view.
+    }
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(true)
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
     }
 
     
     func configureUI(){
+        
+        let headerBackView = UIView()
+        headerBackView.backgroundColor = NavColor
+        headerBackView.frame = CGRectMake(0, 0, WIDTH, 120*px)
+        self.view.addSubview(headerBackView)
+        self.myHeaderImageView = ColorfulNameLabel.init(frame: CGRectMake(15*px, 40*px, 55*px, 55*px)) 
+        self.myHeaderImageView.text = "未知"
+        headerBackView.addSubview(myHeaderImageView)
+        
+        
+        
         
         let homeCareButton = UIButton.init(frame: CGRectMake(50, 200, 60, 30))
         homeCareButton.setTitle("居家养老", forState: .Normal)
@@ -47,8 +71,6 @@ class HPYMineController: UIViewController {
     }
     //MARK:------Action
     func homeCareButtonAction(){
-        print(Screen_W)
-        print(Screen_H)
         let homeCareViewController = HPYHomeCareViewController()
         homeCareViewController.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(homeCareViewController, animated: true)
