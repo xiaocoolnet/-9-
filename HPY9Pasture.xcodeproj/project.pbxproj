@@ -72,6 +72,7 @@
 		7768FBDB1DC98EB7008586F6 /* PublicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7768FBDA1DC98EB7008586F6 /* PublicTableViewCell.swift */; };
 		7768FBEB1DC9E781008586F6 /* ColorfulNameLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7768FBEA1DC9E781008586F6 /* ColorfulNameLabel.m */; };
 		777E11D11DC0B99F00ABA9C6 /* GXAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 777E11D01DC0B99F00ABA9C6 /* GXAlertView.m */; };
+		77CD097C1DCB47080033454B /* AliyunPlayerSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7708A6BA1DC081D0005573D2 /* AliyunPlayerSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		77E2DCE11DC7393D00CDC80A /* CommunityIntroductionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E2DCE01DC7393D00CDC80A /* CommunityIntroductionViewController.swift */; };
 		77FBABF51DC884810068F995 /* FXLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 77FBABF41DC884810068F995 /* FXLabel.m */; };
 		77FBABF71DC899F10068F995 /* HPYHomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FBABF61DC899F10068F995 /* HPYHomeController.swift */; };
@@ -98,6 +99,20 @@
 			remoteInfo = HPY9Pasture;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		77CD097D1DCB47080033454B /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				77CD097C1DCB47080033454B /* AliyunPlayerSDK.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		18A280395E783FA6EC74C8B8 /* Pods_HPY9Pasture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HPY9Pasture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -905,6 +920,7 @@
 				7708A5E91DC080B9005573D2 /* Resources */,
 				43798637D352F63A6BA21BCE /* [CP] Embed Pods Frameworks */,
 				FFD526E0E3EBE4C5D2518A4F /* [CP] Copy Pods Resources */,
+				77CD097D1DCB47080033454B /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1361,6 +1377,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEFINES_MODULE = YES;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/HPY9Pasture/Third_part_lib/AliPay",
@@ -1399,6 +1416,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEFINES_MODULE = YES;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/HPY9Pasture/Third_part_lib/AliPay",

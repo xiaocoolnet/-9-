@@ -28,6 +28,8 @@ class MapSelectViewController: UIViewController,BMKMapViewDelegate,BMKGeoCodeSea
     var showRegion = BMKCoordinateRegion.init()
     var searcher = BMKSuggestionSearch.init()
     
+    var locationService: BMKLocationService!//定位
+    
     var option = BMKSuggestionSearchOption.init()
     
     
@@ -41,6 +43,10 @@ class MapSelectViewController: UIViewController,BMKMapViewDelegate,BMKGeoCodeSea
         self.title = "请选择社区"
         showRegion.span.latitudeDelta = 0.05
         showRegion.span.longitudeDelta = 0.05
+        
+        locationService = BMKLocationService()
+        locationService.delegate = self
+        locationService.startUserLocationService()
         
         geocodeSearch = BMKGeoCodeSearch()
         setSearchBar()
@@ -64,6 +70,7 @@ class MapSelectViewController: UIViewController,BMKMapViewDelegate,BMKGeoCodeSea
         mapView.viewWillDisappear()
         mapView.delegate = nil
         searcher.delegate = nil
+        locationService.delegate = nil
         self.tabBarController?.tabBar.hidden = false
     }
     
@@ -73,6 +80,7 @@ class MapSelectViewController: UIViewController,BMKMapViewDelegate,BMKGeoCodeSea
     {
         
         searchBar.showsCancelButton = true
+        
         searchBar.delegate = self
         self.view.addSubview(searchBar)
         
@@ -285,6 +293,27 @@ class MapSelectViewController: UIViewController,BMKMapViewDelegate,BMKGeoCodeSea
     func mapView(mapView: BMKMapView!, onDrawMapFrame status: BMKMapStatus!) {
         
         
+    }
+    
+    //BMKLocationSerevenceDelegate
+    
+    func didUpdateBMKUserLocation(userLocation: BMKUserLocation!) {
+        if(userLocation.location != nil)
+        {
+            WillShowName(userLocation.location.coordinate.latitude, longtitude: userLocation.location.coordinate.longitude)
+            showRegion.center = userLocation.location.coordinate
+            showRegion.span.latitudeDelta = 0.05
+            showRegion.span.longitudeDelta = 0.05
+            mapView.setRegion(showRegion, animated: true)
+            mapView.updateLocationData(userLocation)
+            
+            pointAnmation.coordinate = userLocation.location.coordinate
+            pointAnmation.title = userLocation.title
+            
+            mapView.addAnnotation(pointAnmation)
+            
+            mapView.selectAnnotation(pointAnmation, animated: true)
+        }
     }
     
     func mapView(mapView: BMKMapView!, regionDidChangeAnimated animated: Bool)

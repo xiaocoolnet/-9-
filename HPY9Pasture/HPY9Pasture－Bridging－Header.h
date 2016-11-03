@@ -17,8 +17,9 @@
 #import "SDCycleScrollView.h"
 #import "FXLabel.h"
 #import "ColorfulNameLabel.h"//自定义头像
-
-
+#import <AliyunPlayerSDK/AliVcMediaPlayer.h>
+#import <MediaPlayer/MediaPlayer.h>
+#import <AVFoundation/AVAudioSession.h>
 
 
 
