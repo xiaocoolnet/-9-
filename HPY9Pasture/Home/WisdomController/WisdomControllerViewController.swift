@@ -58,6 +58,11 @@ class WisdomControllerViewController: UIViewController,SDCycleScrollViewDelegate
     }
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath){
         switch indexPath.row {
+        case 0:
+            let homeCareViewController = MapSelectViewController()
+            //        homeCareViewController.hidesBottomBarWhenPushed = true
+            self.navigationController?.pushViewController(homeCareViewController, animated: true)
+            break
         case 2:
             let homeCareViewController = HPYHomeCareViewController()
             //        homeCareViewController.hidesBottomBarWhenPushed = true

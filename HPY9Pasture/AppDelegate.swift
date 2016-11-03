@@ -9,9 +9,10 @@
 import UIKit
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate,BMKGeneralDelegate {
 
     var window: UIWindow?
+    var _mapManager: BMKMapManager?
     let NAVC = HPYRootController()
     
 
@@ -36,6 +37,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             NAVC.presentViewController(NAV1, animated: true, completion: {
                 
             })
+        }
+        
+        /***********************百度地图********************************/
+        // 要使用百度地图，请先启动BaiduMapManager
+        _mapManager = BMKMapManager()
+        // 如果要关注网络及授权验证事件，请设定generalDelegate参数
+        let ret = _mapManager?.start("SdD0fiLvsqqWuoAUZWhDmF3BuU4ovmHA", generalDelegate: self)
+        if ret == false {
+            NSLog("manager start failed!")
         }
         
         return true

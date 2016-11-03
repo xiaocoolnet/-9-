@@ -64,6 +64,7 @@
 		773CA6B21DC33B380062D6D3 /* PublicTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773CA6B11DC33B380062D6D3 /* PublicTableViewController.swift */; };
 		773CA6BF1DC34C8F0062D6D3 /* RetireServerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773CA6BE1DC34C8F0062D6D3 /* RetireServerViewController.swift */; };
 		773E91DD1DC1A45A00B21853 /* AutoScrollLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773E91DC1DC1A45A00B21853 /* AutoScrollLabel.swift */; };
+		7747E0EB1DCB1C4100E0B527 /* MapSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7747E0EA1DCB1C4100E0B527 /* MapSelectViewController.swift */; };
 		774D325B1DC3523600DC0401 /* RetireTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774D32591DC3523600DC0401 /* RetireTableViewCell.swift */; };
 		774D325C1DC3523600DC0401 /* RetireTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 774D325A1DC3523600DC0401 /* RetireTableViewCell.xib */; };
 		774D325F1DC3526200DC0401 /* RetireRecordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774D325D1DC3526200DC0401 /* RetireRecordTableViewCell.swift */; };
@@ -252,6 +253,7 @@
 		773CA6B11DC33B380062D6D3 /* PublicTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublicTableViewController.swift; sourceTree = "<group>"; };
 		773CA6BE1DC34C8F0062D6D3 /* RetireServerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RetireServerViewController.swift; sourceTree = "<group>"; };
 		773E91DC1DC1A45A00B21853 /* AutoScrollLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoScrollLabel.swift; sourceTree = "<group>"; };
+		7747E0EA1DCB1C4100E0B527 /* MapSelectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapSelectViewController.swift; sourceTree = "<group>"; };
 		774D32591DC3523600DC0401 /* RetireTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RetireTableViewCell.swift; sourceTree = "<group>"; };
 		774D325A1DC3523600DC0401 /* RetireTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RetireTableViewCell.xib; sourceTree = "<group>"; };
 		774D325D1DC3526200DC0401 /* RetireRecordTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RetireRecordTableViewCell.swift; sourceTree = "<group>"; };
@@ -435,6 +437,7 @@
 			isa = PBXGroup;
 			children = (
 				7708A6291DC08137005573D2 /* HPYCommunityCtrler.swift */,
+				7747E0EA1DCB1C4100E0B527 /* MapSelectViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1189,6 +1192,7 @@
 				7708A6471DC08137005573D2 /* HPYCommunityCtrler.swift in Sources */,
 				77FBAC011DC89A630068F995 /* OutpatientViewController.swift in Sources */,
 				7708A6C71DC081D0005573D2 /* RSADataSigner.m in Sources */,
+				7747E0EB1DCB1C4100E0B527 /* MapSelectViewController.swift in Sources */,
 				77FBAC061DC89B100068F995 /* WisdomControllerViewController.swift in Sources */,
 				7708A6501DC08137005573D2 /* HPYFgetPasswordCtrler.swift in Sources */,
 				7708A6C81DC081D0005573D2 /* RSADataVerifier.m in Sources */,
@@ -1355,6 +1359,7 @@
 			baseConfigurationReference = 9548703CE33FDD94A4D23B41 /* Pods-HPY9Pasture.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1392,6 +1397,7 @@
 			baseConfigurationReference = CB8512551405374B4FD6770F /* Pods-HPY9Pasture.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

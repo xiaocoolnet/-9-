@@ -18,9 +18,19 @@ class HPYLoginController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "登录"
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
         self.createrRightNavButton()
         configureUI()
         addTargetAction()
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(true)
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
+    }
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(true)
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
     }
     
     
