@@ -79,8 +79,8 @@ class MapSelectViewController: UIViewController,BMKMapViewDelegate,BMKGeoCodeSea
     func setSearchBar()
     {
         
-        searchBar.showsCancelButton = true
-        
+        searchBar.showsCancelButton = false
+        searchBar.placeholder = "输入城市或拼音查询"
         searchBar.delegate = self
         self.view.addSubview(searchBar)
         
@@ -135,10 +135,10 @@ class MapSelectViewController: UIViewController,BMKMapViewDelegate,BMKGeoCodeSea
         option.keyword = keyWord
         if( searcher.suggestionSearch(option) )
         {
-            print("建议检索成功")
+            NSLOG("建议检索成功")
         }else
         {
-            print("建议检索失败")
+            NSLOG("建议检索失败")
         }
         
     }
@@ -156,7 +156,7 @@ class MapSelectViewController: UIViewController,BMKMapViewDelegate,BMKGeoCodeSea
         if flag {
             
         } else {
-            print("反geo 检索发送失败")
+            NSLOG("反geo 检索发送失败")
         }
         
         
@@ -164,8 +164,16 @@ class MapSelectViewController: UIViewController,BMKMapViewDelegate,BMKGeoCodeSea
     
     //MARK: -UISarchBarDelegate
     func searchBarTextDidBeginEditing(searchBar: UISearchBar) {
+        searchBar.showsCancelButton = true
         searchTableView.hidden = false
-        print("将要开始编辑")
+        
+        
+        for view in searchBar.subviews[0].subviews{
+            if view.isKindOfClass(UIButton) {
+                (view as! UIButton).setTitle("取消", forState: .Normal)
+            }
+        }
+        NSLOG("将要开始编辑")
     }
     func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
         
@@ -194,7 +202,7 @@ class MapSelectViewController: UIViewController,BMKMapViewDelegate,BMKGeoCodeSea
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         if( tableView == interstTableView)
         {
-            let cell = UITableViewCell.init(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "InterstableView")
+            let cell = PublicTableViewCell.init(style: UITableViewCellStyle.Subtitle)
             
             cell.textLabel?.text = interstArray[indexPath.row].name
             
@@ -203,7 +211,7 @@ class MapSelectViewController: UIViewController,BMKMapViewDelegate,BMKGeoCodeSea
             return cell
         }else{
             
-            let cell = UITableViewCell.init(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "SearchtableView")
+            let cell = PublicTableViewCell.init(style: UITableViewCellStyle.Subtitle)
             cell.textLabel?.text = searchResult[indexPath.row].name
             cell.detailTextLabel?.text = searchResult[indexPath.row].adress
             return cell
@@ -213,7 +221,6 @@ class MapSelectViewController: UIViewController,BMKMapViewDelegate,BMKGeoCodeSea
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        
         if(tableView == interstTableView)
         {
             let index = NSIndexPath.init(forRow: 0, inSection: 0)
@@ -261,7 +268,7 @@ class MapSelectViewController: UIViewController,BMKMapViewDelegate,BMKGeoCodeSea
     
     //MARK: - SuggestionDelegate
     func onGetSuggestionResult(searcher: BMKSuggestionSearch!, result: BMKSuggestionResult!, errorCode error: BMKSearchErrorCode) {
-        print("推荐代理")
+        NSLOG("推荐代理")
         searchTableView.hidden = false
         if result == nil{
             return
@@ -327,8 +334,8 @@ class MapSelectViewController: UIViewController,BMKMapViewDelegate,BMKGeoCodeSea
         
     }
     func mapView(mapView: BMKMapView!, onClickedMapBlank coordinate: CLLocationCoordinate2D) {
-        print("点击了地图")
-        print(coordinate)
+        NSLOG("点击了地图")
+        NSLOG(coordinate)
         LocationForView = CLLocation.init(latitude: coordinate.latitude, longitude: coordinate.longitude)
         createPointAnmation(LocationForView, Title: "")
     }

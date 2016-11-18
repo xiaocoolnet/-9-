@@ -135,7 +135,7 @@ class CommunityIntroductionViewController: UIViewController,SDCycleScrollViewDel
     }
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath){
         
-        print(indexPath)
+        NSLOG(indexPath)
     }
     
     

@@ -55,6 +55,7 @@ class HPYCommunityCtrler: UIViewController,UICollectionViewDelegate,UICollection
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath)
+        
         let headerCellView = MainImageAndTextButton.init(frame: CGRectMake(0, 0, (Screen_W-4)/3, (Screen_W-4)/3), imageFrame: CGRectMake(((Screen_W-4)/3-53*px)/2, 15*px, 53*px, 53*px), textFrame: CGRectMake(0, 68*px, (Screen_W-4)/3, 50), imageName: self.imageArray[indexPath.item], labelText: self.textArray[indexPath.item])
         headerCellView.tag = indexPath.item
         headerCellView.addTarget(self, action: #selector(self.headerCellViewAction(_:)), forControlEvents: .TouchUpInside)

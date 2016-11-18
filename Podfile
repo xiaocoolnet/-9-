@@ -12,6 +12,8 @@ pod  'SwiftyJSON', '~>2.4.0'
 pod 'SDAutoLayout', '~> 2.1.3'
 pod 'SDWebImage', '3.7.6’
 pod 'SDCycleScrollView','~> 1.64'
+pod 'SACollectionViewVerticalScalingFlowLayout','2.3.0'
+
 
 
   # Pods for HPY9Pasture

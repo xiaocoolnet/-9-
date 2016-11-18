@@ -51,7 +51,7 @@ class RetireServerViewController: UIViewController,UITableViewDelegate,UITableVi
     
 //    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath){
 //        
-//        print(indexPath)
+//        NSLOG(indexPath)
 //    }
     
     

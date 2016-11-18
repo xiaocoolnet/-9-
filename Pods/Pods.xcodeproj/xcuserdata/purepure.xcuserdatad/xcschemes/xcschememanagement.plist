@@ -29,6 +29,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SACollectionViewVerticalScalingFlowLayout.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>SDAutoLayout.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -57,22 +62,27 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>0E2EB98DAB9801BC39B1426453A37076</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>0F8675483BADB7F08F4AA1CCAB974085</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>29DD99664D189A7CA206368F493B1E0B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>2D5BDB1F0BFA3AC284133C0AA3FDB794</key>
+		<key>484DCE0FC570856359C4B72D3A671E93</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3472A9BAAF3F4F0877255F9483759AB8</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>511A466D36D0A4C1C2CDD21E1C4EE325</key>
+		<key>64E396A1014B40A5883A3550C54C87E2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -82,7 +92,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7FA658E912F93686A9DB8DFBA1D9A252</key>
+		<key>9041421A66D2C9B6D18E3115F27E21D2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -92,17 +102,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>B375EF3B22438AD1519CBB8A1B444E07</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>B5824F7BFEFED8EE2F3F692AEC253BBC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>DCCFAF986DD718EDF31F5AB31C571EAC</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>F618306C04F0071EECE48EAA0DCE5430</key>
+		<key>F430F15734737945DE6192700C22E68F</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -33,17 +33,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate,BMKGeneralDelegate {
         if ud.boolForKey("ISLogin") {//判断是否需要登录
             
         }else{
+            //为登录跳转登录页面
             let NAV1 = UINavigationController.init(rootViewController: HPYLoginController())
-            NAVC.presentViewController(NAV1, animated: true, completion: {
-                
-            })
+//            NAVC.presentViewController(NAV1, animated: true, completion: {
+//            
+//            })
         }
         
         /***********************百度地图********************************/
         // 要使用百度地图，请先启动BaiduMapManager
         _mapManager = BMKMapManager()
         // 如果要关注网络及授权验证事件，请设定generalDelegate参数
-        let ret = _mapManager?.start("SdD0fiLvsqqWuoAUZWhDmF3BuU4ovmHA", generalDelegate: self)
+        let ret = _mapManager?.start("ZYrOi8YPt6NoNBvaYV5b2RxC1r0z0Bxv", generalDelegate: self)
         if ret == false {
             NSLog("manager start failed!")
         }

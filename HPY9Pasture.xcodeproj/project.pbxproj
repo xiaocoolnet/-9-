@@ -69,6 +69,7 @@
 		774D325C1DC3523600DC0401 /* RetireTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 774D325A1DC3523600DC0401 /* RetireTableViewCell.xib */; };
 		774D325F1DC3526200DC0401 /* RetireRecordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774D325D1DC3526200DC0401 /* RetireRecordTableViewCell.swift */; };
 		774D32601DC3526200DC0401 /* RetireRecordTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 774D325E1DC3526200DC0401 /* RetireRecordTableViewCell.xib */; };
+		7764D1431DDEA64600634618 /* WisdomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7764D1421DDEA64600634618 /* WisdomTableViewCell.swift */; };
 		7768FBDB1DC98EB7008586F6 /* PublicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7768FBDA1DC98EB7008586F6 /* PublicTableViewCell.swift */; };
 		7768FBEB1DC9E781008586F6 /* ColorfulNameLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7768FBEA1DC9E781008586F6 /* ColorfulNameLabel.m */; };
 		777E11D11DC0B99F00ABA9C6 /* GXAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 777E11D01DC0B99F00ABA9C6 /* GXAlertView.m */; };
@@ -273,6 +274,7 @@
 		774D325A1DC3523600DC0401 /* RetireTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RetireTableViewCell.xib; sourceTree = "<group>"; };
 		774D325D1DC3526200DC0401 /* RetireRecordTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RetireRecordTableViewCell.swift; sourceTree = "<group>"; };
 		774D325E1DC3526200DC0401 /* RetireRecordTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RetireRecordTableViewCell.xib; sourceTree = "<group>"; };
+		7764D1421DDEA64600634618 /* WisdomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WisdomTableViewCell.swift; sourceTree = "<group>"; };
 		7768FBDA1DC98EB7008586F6 /* PublicTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublicTableViewCell.swift; sourceTree = "<group>"; };
 		7768FBE91DC9E781008586F6 /* ColorfulNameLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorfulNameLabel.h; sourceTree = "<group>"; };
 		7768FBEA1DC9E781008586F6 /* ColorfulNameLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorfulNameLabel.m; sourceTree = "<group>"; };
@@ -488,6 +490,7 @@
 			isa = PBXGroup;
 			children = (
 				7708A6321DC08137005573D2 /* ImageAndTextTableViewCell.swift */,
+				7764D1421DDEA64600634618 /* WisdomTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -921,6 +924,7 @@
 				43798637D352F63A6BA21BCE /* [CP] Embed Pods Frameworks */,
 				FFD526E0E3EBE4C5D2518A4F /* [CP] Copy Pods Resources */,
 				77CD097D1DCB47080033454B /* Embed Frameworks */,
+				7743783F1DD1773A0073E3FB /* Warning */,
 			);
 			buildRules = (
 			);
@@ -985,6 +989,7 @@
 				TargetAttributes = {
 					7708A5EA1DC080B9005573D2 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 2CBFXYSAM7;
 					};
 					7708A5FE1DC080B9005573D2 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -1157,6 +1162,20 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		7743783F1DD1773A0073E3FB /* Warning */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Warning;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "TAGS=\"TODO:|FIXME:\"\necho \"searching ${SRCROOT} for ${TAGS}\"\nfind \"${SRCROOT}\" \\( -name \"*.swift\" \\) -print0 | xargs -0 egrep --with-filename --line-number --only-matching \"($TAGS).*\\$\" | perl -p -e \"s/($TAGS)/ warning: \\$1/\"\n";
+		};
 		8AC638BBFC37A608E232B521 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1196,6 +1215,7 @@
 			files = (
 				7708A64B1DC08137005573D2 /* ImageAndTextTableViewCell.swift in Sources */,
 				7708A6C51DC081D0005573D2 /* NSDataEx.m in Sources */,
+				7764D1431DDEA64600634618 /* WisdomTableViewCell.swift in Sources */,
 				7708A6C41DC081D0005573D2 /* MD5DataSigner.m in Sources */,
 				777E11D11DC0B99F00ABA9C6 /* GXAlertView.m in Sources */,
 				77FBABF71DC899F10068F995 /* HPYHomeController.swift in Sources */,

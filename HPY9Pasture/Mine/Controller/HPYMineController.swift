@@ -14,11 +14,12 @@ class HPYMineController: UIViewController {
     var myHeaderImageView = ColorfulNameLabel()
     let myHeaderImageButton = UIButton()
     let loginButton = UIButton()
+    let toolBackView = UIView()//九宫格背景图
     
     let orderStateTextArray = ["待付款","待发货","待收货","待评价","售后"]
-    let orderStateImageArray = ["wode_daifukuan","wode_daifahuo","wode_daishouhuo","wode_daipingjia","wode_shouhou"]
-    let toolTextArray = ["机票","收藏","关注","足迹","快递","通信","卡卷","其他"]
-    let toolImageArray = ["wode_jipiao","wode_shoucang","wode_guanzhu","wode_zuji","wode_kuaidi","wode_tongxin","wode_kaquan","wode_qita"]
+    let orderStateImageArray = ["wode_daifahuo","wode_daifahuo","wode_daishouhuo","wode_daipingjia","wode_shouhou"]
+    let toolTextArray = ["健康档案","收藏","关注","足迹","政府采购","通信","卡卷","账单","其他"]
+    let toolImageArray = ["wode_dangan","wode_shoucang","wode_guanzhu","wode_zuji","wode_zhegnfucaigou","wode_tongxin","wode_qinqingquan","wode_zhangdan","wode_qita"]
     
     
     
@@ -28,8 +29,9 @@ class HPYMineController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = LGBackColor
         
-        myScrollView.frame = CGRectMake(0, 0, WIDTH, HEIGHT-46)
+        myScrollView.frame = CGRectMake(0, -23, WIDTH, HEIGHT-27)
         myScrollView.backgroundColor = LGBackColor
+        
         
         self.view.addSubview(myScrollView)
         
@@ -40,19 +42,20 @@ class HPYMineController: UIViewController {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(true)
-        self.navigationController?.setNavigationBarHidden(true, animated: false)
+        self.navigationController?.navigationBar.hidden = true
     }
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(true)
-        self.navigationController?.setNavigationBarHidden(true, animated: false)
+        self.navigationController?.navigationBar.hidden = true
     }
 
     
     func configureUI(){
         
-        let headerBackView = UIView()
-        headerBackView.backgroundColor = NavColor
-        headerBackView.frame = CGRectMake(0, 0, WIDTH, 120*px)
+        let headerBackView = UIImageView()
+        headerBackView.image = UIImage(named: "wode_beijing")
+        headerBackView.frame = CGRectMake(0, 0, WIDTH, 133*px)
+        headerBackView.userInteractionEnabled = true
         self.myScrollView.addSubview(headerBackView)
         self.myHeaderImageView = ColorfulNameLabel.init(frame: CGRectMake(15*px, 40*px, 55*px, 55*px)) 
         self.myHeaderImageView.text = "未知"
@@ -74,6 +77,20 @@ class HPYMineController: UIViewController {
         loginButton.addTarget(self, action: #selector(self.clickedLogBtn(_:)), forControlEvents: .TouchUpInside)
         headerBackView.addSubview(loginButton)
         
+        let setButton = UIButton.init(frame: CGRectMake(WIDTH-80*px, 23, 19*px, 19*px))
+        setButton.backgroundColor = UIColor.clearColor()
+        setButton.setImage(UIImage(named: "wode_shezhi"), forState: .Normal)
+        setButton.addTarget(self, action: #selector(self.setButtonAction), forControlEvents: .TouchUpInside)
+        
+        
+        let messageButton = UIButton.init(frame: CGRectMake(WIDTH-40*px, 23, 22*px, 17*px))
+        messageButton.backgroundColor = UIColor.clearColor()
+        messageButton.setImage(UIImage(named: "email"), forState: .Normal)
+        messageButton.addTarget(self, action: #selector(self.messageButtonAction), forControlEvents: .TouchUpInside)
+        
+        headerBackView.addSubview(setButton)
+        headerBackView.addSubview(messageButton)
+        
         let goRightImageView = UIImageView()
         goRightImageView.backgroundColor = UIColor.clearColor()
         goRightImageView.image = UIImage(named: "wode_jiantou")
@@ -93,8 +110,8 @@ class HPYMineController: UIViewController {
         allOrderButton.backgroundColor = UIColor.whiteColor()
         allOrderButton.setTitleColor(UIColor.grayColor(), forState: .Normal)
         allOrderButton.setTitle("查看全部订单", forState: .Normal)
-        allOrderButton.addTarget(self, action: #selector(self.allOrderButtonAction), forControlEvents: .TouchUpInside)
-        allOrderButton.titleLabel?.font = MainFont
+//        allOrderButton.addTarget(self, action: #selector(self.allOrderButtonAction), forControlEvents: .TouchUpInside)
+        allOrderButton.titleLabel?.font = UIFont.systemFontOfSize(13)
         allOrderButton.contentHorizontalAlignment = .Center
         self.myScrollView.addSubview(allOrderButton)
         let rightGrayImageView = UIImageView()
@@ -102,8 +119,13 @@ class HPYMineController: UIViewController {
         rightGrayImageView.image = UIImage(named:"wode_jiantouhuise")
         self.myScrollView.addSubview(rightGrayImageView)
         
+        let lookMyAllOrderButton = UIButton.init(frame: CGRectMake(0, headerBackView.frame.height, WIDTH, 44*px))
+        lookMyAllOrderButton.backgroundColor = UIColor.clearColor()
+        lookMyAllOrderButton.addTarget(self, action: #selector(self.lookMyAllOrderButtonAction), forControlEvents: .TouchUpInside)
+        
+        
         for index in 0...orderStateTextArray.count-1 {//订单状态按钮
-            let myOrderStateButton = MainImageAndTextButton.init(frame: CGRectMake(CGFloat(index)*WIDTH/5, allOrderButton.frame.height+allOrderButton.frame.origin.y+1, WIDTH/5, 56*px), imageFrame: CGRectMake((WIDTH/5-20*px)/2, 8*px, 20*px, 18*px), textFrame: CGRectMake(0, 26*px, WIDTH/5, 30*px), imageName: self.orderStateImageArray[index], labelText: self.orderStateTextArray[index])
+            let myOrderStateButton = MainImageAndTextButton.init(frame: CGRectMake(CGFloat(index)*WIDTH/5, allOrderButton.frame.height+allOrderButton.frame.origin.y+1, WIDTH/5, 56*px), imageFrame: CGRectMake((WIDTH/5-23*px)/2, 8*px, 23*px, 18*px), textFrame: CGRectMake(0, 26*px, WIDTH/5, 30*px), imageName: self.orderStateImageArray[index], labelText: self.orderStateTextArray[index])
             myOrderStateButton.backgroundColor = UIColor.whiteColor()
             myOrderStateButton.downTextLable.textColor = UIColor.grayColor()
             myOrderStateButton.downTextLable.font = MainFont
@@ -113,16 +135,75 @@ class HPYMineController: UIViewController {
             
         }
         
+        
+        let chaperonageOfHospital = UILabel()
+        chaperonageOfHospital.frame = CGRectMake(0, allOrderButton.frame.origin.y+110*px, WIDTH/2, 44*px)
+        chaperonageOfHospital.backgroundColor = UIColor.whiteColor()
+        chaperonageOfHospital.text = "  医院陪护"
+        chaperonageOfHospital.font = MainFont
+        self.myScrollView.addSubview(chaperonageOfHospital)
+        
+        let watchCCTV = UILabel()
+        
+        watchCCTV.frame = CGRectMake(WIDTH/2, headerBackView.frame.height+110*px, WIDTH/2, 44*px)
+        watchCCTV.backgroundColor = UIColor.whiteColor()
+        watchCCTV.textColor = UIColor.grayColor()
+        watchCCTV.text = "查看监控"
+        //        allOrderButton.addTarget(self, action: #selector(self.allOrderButtonAction), forControlEvents: .TouchUpInside)
+        watchCCTV.font = UIFont.systemFontOfSize(13)
+        watchCCTV.textAlignment = .Center
+        self.myScrollView.addSubview(watchCCTV)
+        let rightGrayImageView2 = UIImageView()
+        rightGrayImageView2.frame = CGRectMake(WIDTH-23*px, headerBackView.frame.height+110*px+(44-13)/2*px, 7*px, 13*px)
+        rightGrayImageView2.image = UIImage(named:"wode_jiantouhuise")
+        self.myScrollView.addSubview(rightGrayImageView2)
+        
+        let chaperonageOfHospitalButton = UIButton.init(frame: CGRectMake(0, headerBackView.frame.height+110*px, WIDTH, 44*px))
+        chaperonageOfHospitalButton.backgroundColor = UIColor.clearColor()
+        chaperonageOfHospitalButton.addTarget(self, action: #selector(self.chaperonageOfHospitalButtonAction), forControlEvents: .TouchUpInside)
+        
+        
+        
+        let serverOfHousekeeping = UILabel()
+        serverOfHousekeeping.frame = CGRectMake(0, allOrderButton.frame.origin.y+110*px+45*px, WIDTH/2, 44*px)
+        serverOfHousekeeping.backgroundColor = UIColor.whiteColor()
+        serverOfHousekeeping.text = "  家政服务"
+        serverOfHousekeeping.font = MainFont
+        self.myScrollView.addSubview(serverOfHousekeeping)
+        
+        let lookOrder = UILabel()
+        
+        lookOrder.frame = CGRectMake(WIDTH/2, headerBackView.frame.height+110*px+45*px, WIDTH/2, 44*px)
+        lookOrder.backgroundColor = UIColor.whiteColor()
+        lookOrder.textColor = UIColor.grayColor()
+        lookOrder.text = "查看订单"
+        //        allOrderButton.addTarget(self, action: #selector(self.allOrderButtonAction), forControlEvents: .TouchUpInside)
+        lookOrder.font = UIFont.systemFontOfSize(13)
+        lookOrder.textAlignment = .Center
+        self.myScrollView.addSubview(lookOrder)
+        let rightGrayImageView3 = UIImageView()
+        rightGrayImageView3.frame = CGRectMake(WIDTH-23*px, headerBackView.frame.height+110*px+(44-13)/2*px+45*px, 7*px, 13*px)
+        rightGrayImageView3.image = UIImage(named:"wode_jiantouhuise")
+        self.myScrollView.addSubview(rightGrayImageView3)
+        
+        let serverOfHousekeepingButton = UIButton.init(frame: CGRectMake(0, headerBackView.frame.height+110*px+45*px, WIDTH, 44*px))
+        serverOfHousekeepingButton.backgroundColor = UIColor.clearColor()
+        serverOfHousekeepingButton.addTarget(self, action: #selector(self.serverOfHousekeepingButtonAction), forControlEvents: .TouchUpInside)
+        
+        
+        
+        
+        
         let toolAboutLabel = UILabel()
         toolAboutLabel.text = "   必备工具"
-        toolAboutLabel.backgroundColor = UIColor.whiteColor()
+        toolAboutLabel.backgroundColor = LGBackColor
         toolAboutLabel.font = MainFont
-        toolAboutLabel.frame = CGRectMake(0, allOrderButton.frame.origin.y+116*px, WIDTH, 44*px)
+        toolAboutLabel.frame = CGRectMake(0, serverOfHousekeepingButton.frame.origin.y+46*px, WIDTH, 44*px)
         self.myScrollView.addSubview(toolAboutLabel)
         
-        let toolBackView = UIView()
+        
         toolBackView.backgroundColor = LGBackColor
-        toolBackView.frame = CGRectMake(0, toolAboutLabel.frame.origin.y+toolAboutLabel.frame.height, WIDTH, CGFloat(self.toolTextArray.count/3+1)*81*px)
+        toolBackView.frame = CGRectMake(0, toolAboutLabel.frame.origin.y+toolAboutLabel.frame.height, WIDTH, CGFloat((self.toolTextArray.count-1)/3+1)*81*px)
         
         var count = toolTextArray.count
         if toolTextArray.count%3 == 1 {
@@ -142,7 +223,7 @@ class HPYMineController: UIViewController {
                 textStr = self.toolTextArray[index]
             }
             
-            let toolButton = MainImageAndTextButton.init(frame: CGRectMake(CGFloat(index%3)*((WIDTH-2)/3+1), CGFloat(index/3)*80*px+(CGFloat(index/3+1)), (WIDTH-2)/3, 80*px), imageFrame: CGRectMake(((WIDTH-2)/3-23*px)/2, 12*px, 23*px, 24*px), textFrame: CGRectMake(0, 40*px, (WIDTH-2)/3, 40*px), imageName:imageStr , labelText:textStr )
+            let toolButton = MainImageAndTextButton.init(frame: CGRectMake(CGFloat(index%3)*((WIDTH-2)/3+1), CGFloat(index/3)*80*px+(CGFloat(index/3+1)), (WIDTH-2)/3, 80*px), imageFrame: CGRectMake(((WIDTH-2)/3-36*px)/2, 12*px, 36*px, 33*px), textFrame: CGRectMake(0, 40*px, (WIDTH-2)/3, 40*px), imageName:imageStr , labelText:textStr )
             toolButton.downTextLable.font = MainFont
             toolButton.tag = index + 100
             toolButton.addTarget(self, action: #selector(self.toolButtonAction(_:)), forControlEvents: .TouchUpInside)
@@ -153,6 +234,8 @@ class HPYMineController: UIViewController {
         }
         
         self.myScrollView.addSubview(toolBackView)
+        
+        myScrollView.contentSize = CGSizeMake(WIDTH, toolBackView.height+toolBackView.origin.y+20)
 //
 //        
 //        let homeCareButton = UIButton.init(frame: CGRectMake(50, 200, 60, 30))
@@ -195,13 +278,25 @@ class HPYMineController: UIViewController {
         registerVC.hidesBottomBarWhenPushed = true
         navigationController?.pushViewController(registerVC, animated: true)
     }
-    func allOrderButtonAction(){
+    func lookMyAllOrderButtonAction(){
         
     }
     func myOrderStateButtonAction(sender:UIButton){
         
     }
+    func chaperonageOfHospitalButtonAction(){
+        
+    }
+    func serverOfHousekeepingButtonAction(){
+        
+    }
+    func setButtonAction(){
+        
+    }
+    func messageButtonAction(){
+        
+    }
     func toolButtonAction(sender:UIButton){
-        print(sender.tag)
+        NSLOG(sender.tag)
     }
 }

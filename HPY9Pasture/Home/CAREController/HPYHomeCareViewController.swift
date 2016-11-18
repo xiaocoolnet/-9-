@@ -82,7 +82,7 @@ class HPYHomeCareViewController: UIViewController,UITableViewDelegate,UITableVie
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath){
         
-        print(indexPath)
+        NSLOG(indexPath)
     }
     
     
