@@ -14,6 +14,16 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>PagingMenuController-PagingMenuController.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>PagingMenuController.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-HPY9Pasture.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -62,12 +72,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0E2EB98DAB9801BC39B1426453A37076</key>
+		<key>0B09CAF3376E5484EECA374752AB325D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>0F8675483BADB7F08F4AA1CCAB974085</key>
+		<key>12709FF06D1C8041285D0371A0E17024</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>2212E4CAA6F3D602DF324AD4CFBF6475</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>23D4B5C9CC657B68134305BFEB076270</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -77,12 +97,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>484DCE0FC570856359C4B72D3A671E93</key>
+		<key>39F325916D2DEF5F4F7B9CC099FFFEC5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>64E396A1014B40A5883A3550C54C87E2</key>
+		<key>4C2A8C4219874A832BAFD6CBCA783151</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5BBB34170986C897E8931C1768FD6EE3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -92,7 +117,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9041421A66D2C9B6D18E3115F27E21D2</key>
+		<key>A7E479C8BA60427511AEE0C41D768710</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -102,17 +127,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B375EF3B22438AD1519CBB8A1B444E07</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>B5824F7BFEFED8EE2F3F692AEC253BBC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F430F15734737945DE6192700C22E68F</key>
+		<key>FC143C87AE83A2453B549D9CBC1B0C81</key>
 		<dict>
 			<key>primary</key>
 			<true/>

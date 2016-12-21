@@ -78,12 +78,12 @@ class HPYHomeController: UIViewController ,UICollectionViewDataSource,UIScrollVi
         layout.alphaMode = .Hard
         
         layout.scrollDirection = .Horizontal
-        layout.itemSize = CGSizeMake(100*px, 100*px)
+        layout.itemSize = CGSizeMake(110*px, 110*px)
         layout.sectionInset = UIEdgeInsetsMake(5*px, 5*px, 5*px, 5*px)
-        layout.minimumInteritemSpacing = 10
-        layout.minimumLineSpacing = 10
+        layout.minimumInteritemSpacing = 0
+        layout.minimumLineSpacing = 0
         
-        collectionView = UICollectionView(frame:CGRectMake(0, backImageView.height, WIDTH, 120*px),collectionViewLayout:layout)
+        collectionView = UICollectionView(frame:CGRectMake(0, backImageView.height, WIDTH, 110*px),collectionViewLayout:layout)
         collectionView.backgroundColor = UIColor.whiteColor()
         collectionView.registerClass(SACollectionViewVerticalScalingCell.self, forCellWithReuseIdentifier: kCellIdentifier)
         //        collectionView.tag = 10003
@@ -191,7 +191,7 @@ class HPYHomeController: UIViewController ,UICollectionViewDataSource,UIScrollVi
             myview.removeFromSuperview()
         }
         
-        let headerCellView = MainImageAndTextButton.init(frame: cell.bounds, imageFrame: CGRectMake(9*px, 0, 82*px, 82*px), textFrame: CGRectMake(0, 82*px, 100*px, 28*px), imageName: self.imageArray[tagNumber], labelText: self.textArray[tagNumber])
+        let headerCellView = MainImageAndTextButton.init(frame: CGRectMake(0, 0, 110*px, 110*px), imageFrame: CGRectMake(9*px, 0, 82*px, 82*px), textFrame: CGRectMake(0, 82*px, 100*px, 28*px), imageName: self.imageArray[tagNumber], labelText: self.textArray[tagNumber])
         headerCellView.downTextLable.font = UIFont.systemFontOfSize(14)
     
         headerCellView.tag = tagNumber

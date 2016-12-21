@@ -20,7 +20,10 @@
 #import <AliyunPlayerSDK/AliVcMediaPlayer.h>
 #import <MediaPlayer/MediaPlayer.h>
 #import <AVFoundation/AVAudioSession.h>
+#import "NIMSDK.h"
+#import "NIMNetCallManagerProtocol.h"
 
+#import "NIMAVChat.h"
 
 
 

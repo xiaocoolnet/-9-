@@ -12,13 +12,26 @@ class WisdomControllerViewController: UIViewController,SDCycleScrollViewDelegate
     
     let mytableView = UITableView()
     
-    var a = ["mainTitle":"智慧社区","classify":[["image":"rijianzhaol","text":"日常照料"],["image":"zhulaoshitang","text":"助老食堂"],["image":"huzhuyanglao","text":"互助养老"],["image":"kangfuzhognxin","text":"康复中心"],["image":"yuanchegnrenzheng","text":"远程认证"],["image":"shequjianjie","text":"社区简介"],["image":"wuyefei","text":"物业费"],["image":"disanfang","text":"第三方缴费"],["image":"xinxiqiang","text":"信息墙"],["image":"bianminshangcheng-1","text":"便民商城"],["image":"yijiantong","text":"一键通"],["image":"shipindating","text":"视频大厅"]]]
+//    var a = []
+//    var b = []
+//    var c = []
+//    var d = []
     
-    var b = ["mainTitle":"机构养老","classify":[["image":"qiyexinxi","text":"企业信息"],["image":"tuzhurenyuan","text":"入住人员"],["image":"renlizhiyuan","text":"人力资源"],["image":"kaoqianguanli","text":"考勤管理"],["image":"houqinguanli","text":"后勤管理"],["image":"butieguanli","text":"补贴管理"],["image":"caiwuguanli","text":"财务管理"],["image":"shipindating","text":"视频大厅"]]]
+    var a = ["mainTitle":"智慧社区","classify":[["image":"fuwudating","text":"服务大厅"],["image":"shequyanglao","text":"社区养老"],["image":"yijiantong","text":"一键通"],["image":"bianminshangcheng-1","text":"便民商城"],["image":"jiatingchufang","text":"家庭厨房"],["image":"wuyefei","text":"物业缴费"]]]
     
-    var c = ["mainTitle":"居家养老","classify":[["image":"bianminshangcheng-1","text":"便民商城"],["image":"jiatingfuwu","text":"家庭服务"],["image":"peihufuwu","text":"陪护服务"],["image":"gongjuxinag","text":"工具箱"],["image":"hulizhan","text":"护理站"],["image":"anbao","text":"安保＋养老"]]]
+    var b = ["mainTitle":"机构养老","classify":[["image":"qiyexinxi","text":"企业信息"],["image":"tuzhurenyuan","text":"入住人员"],["image":"fangjainfenbu","text":"房间分布"],["image":"kaoqianguanli","text":"考勤管理"],
+        ["image":"butieguanli","text":"补贴管理"],
+        ["image":"caiwuguanli","text":"财务管理"],
+        ["image":"renlizhiyuan","text":"人力资源"],
+        ["image":"houqinguanli","text":"后勤管理"],["image":"yaofangguanli","text":"药房管理"],["image":"xiaofanganquan","text":"消防安全"]
+        ,["image":"yaojainshipin","text":"药检食品"]]]
     
-    var d = ["mainTitle":"时尚生活","classify":[["image":"laoniandaxue","text":"老年大学"],["image":"xiaojuyuan","text":"小剧院"],["image":"组1","text":"文娱室"],["image":"dianyingyaun","text":"电影院"]]]
+    var c = ["mainTitle":"居家养老","classify":[["image":"jiankangdangan","text":"健康档案"],["image":"jiatingfuwu","text":"家庭服务"],
+        ["image":"peihufuwu","text":"陪护服务"],["image":"shequmenzhen","text":"社区门诊"],["image":"jingshenweiji","text":"精神慰藉"],["image":"quanyibaozhang","text":"权益保障"],["image":"hulizhan-1","text":"护理站"],["image":"efangtianxia","text":"e房天下"],["image":"jipiao","text":"机票"],["image":"huochepaio","text":"火车票"],["image":"qichepiao","text":"汽车票"],["image":"shegnhuojiaofei","text":"生活缴费"],["image":"didi","text":"滴滴出行"],["image":"gongjuxinag","text":"工具箱"]]]
+    
+    var d = ["mainTitle":"时尚生活","classify":[["image":"jingshenweiji","text":"精神慰藉"],["image":"quanyibaozhang","text":"权益保障"],["image":"laoniandaxue","text":"老年大学"],
+        ["image":"tushuguan","text":"图书馆"],
+        ["image":"dianyingyaun","text":"电影院"],["image":"xiaojuyuan","text":"小剧院"],["image":"组1","text":"游戏厅"]]]
     
     var myDataSource = NSMutableArray()
     var isALLArray = NSMutableArray()
@@ -29,15 +42,11 @@ class WisdomControllerViewController: UIViewController,SDCycleScrollViewDelegate
     var dIsAll = Bool()
     
     
-//    [["mainTitle":"智慧社区","classify":[["image":"","text":"日常照料"],["image":"","text":"助老食堂"],["image":"","text":"互助养老"],["image":"","text":"康复中心"],["image":"","text":"远程认证"],["image":"","text":"社区简介"],["image":"","text":"物业费"],["image":"","text":"第三方缴费"],["image":"","text":"信息墙"],["image":"","text":"便民商城"],["image":"","text":"一键通"],["image":"","text":"视频大厅"]]],["mainTitle":"机构养老","classify":[["image":"","text":"企业信息"],["image":"","text":"入住人员"],["image":"","text":"人力资源"],["image":"","text":"考勤管理"],["image":"","text":"后勤管理"],["image":"","text":"补贴管理"],["image":"","text":"财务管理"],["image":"","text":"视频大厅"]]],["mainTitle":"居家养老","classify":[["image":"","text":"便民商城"],["image":"","text":"家庭服务"],["image":"","text":"陪护服务"],["image":"","text":"工具箱"],["image":"","text":"护理站"],["image":"","text":"安保＋养老"]]],["mainTitle":"时尚生活","classify":[["image":"","text":"老年大学"],["image":"","text":"小剧院"],["image":"","text":"文娱室"],["image":"","text":"电影院"]]]]
-    
-    
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "智慧养老"
-        myDataSource = [a,b,c,d]
+        myDataSource = [a,c,b,d]
         isALLArray = [aIsAll,bIsAll,cIsAll,dIsAll]
         self.view.backgroundColor = LGBackColor
         self.createUI()
@@ -65,33 +74,33 @@ class WisdomControllerViewController: UIViewController,SDCycleScrollViewDelegate
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat{
         
         if (self.isALLArray[indexPath.row] as! Bool) == false{
-            if (self.myDataSource[indexPath.row].objectForKey("classify") as! NSArray).count > 4{
+            if (self.myDataSource[indexPath.row].objectForKey("classify") as! NSArray).count > 3{
                 return 98*px + WIDTH/2
             }else{
                 return 98*px + WIDTH/4
             }
         }else{
-            return 98*px + WIDTH/4*CGFloat(((self.myDataSource[indexPath.row].objectForKey("classify") as! NSArray).count)/4+1)
+            return 98*px + WIDTH/4*CGFloat(((self.myDataSource[indexPath.row].objectForKey("classify") as! NSArray).count)/4+1)+473*px
         }
         
         
         
     }
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath){
-        switch indexPath.row {
-        case 0:
-            let homeCareViewController = MapSelectViewController()
-            //        homeCareViewController.hidesBottomBarWhenPushed = true
-            self.navigationController?.pushViewController(homeCareViewController, animated: true)
-            break
-        case 2:
-            let homeCareViewController = HPYHomeCareViewController()
-            //        homeCareViewController.hidesBottomBarWhenPushed = true
-            self.navigationController?.pushViewController(homeCareViewController, animated: true)
-            break
-        default:
-            break
-        }
+//        switch indexPath.row {
+//        case 0:
+//            let homeCareViewController = MapSelectViewController()
+//            //        homeCareViewController.hidesBottomBarWhenPushed = true
+//            self.navigationController?.pushViewController(homeCareViewController, animated: true)
+//            break
+//        case 2:
+//            let homeCareViewController = HPYHomeCareViewController()
+//            //        homeCareViewController.hidesBottomBarWhenPushed = true
+//            self.navigationController?.pushViewController(homeCareViewController, animated: true)
+//            break
+//        default:
+//            break
+//        }
         
         NSLOG(indexPath)
     }
@@ -106,34 +115,23 @@ class WisdomControllerViewController: UIViewController,SDCycleScrollViewDelegate
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
         
-//        let cell = tableView.dequeueReusableCellWithIdentifier("mytableViewCell", forIndexPath: indexPath)
         let cell = WisdomTableViewCell.init(myDIC: (myDataSource[indexPath.row] as! NSDictionary),isAlll:isALLArray[indexPath.row] as! Bool)
-        let myarray = myDataSource[indexPath.row].objectForKey("classify") as! NSArray
-        if myarray.count > 8{
-            cell.lookAllButton.hidden = false
-            cell.lookAllButton.tag = indexPath.row
-            cell.lookAllButton.addTarget(self, action: #selector(self.lookAllButtonAction(_:)), forControlEvents: .TouchUpInside)
-        }else{
-            cell.lookAllButton.hidden = true
-            
-        }
-       
+        cell.targets = self
+        cell.selectionStyle = .None
+        cell.lookAllButton.tag = indexPath.row
+        cell.lookAllButton.addTarget(self, action: #selector(self.lookAllButtonAction(_:)), forControlEvents: .TouchUpInside)
         return cell
         
         
         
         
     }
-    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let mysectionView = UILabel()
-        mysectionView.backgroundColor = LGBackColor
-        mysectionView.frame = CGRectMake(0, 0, Screen_W, 10)
-        return mysectionView
-        
-    }
-    
+
+    //MARK: ------Action
     func lookAllButtonAction(sender:UIButton){
         let isalll = self.isALLArray[sender.tag] as! Bool
+        sender.setTitle("收起", forState: .Normal)
+        sender.setImage(UIImage(named: "shouhui"), forState: .Normal)
             
             
          self.isALLArray[sender.tag] = !isalll
@@ -141,11 +139,6 @@ class WisdomControllerViewController: UIViewController,SDCycleScrollViewDelegate
         
         self.mytableView.reloadData()
         
-//        let indexs = NSIndexPath.init(forRow: sender.tag, inSection: 0)
-//        let cell = mytableView.cellForRowAtIndexPath(indexs) as! WisdomTableViewCell
-//        mytableView.beginUpdates()
-//        cell.isAll = !cell.isAll
-//        mytableView.endUpdates()
     }
     
     

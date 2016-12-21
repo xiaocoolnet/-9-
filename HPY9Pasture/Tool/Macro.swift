@@ -9,7 +9,8 @@ import UIKit
 
 let LGBackColor = UIColor(red: 239/255.0, green: 239/255.0, blue: 239/255.0, alpha: 1)
 let NavColor = UIColor(red: 81/255.0, green: 166/255.0, blue: 255/255, alpha: 1)
-let MainFont = UIFont.systemFontOfSize(15)
+let MainTextBackColor = RGBACOLOR(149, g: 149, b: 149, a: 1)
+let MainFont = UIFont.systemFontOfSize(13)
 let Screen_H = UIScreen.mainScreen().bounds.height
 let Screen_W = UIScreen.mainScreen().bounds.width
 let px = Screen_W/375
@@ -25,4 +26,15 @@ func RGBACOLOR(r:Float,g:Float,b:Float,a:Float) -> UIColor{
 func NSLOG(someThing:Any){
     print(someThing)
 }
+//提示框
+
+func alert(message:String,delegate:AnyObject){
+    let alert = UIAlertView(title: "提示", message: message, delegate: delegate, cancelButtonTitle: "确定")
+    alert.show()
+}
+
+
+
+
+
 

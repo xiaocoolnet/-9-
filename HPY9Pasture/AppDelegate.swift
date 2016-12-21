@@ -9,7 +9,7 @@
 import UIKit
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate,BMKGeneralDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate,BMKGeneralDelegate ,NIMNetCallManagerDelegate{
 
     var window: UIWindow?
     var _mapManager: BMKMapManager?
@@ -35,10 +35,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate,BMKGeneralDelegate {
         }else{
             //为登录跳转登录页面
             let NAV1 = UINavigationController.init(rootViewController: HPYLoginController())
-//            NAVC.presentViewController(NAV1, animated: true, completion: {
-//            
-//            })
+            NAVC.presentViewController(NAV1, animated: true, completion: {
+            
+            })
         }
+        /***********************网易云信********************************/
+        
+        NIMSDK.sharedSDK().registerWithAppID("34d065a1b06fb569380c94d4c55841ec", cerName: "快乐9号")
+        //视频通话接听回调添加代理
+        NIMSDK.sharedSDK().netCallManager.addDelegate(self)
         
         /***********************百度地图********************************/
         // 要使用百度地图，请先启动BaiduMapManager
@@ -51,6 +56,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate,BMKGeneralDelegate {
         
         return true
     }
+    //MARK:-- NIMNetCallManagerDelegate//视频通话接听回调代理
+    func onReceive(callID: UInt64, from caller: String, type: NIMNetCallType, message extendMessage: String?) {
+        
+    }
+    
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.

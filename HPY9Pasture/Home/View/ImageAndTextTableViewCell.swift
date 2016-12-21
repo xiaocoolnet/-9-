@@ -19,7 +19,7 @@ class ImageAndTextTableViewCell: UITableViewCell {
         super.init(style: .Default, reuseIdentifier: "ImageAndTextTableViewCell")
         let lineView = UIView()
         lineView.backgroundColor = LGBackColor
-        lineView.frame = CGRectMake(0, self.frame.height-1, Screen_W, 1)
+        lineView.frame = CGRectMake(0, 43*px, Screen_W, 1*px)
         self.addSubview(lineView)
     }
     

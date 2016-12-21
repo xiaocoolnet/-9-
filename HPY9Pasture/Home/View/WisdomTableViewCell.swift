@@ -13,7 +13,16 @@ class WisdomTableViewCell: UITableViewCell {
     let mainTitle = UILabel()
     let classifyButtonBackView = UIView()
     let lookMoreButton = UIButton()
-    var targets:UIViewController!
+    let remoteVidioImageView = UIImageView()
+    let watchVidioImageView = UIImageView()
+    
+    let messageCell = UIImageView()
+    let messageCellButton = UIButton()
+    
+    
+    
+    
+    var targets = UIViewController()
     var lookAllButton = UIButton()
     let lineView = UIView()
     let footView = UIView()
@@ -33,7 +42,9 @@ class WisdomTableViewCell: UITableViewCell {
     init(myDIC:NSDictionary,isAlll:Bool){
         super.init(style: UITableViewCellStyle.Default , reuseIdentifier: "WisdomTableViewCell")
         self.backgroundColor = UIColor.whiteColor()
-        self.sd_addSubviews([mainTitle,classifyButtonBackView,lookAllButton,footView])
+        let lineView = UIView()
+        lineView.backgroundColor = LGBackColor
+        self.sd_addSubviews([mainTitle,lookAllButton,footView,remoteVidioImageView,watchVidioImageView,lineView,messageCell,messageCellButton])
         mainTitle.frame = CGRectMake(10, 0, width, 88*px)
         mainTitle.backgroundColor = UIColor.whiteColor()
         mainTitle.text = myDIC.objectForKey("mainTitle") as? String
@@ -58,58 +69,244 @@ class WisdomTableViewCell: UITableViewCell {
         if  isAlll {
             counts = classifyArray.count
         }else{
-            if classifyArray.count<9 {
+            if classifyArray.count < 8 {
                 counts = classifyArray.count
             }else{
-                counts = 8
+                counts = 7
                 
             }
         }
         
         
         
-        classifyButtonBackView.frame = CGRectMake(0, mainTitle.height, WIDTH, WIDTH/4*CGFloat((classifyArray.count-1)/4)+1)
-        if classifyArray.count > 8 {
+        classifyButtonBackView.frame = CGRectMake(0, mainTitle.height, WIDTH, (WIDTH/4)*(CGFloat((counts)/4)+1))
+        classifyButtonBackView.backgroundColor = UIColor.whiteColor()
+        self.addSubview(classifyButtonBackView)
+        NSLOG(CGFloat((counts)/4)+1)
+        NSLOG(WIDTH/4)
+        
+        for indexs in 0...counts {
+            if indexs == counts {
+                
+                if isAlll {
+                    let classifyButton = MainImageAndTextButton.init(frame: CGRectMake(WIDTH/4*CGFloat((indexs)%4), WIDTH/4*CGFloat((indexs)/4), WIDTH/4, WIDTH/4), imageFrame: CGRectMake((WIDTH/4-38*px)/2, 5*px, 38*px, 38*px), textFrame: CGRectMake(0, 43*px, WIDTH/4, WIDTH/4-43*px), imageName: "shouhui", labelText: "收起")
+                    classifyButton.downTextLable.font = UIFont.systemFontOfSize(13)
+                    lookAllButton = classifyButton
+                    
+                    classifyButtonBackView.addSubview(classifyButton)
+                }else{
+                    let classifyButton = MainImageAndTextButton.init(frame: CGRectMake(WIDTH/4*CGFloat((indexs)%4), WIDTH/4*CGFloat((indexs)/4), WIDTH/4, WIDTH/4), imageFrame: CGRectMake((WIDTH/4-38*px)/2, 5*px, 38*px, 38*px), textFrame: CGRectMake(0, 43*px, WIDTH/4, WIDTH/4-43*px), imageName: "zhankai", labelText: "展开")
+                    classifyButton.downTextLable.font = UIFont.systemFontOfSize(13)
+                    lookAllButton = classifyButton
+                    
+                    classifyButtonBackView.addSubview(classifyButton)
+                }
+                
+            }else{
+                let classifyButton = MainImageAndTextButton.init(frame: CGRectMake(WIDTH/4*CGFloat((indexs)%4), WIDTH/4*CGFloat((indexs)/4), WIDTH/4, WIDTH/4), imageFrame: CGRectMake((WIDTH/4-38*px)/2, 5*px, 38*px, 38*px), textFrame: CGRectMake(0, 43*px, WIDTH/4, WIDTH/4-43*px), imageName: classifyArray[indexs].objectForKey("image") as! String, labelText: classifyArray[indexs].objectForKey("text") as! String)
+                classifyButton.downTextLable.font = UIFont.systemFontOfSize(13)
+                
+                classifyButton.tag = indexs
+                
+                classifyButton.addTarget(self, action: #selector(self.classifyButtonAction(_:)), forControlEvents: .TouchUpInside)
+                classifyButtonBackView.addSubview(classifyButton)
+            }
             
-            lineView.backgroundColor = UIColor.grayColor()
-            lineView.frame = CGRectMake(10, classifyButtonBackView.height-1, WIDTH-20, 1)
-            classifyButtonBackView.addSubview(lineView)
             
-            lookAllButton.sd_layout()
-                .heightIs(44*px)
-                .widthIs(WIDTH)
-                .leftSpaceToView(self,0)
-                .bottomSpaceToView(self,10)
             
-            lookAllButton.backgroundColor = UIColor.whiteColor()
-            lookAllButton.setTitleColor(NavColor, forState: .Normal)
-            lookAllButton.setTitle("查看全部", forState: .Normal)
-            lookAllButton.contentHorizontalAlignment = .Center
-            lookAllButton.titleLabel?.font = MainFont
-//            lookAllButton.addTarget(self, action: #selector(self.lookAllButtonAction(_:)), forControlEvents: .TouchUpInside)
             
-//            self.addSubview(lookAllButton)
         }
         
-        for indexs in 0...counts-1 {
+        
+        if  isAlll {
+            remoteVidioImageView.sd_layout()
+                .heightIs(190*px)
+                .widthIs(WIDTH-10*px)
+                .topSpaceToView(classifyButtonBackView,5*px)
+                .leftSpaceToView(self,5*px)
+            remoteVidioImageView.layer.masksToBounds = true
+            remoteVidioImageView.layer.cornerRadius = 10
+            remoteVidioImageView.userInteractionEnabled = true
+            remoteVidioImageView.backgroundColor = UIColor.blackColor()
             
-            let classifyButton = MainImageAndTextButton.init(frame: CGRectMake(WIDTH/4*CGFloat((indexs)%4), WIDTH/4*CGFloat((indexs)/4), WIDTH/4, WIDTH/4), imageFrame: CGRectMake((WIDTH/4-38*px)/2, 5*px, 38*px, 38*px), textFrame: CGRectMake(0, 43*px, WIDTH/4, WIDTH/4-43*px), imageName: classifyArray[indexs].objectForKey("image") as! String, labelText: classifyArray[indexs].objectForKey("text") as! String)
-            classifyButton.downTextLable.font = UIFont.systemFontOfSize(13)
+            let titleLabel1 = UILabel.init(frame: CGRectMake(10*px, 0, WIDTH/2-5*px, 40))
+            titleLabel1.backgroundColor = UIColor.clearColor()
+            titleLabel1.text = "退休远程认证"
+            titleLabel1.textColor = UIColor.whiteColor()
+            titleLabel1.font = MainFont
             
-            classifyButton.addTarget(self, action: #selector(self.classifyButtonAction(_:)), forControlEvents: .TouchUpInside)
-            classifyButtonBackView.addSubview(classifyButton)
+            let certificationLabel = UILabel.init(frame: CGRectMake(WIDTH-90*px, 10*px, 60*px, 20*px))
+            certificationLabel.backgroundColor = UIColor.whiteColor()
+            certificationLabel.layer.masksToBounds = true
+            certificationLabel.layer.cornerRadius = 10*px
+            certificationLabel.text = "⦁未认证"
+            certificationLabel.font = UIFont.systemFontOfSize(13)
+            certificationLabel.textColor = UIColor.orangeColor()
             
+            
+            let certificationButton = UIButton.init(frame: CGRectMake(WIDTH/2-55*px, 75*px, 100*px, 35*px))
+            certificationButton.layer.masksToBounds = true
+            certificationButton.layer.cornerRadius = 35*px/2
+            certificationButton.layer.borderColor = UIColor.whiteColor().CGColor
+            certificationButton.layer.borderWidth = 1
+            certificationButton.setTitle("点击预约", forState: .Normal)
+            certificationButton.titleLabel?.font = UIFont.systemFontOfSize(14)
+            certificationButton.addTarget(self, action: #selector(self.certificationButtonAction), forControlEvents: .TouchUpInside)
+            
+            let timeLabel = UILabel.init(frame: CGRectMake(10*px, remoteVidioImageView.height-30*px, WIDTH-20*px, 20*px))
+            timeLabel.textColor = UIColor.whiteColor()
+            timeLabel.font = UIFont.systemFontOfSize(13)
+            timeLabel.text = "截止日期:2016.06.12 08:25"
+            timeLabel.backgroundColor = UIColor.clearColor()
+            
+      
+            remoteVidioImageView.addSubview(titleLabel1)
+            remoteVidioImageView.addSubview(certificationLabel)
+            remoteVidioImageView.addSubview(certificationButton)
+            remoteVidioImageView.addSubview(timeLabel)
+            
+            
+            
+            watchVidioImageView.sd_layout()
+                .heightIs(190*px)
+                .widthIs(WIDTH-10*px)
+                .topSpaceToView(remoteVidioImageView,10*px)
+                .leftSpaceToView(self,5*px)
+            
+            watchVidioImageView.layer.masksToBounds = true
+            watchVidioImageView.layer.cornerRadius = 10
+            watchVidioImageView.userInteractionEnabled = true
+            watchVidioImageView.backgroundColor = UIColor.blackColor()
+            
+            
+            let titleLabel2 = UILabel.init(frame: CGRectMake(10*px, 0, WIDTH/2-5*px, 40))
+            titleLabel2.backgroundColor = UIColor.clearColor()
+            titleLabel2.text = "社区晚会活动"
+            titleLabel2.textColor = UIColor.whiteColor()
+            titleLabel2.font = MainFont
+            
+            let onlineLabel = UILabel.init(frame: CGRectMake(WIDTH-90*px, 10*px, 60*px, 20*px))
+            onlineLabel.backgroundColor = UIColor.whiteColor()
+            onlineLabel.layer.masksToBounds = true
+            onlineLabel.layer.cornerRadius = 10*px
+            onlineLabel.text = "⦁看直播"
+            onlineLabel.font = UIFont.systemFontOfSize(13)
+            onlineLabel.textColor = UIColor.greenColor()
+            
+            
+            let watchOnlineButton = UIButton.init(frame: CGRectMake(WIDTH/2-55*px, 75*px, 100*px, 35*px))
+            watchOnlineButton.layer.masksToBounds = true
+            watchOnlineButton.layer.cornerRadius = 35*px/2
+            watchOnlineButton.layer.borderColor = UIColor.whiteColor().CGColor
+            watchOnlineButton.layer.borderWidth = 1
+            watchOnlineButton.setTitle("点击观看", forState: .Normal)
+            watchOnlineButton.titleLabel?.font = UIFont.systemFontOfSize(14)
+            watchOnlineButton.addTarget(self, action: #selector(self.watchOnlineButtonAction), forControlEvents: .TouchUpInside)
+            
+            let timeLabel2 = UILabel.init(frame: CGRectMake(10*px, watchVidioImageView.height-30*px, WIDTH-20*px, 20*px))
+            timeLabel2.textColor = UIColor.whiteColor()
+            timeLabel2.font = UIFont.systemFontOfSize(13)
+            timeLabel2.text = "开始日期:2016.06.12 08:25"
+            timeLabel2.backgroundColor = UIColor.clearColor()
+            
+            
+            watchVidioImageView.addSubview(titleLabel2)
+            watchVidioImageView.addSubview(onlineLabel)
+            watchVidioImageView.addSubview(watchOnlineButton)
+            watchVidioImageView.addSubview(timeLabel2)
+            
+            lineView.sd_layout()
+            .heightIs(2*px)
+            .widthIs(WIDTH)
+            .topSpaceToView(watchVidioImageView,10*px)
+            .leftSpaceToView(self,0)
+            
+            messageCell.sd_layout()
+                .heightIs(65*px)
+                .widthIs(WIDTH)
+                .topSpaceToView(watchVidioImageView,13*px)
+                .leftSpaceToView(self,0)
+            messageCellButton.sd_layout()
+                .heightIs(65*px)
+                .widthIs(WIDTH)
+                .topSpaceToView(watchVidioImageView,13*px)
+                .leftSpaceToView(self,0)
+            messageCell.backgroundColor = UIColor.whiteColor()
+            messageCellButton.backgroundColor = UIColor.clearColor()
+            messageCellButton.addTarget(self, action: #selector(self.messageCellButtonAction), forControlEvents: .TouchUpInside)
+            
+            messageCell.image = UIImage(named:"xinxiqiang-1")
         }
+        
+        
+        
+        
+        
+        
+        
+        
         
     }
     
     
     func classifyButtonAction(sender:UIButton){
         
+        
+        if mainTitle.text ==  "智慧社区"{
+            switch sender.tag {
+            case 0:
+                break
+            case 1:
+                let vc = CommunityOlderCareViewController()
+                targets.navigationController?.pushViewController(vc, animated: true)
+                break
+            case 2:
+                let vc = PushToTalkViewController()
+                targets.navigationController?.pushViewController(vc, animated: true)
+                break
+                
+                
+            default:
+                break
+            }
+
+        }else if mainTitle.text ==  "居家养老"{
+            
+            switch sender.tag {
+            case 0:
+                let vc = HealthRecordsAndKindViewController()
+                targets.navigationController?.pushViewController(vc, animated: true)
+                break
+            case 1:
+                break
+            case 2:
+                break
+                
+                
+            default:
+                break
+            }
+
+            
+        }else if mainTitle.text ==  "机构养老"{
+            
+        }else if mainTitle.text ==  "时尚生活"{
+            
+        }
     }
     
     func lookAllButtonAction(sender:UIButton){
         self.height = 500
+    }
+    
+    func certificationButtonAction(){
+        
+    }
+    func watchOnlineButtonAction(){
+        
+    }
+    func messageCellButtonAction(){
+        
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
