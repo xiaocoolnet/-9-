@@ -65,6 +65,9 @@
 		7734D7811E07BB120084B50E /* CommunityOlderCareTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7734D77F1E07BB120084B50E /* CommunityOlderCareTableViewCell.xib */; };
 		7734D7871E07D0200084B50E /* PushToTalkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7734D7861E07D0200084B50E /* PushToTalkViewController.swift */; };
 		77363E071DC8679F00893521 /* HealthRecordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77363E061DC8679F00893521 /* HealthRecordsViewController.swift */; };
+		773C57911E0B783B00B43F1E /* PublicTextEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773C57901E0B783B00B43F1E /* PublicTextEditViewController.swift */; };
+		773C57951E0BAA9D00B43F1E /* 民族——nations.json in Resources */ = {isa = PBXBuildFile; fileRef = 773C57941E0BAA9D00B43F1E /* 民族——nations.json */; };
+		773C57981E0BCAFB00B43F1E /* FamilyMessagesEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773C57971E0BCAFB00B43F1E /* FamilyMessagesEditViewController.swift */; };
 		773CA6B21DC33B380062D6D3 /* PublicTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773CA6B11DC33B380062D6D3 /* PublicTableViewController.swift */; };
 		773CA6BF1DC34C8F0062D6D3 /* RetireServerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773CA6BE1DC34C8F0062D6D3 /* RetireServerViewController.swift */; };
 		773E91DD1DC1A45A00B21853 /* AutoScrollLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773E91DC1DC1A45A00B21853 /* AutoScrollLabel.swift */; };
@@ -292,6 +295,9 @@
 		7734D77F1E07BB120084B50E /* CommunityOlderCareTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommunityOlderCareTableViewCell.xib; sourceTree = "<group>"; };
 		7734D7861E07D0200084B50E /* PushToTalkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushToTalkViewController.swift; sourceTree = "<group>"; };
 		77363E061DC8679F00893521 /* HealthRecordsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthRecordsViewController.swift; sourceTree = "<group>"; };
+		773C57901E0B783B00B43F1E /* PublicTextEditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublicTextEditViewController.swift; sourceTree = "<group>"; };
+		773C57941E0BAA9D00B43F1E /* 民族——nations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "民族——nations.json"; sourceTree = "<group>"; };
+		773C57971E0BCAFB00B43F1E /* FamilyMessagesEditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FamilyMessagesEditViewController.swift; sourceTree = "<group>"; };
 		773CA6B11DC33B380062D6D3 /* PublicTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublicTableViewController.swift; sourceTree = "<group>"; };
 		773CA6BE1DC34C8F0062D6D3 /* RetireServerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RetireServerViewController.swift; sourceTree = "<group>"; };
 		773E91DC1DC1A45A00B21853 /* AutoScrollLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoScrollLabel.swift; sourceTree = "<group>"; };
@@ -440,6 +446,7 @@
 		7708A61C1DC08137005573D2 /* HPY9Pasture */ = {
 			isa = PBXGroup;
 			children = (
+				773C57921E0BAA9D00B43F1E /* Supporting Files */,
 				7708A6D31DC08237005573D2 /* Tool */,
 				7708A6CC1DC08237005573D2 /* SDKExport */,
 				7708A6531DC081D0005573D2 /* Third_part_lib */,
@@ -475,6 +482,7 @@
 				7708A6221DC08137005573D2 /* UIBounceButton.m */,
 				7768FBDA1DC98EB7008586F6 /* PublicTableViewCell.swift */,
 				774597631E0A742C00902BCE /* PublicTableViewViewController.swift */,
+				773C57901E0B783B00B43F1E /* PublicTextEditViewController.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -798,6 +806,30 @@
 			path = PushToTalk;
 			sourceTree = "<group>";
 		};
+		773C57921E0BAA9D00B43F1E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				773C57931E0BAA9D00B43F1E /* JSON数据 */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		773C57931E0BAA9D00B43F1E /* JSON数据 */ = {
+			isa = PBXGroup;
+			children = (
+				773C57941E0BAA9D00B43F1E /* 民族——nations.json */,
+			);
+			path = "JSON数据";
+			sourceTree = "<group>";
+		};
+		773C57961E0BCAAB00B43F1E /* FamilyMessages */ = {
+			isa = PBXGroup;
+			children = (
+				773C57971E0BCAFB00B43F1E /* FamilyMessagesEditViewController.swift */,
+			);
+			path = FamilyMessages;
+			sourceTree = "<group>";
+		};
 		773CA6B01DC33B0B0062D6D3 /* PublicTableView */ = {
 			isa = PBXGroup;
 			children = (
@@ -925,6 +957,7 @@
 		7749D2731E08FA1C00049D98 /* HealthRecords */ = {
 			isa = PBXGroup;
 			children = (
+				773C57961E0BCAAB00B43F1E /* FamilyMessages */,
 				774597531E0A12E200902BCE /* PersonalMessages */,
 				77DA3E3B1E0906D4008FE57A /* ChildVC */,
 				77D381481E09152400A1C2BF /* PersonalMessagesViewController.swift */,
@@ -1180,6 +1213,7 @@
 				7708A6D51DC08237005573D2 /* Default-568h@2x.png in Resources */,
 				7708A6D81DC08237005573D2 /* README.txt in Resources */,
 				77D381471E090EA000A1C2BF /* KindVCTableViewCell.xib in Resources */,
+				773C57951E0BAA9D00B43F1E /* 民族——nations.json in Resources */,
 				7708A6D71DC08237005573D2 /* read_me.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1399,11 +1433,13 @@
 				77FBAC001DC89A630068F995 /* HPYHomeCareViewController.swift in Sources */,
 				7734D7871E07D0200084B50E /* PushToTalkViewController.swift in Sources */,
 				773E91DD1DC1A45A00B21853 /* AutoScrollLabel.swift in Sources */,
+				773C57911E0B783B00B43F1E /* PublicTextEditViewController.swift in Sources */,
 				7708A64C1DC08137005573D2 /* HPYRootController.swift in Sources */,
 				77FBABF51DC884810068F995 /* FXLabel.m in Sources */,
 				774597611E0A1DC500902BCE /* RightArrowAndLabelTableViewCell.swift in Sources */,
 				7708A64F1DC08137005573D2 /* HPYVideoController.swift in Sources */,
 				774597591E0A1D5400902BCE /* HeaderPhotoTableViewCell.swift in Sources */,
+				773C57981E0BCAFB00B43F1E /* FamilyMessagesEditViewController.swift in Sources */,
 				7708A6511DC08137005573D2 /* HPYLoginController.swift in Sources */,
 				7768FBDB1DC98EB7008586F6 /* PublicTableViewCell.swift in Sources */,
 				7708A6481DC08137005573D2 /* HPYConvenienceCtrler.swift in Sources */,

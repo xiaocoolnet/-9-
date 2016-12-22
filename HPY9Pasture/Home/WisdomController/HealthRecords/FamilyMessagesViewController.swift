@@ -7,17 +7,23 @@
 //
 
 import UIKit
-
+typealias callBackWithIndexFunc = (selectIndex:Int,selectArray:NSDictionary)->Void
+typealias callBackWithViodFunc = () ->Void
 class FamilyMessagesViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
+    var myIndexFunc = callBackWithIndexFunc?()
+    var myFunc = callBackWithViodFunc?()
     let mytableView = UITableView()
-    let textArray = ["王纯纯","李纯纯","张纯纯","时纯纯"]
+    var textArray = NSArray()
+    var buttonText = String()
+    var VC = UIViewController()
+    
     
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "家族信息"
+//        self.title = "家族信息"
         self.mytableView.frame = CGRectMake(0, 0, WIDTH, HEIGHT-64-50*px)
         self.mytableView.delegate = self
         self.mytableView.dataSource = self
@@ -29,7 +35,7 @@ class FamilyMessagesViewController: UIViewController,UITableViewDelegate,UITable
         addButton.frame = CGRectMake(0, HEIGHT-64-50*px, WIDTH, 50*px)
         addButton.backgroundColor = NavColor
         addButton.titleLabel?.font = UIFont.boldSystemFontOfSize(13)
-        addButton.setTitle("添加家属信息", forState: .Normal)
+        addButton.setTitle(buttonText, forState: .Normal)
         addButton.addTarget(self, action: #selector(self.addButtonAction), forControlEvents: .TouchUpInside)
         self.view.addSubview(addButton)
         
@@ -43,25 +49,10 @@ class FamilyMessagesViewController: UIViewController,UITableViewDelegate,UITable
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath){
-        switch indexPath.row {
-        case 0:
+        
+        self.myIndexFunc!(selectIndex:indexPath.row,selectArray:NSDictionary())
             
-            
-            break
-        case 1:
-            
-            
-            break
-            
-        case 2:
-            
-            
-            break
-            
-            
-        default:
-            break
-        }
+        
     }
     
     
@@ -73,7 +64,7 @@ class FamilyMessagesViewController: UIViewController,UITableViewDelegate,UITable
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
         let cell = PublicTableViewCell.init(style:.Default)
         cell.textLabel?.font = UIFont.systemFontOfSize(13)
-        cell.textLabel?.text = textArray[indexPath.row]
+        cell.textLabel?.text = textArray[indexPath.row] as? String
         
         cell.accessoryType = .DisclosureIndicator
         cell.selectionStyle = .None
@@ -82,7 +73,9 @@ class FamilyMessagesViewController: UIViewController,UITableViewDelegate,UITable
     }
     //MARK:--------ACTION
     func addButtonAction(){
-        
+        if self.myFunc != nil{
+            self.myFunc!()
+        }
     }
 
     override func didReceiveMemoryWarning() {

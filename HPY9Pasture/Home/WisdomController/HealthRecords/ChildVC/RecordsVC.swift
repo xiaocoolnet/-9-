@@ -48,6 +48,20 @@ class RecordsVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
             
         case 2:
             let vc = FamilyMessagesViewController()
+            vc.textArray = ["王纯纯","李纯纯","张纯纯","时纯纯"]
+            vc.title = "家族信息"
+            vc.buttonText = "添加家属信息"
+            vc.myFunc = {()->Void in
+                //添加家族信息事件
+                let vc1 = FamilyMessagesEditViewController()
+                vc1.title = "添加家属信息"
+                
+                vc.navigationController?.pushViewController(vc1, animated: true)
+            }
+            vc.myIndexFunc = {(selectIndex,selectArray)->Void in
+                //添加cell点击事件
+                //                vc.navigationController?.pushViewController(vc1, animated: true)
+            }
             self.navigationController?.pushViewController(vc, animated: true)
             
             break

@@ -15,6 +15,8 @@ class PublicTableViewViewController: UIViewController,UITableViewDataSource,UITa
     
     let myTableView = UITableView()
     var myArray = NSArray()
+    var nationArray = NSArray()
+    
     
     
     
@@ -37,7 +39,12 @@ class PublicTableViewViewController: UIViewController,UITableViewDataSource,UITa
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath){
         if self.myFunc != nil{
-            self.myFunc!(selectText:self.myArray[indexPath.row] as! String);
+            if self.myArray.count < 1 {
+                self.myFunc!(selectText:self.nationArray[indexPath.row].objectForKey("name") as! String)
+            }else{
+                self.myFunc!(selectText:self.myArray[indexPath.row] as! String)
+            }
+            
         }
        self.navigationController?.popViewControllerAnimated(true)
     }
@@ -45,13 +52,25 @@ class PublicTableViewViewController: UIViewController,UITableViewDataSource,UITa
     
     //MARK: ------TableViewDatasource
     func  tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.myArray.count
+        if self.myArray.count < 1 {
+            
+          return self.nationArray.count
+        }else{
+          return self.myArray.count
+        }
+        
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
         let cell = PublicTableViewCell.init(style: .Default)
         cell.accessoryType = .DisclosureIndicator
-        cell.textLabel?.text = self.myArray[indexPath.row] as? String
+        if self.myArray.count < 1 {
+            cell.textLabel?.text = self.nationArray[indexPath.row].objectForKey("name") as? String
+
+        }else{
+            cell.textLabel?.text = self.myArray[indexPath.row] as? String
+
+        }
         cell.textLabel?.font = MainFont
         cell.selectionStyle = .None
         return cell
