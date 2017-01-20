@@ -20,7 +20,7 @@ class RecordsVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
         myTableView.delegate = self
         myTableView.dataSource = self
         myTableView.backgroundColor = LGBackColor
-        myTableView.frame = CGRectMake(0, 0, WIDTH, HEIGHT-64-43*px)
+        myTableView.frame = CGRectMake(0, 0, WIDTH, HEIGHT-64-40*px)
         myTableView.separatorStyle = .None
         myTableView.sectionFooterHeight = 10*px
         self.view.addSubview(myTableView)

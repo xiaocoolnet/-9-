@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="187" id="KGk-i7-Jjw" customClass="FamilyKitHeaderView" customModule="HPY9Pasture" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="187"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="186"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ic_beijing" translatesAutoresizingMaskIntoConstraints="NO" id="lay-Pu-aXa">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="204"/>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rXX-4x-S51" customClass="AutoScrollLabel" customModule="HPY9Pasture" customModuleProvider="target">
+                        <rect key="frame" x="46" y="164" width="266" height="18"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="18" id="4uN-gW-XwN"/>
+                            <constraint firstAttribute="width" constant="266" id="QsF-S0-ITs"/>
+                        </constraints>
+                    </view>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="y7S-ms-h29">
+                        <rect key="frame" x="23" y="90" width="65" height="66"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="65" id="I9H-05-mTF"/>
+                            <constraint firstAttribute="height" constant="66" id="sHF-A9-Acq"/>
+                        </constraints>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6YZ-iR-XEQ" customClass="AutoScrollLabel" customModule="HPY9Pasture" customModuleProvider="target">
+                        <rect key="frame" x="96" y="96" width="191" height="27"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="191" id="npX-IR-2d4"/>
+                            <constraint firstAttribute="height" constant="27" id="sXm-1T-icE"/>
+                        </constraints>
+                    </view>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_guangbo" translatesAutoresizingMaskIntoConstraints="NO" id="Ha4-8w-tyA">
+                        <rect key="frame" x="23" y="166" width="15" height="14"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="14" id="YGA-fN-War"/>
+                            <constraint firstAttribute="width" constant="15" id="hKF-BI-NTc"/>
+                        </constraints>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uU4-x3-eJU">
+                        <rect key="frame" x="-22" y="60" width="94" height="22"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="22" id="O7p-4A-7yw"/>
+                            <constraint firstAttribute="width" constant="94" id="sCM-lc-8hm"/>
+                        </constraints>
+                        <state key="normal" image="ic_fanhui"/>
+                    </button>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jht-nB-92L" customClass="AutoScrollLabel" customModule="HPY9Pasture" customModuleProvider="target">
+                        <rect key="frame" x="96" y="131" width="191" height="18"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="18" id="1GV-b7-5Nx"/>
+                            <constraint firstAttribute="width" constant="191" id="ilY-2u-Uco"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Ha4-8w-tyA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="15" id="02p-wt-qeC"/>
+                    <constraint firstItem="uU4-x3-eJU" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-30" id="2Sv-ql-P50"/>
+                    <constraint firstItem="y7S-ms-h29" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="15" id="6H2-qe-kYF"/>
+                    <constraint firstItem="Jht-nB-92L" firstAttribute="leading" secondItem="y7S-ms-h29" secondAttribute="trailing" constant="8" id="Dp1-8Q-k8y"/>
+                    <constraint firstItem="y7S-ms-h29" firstAttribute="top" secondItem="uU4-x3-eJU" secondAttribute="bottom" constant="8" id="Euk-Vd-X6d"/>
+                    <constraint firstItem="6YZ-iR-XEQ" firstAttribute="leading" secondItem="y7S-ms-h29" secondAttribute="trailing" constant="8" id="Gzb-5S-9fg"/>
+                    <constraint firstItem="rXX-4x-S51" firstAttribute="top" secondItem="y7S-ms-h29" secondAttribute="bottom" constant="8" id="Mdu-pd-cie"/>
+                    <constraint firstItem="6YZ-iR-XEQ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="88" id="PPO-d6-SBi"/>
+                    <constraint firstItem="Ha4-8w-tyA" firstAttribute="top" secondItem="y7S-ms-h29" secondAttribute="bottom" constant="10" id="Pfb-fx-A0S"/>
+                    <constraint firstItem="uU4-x3-eJU" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="52" id="cMh-tK-Nxz"/>
+                    <constraint firstItem="rXX-4x-S51" firstAttribute="leading" secondItem="Ha4-8w-tyA" secondAttribute="trailing" constant="8" id="cPp-46-4Uv"/>
+                    <constraint firstItem="Jht-nB-92L" firstAttribute="top" secondItem="6YZ-iR-XEQ" secondAttribute="bottom" constant="8" id="owu-mb-UnV"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="advertiseMentLabel" destination="rXX-4x-S51" id="5il-KT-muf"/>
+                <outlet property="backButton" destination="uU4-x3-eJU" id="kox-2v-9x9"/>
+                <outlet property="headerImageview" destination="y7S-ms-h29" id="OFk-tj-jzG"/>
+                <outlet property="money" destination="Jht-nB-92L" id="3HE-Oe-7cc"/>
+                <outlet property="name" destination="6YZ-iR-XEQ" id="aBM-fs-2F1"/>
+            </connections>
+            <point key="canvasLocation" x="538" y="233.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="ic_beijing" width="384" height="205"/>
+        <image name="ic_fanhui" width="9" height="20"/>
+        <image name="ic_guangbo" width="15" height="14"/>
+    </resources>
+</document>

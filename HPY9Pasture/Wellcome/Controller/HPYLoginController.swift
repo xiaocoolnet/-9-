@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import SVProgressHUD
+import SwiftyJSON
 
 class HPYLoginController: UIViewController {
 
@@ -14,6 +16,9 @@ class HPYLoginController: UIViewController {
     let pwdText = UITextField()
     let fgetPwdBtn = UIButton(type: .System)
     let loginBtn = UIButton(type: .Custom)
+    var userLocationCenter = NSUserDefaults.standardUserDefaults()
+ 
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +29,8 @@ class HPYLoginController: UIViewController {
         addTargetAction()
     }
     
+
+    
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(true)
         self.navigationController?.navigationBar.hidden = false
@@ -31,46 +38,6 @@ class HPYLoginController: UIViewController {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(true)
         self.navigationController?.navigationBar.hidden = false
-    }
-    
-    
-    //右侧注册按钮
-    func createrRightNavButton(){
-        let mapButton = UIButton()
-        mapButton.frame = CGRectMake(0, 0, 40, 40)
-        mapButton.setTitle("注册", forState: .Normal)
-        mapButton.titleLabel?.font = MainFont
-        mapButton.titleLabel?.textAlignment = .Right
-        mapButton.addTarget(self, action: #selector(self.goRegister), forControlEvents: .TouchUpInside)
-        mapButton.setTitleColor(UIColor.whiteColor(), forState: .Normal)
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(customView: mapButton)
-    }
-    
-    func addTargetAction(){
-        fgetPwdBtn.addTarget(self, action: #selector(clickedForgetPwdBtn), forControlEvents: .TouchUpInside)
-        loginBtn.addTarget(self, action: #selector(clickedLoginBtn), forControlEvents: .TouchUpInside)
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(endEditState))
-        view.userInteractionEnabled = true
-        view.addGestureRecognizer(tapGesture)
-    }
-    
-    //MARK:----------Target-Action-------
-    func clickedForgetPwdBtn(btn:UIButton){
-        navigationController?.pushViewController(HPYFgetPasswordCtrler(), animated: true)
-    }
-    func clickedLoginBtn(btn:UIButton){
-        self.dismissViewControllerAnimated(true) { 
-            
-        }
-    }
-    
-    func endEditState(){
-        view.endEditing(true)
-    }
-    
-    func goRegister(){
-        let vc = HPYRegisterController()
-        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     func configureUI(){
@@ -101,10 +68,108 @@ class HPYLoginController: UIViewController {
         loginBtn.layer.cornerRadius = 4
         loginBtn.setTitle("登录", forState: .Normal)
         
-        
         view.addSubview(inputBack)
         view.addSubview(fgetPwdBtn)
         view.addSubview(loginBtn)
     }
 
+    
+    
+    //左右侧注册按钮
+    func createrRightNavButton(){
+        let mapButton = UIButton()
+        mapButton.frame = CGRectMake(0, 0, 40, 40)
+        mapButton.setTitle("注册", forState: .Normal)
+        mapButton.titleLabel?.font = MainFont
+        mapButton.contentHorizontalAlignment = .Right
+        mapButton.addTarget(self, action: #selector(self.goRegister), forControlEvents: .TouchUpInside)
+        mapButton.setTitleColor(UIColor.whiteColor(), forState: .Normal)
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(customView: mapButton)
+        
+        let leftButton = UIButton()
+        leftButton.frame = CGRectMake(0, 0, 100, 40)
+        leftButton.setTitle("暂不登录", forState: .Normal)
+        leftButton.titleLabel?.font = MainFont
+        leftButton.contentHorizontalAlignment = .Left
+        leftButton.addTarget(self, action: #selector(self.leftButtonAction), forControlEvents: .TouchUpInside)
+        leftButton.setTitleColor(UIColor.whiteColor(), forState: .Normal)
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem.init(customView: leftButton)
+    }
+    
+    func addTargetAction(){
+        fgetPwdBtn.addTarget(self, action: #selector(clickedForgetPwdBtn), forControlEvents: .TouchUpInside)
+        loginBtn.addTarget(self, action: #selector(clickedLoginBtn), forControlEvents: .TouchUpInside)
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(endEditState))
+        view.userInteractionEnabled = true
+        view.addGestureRecognizer(tapGesture)
+    }
+    
+    //MARK:----------Target-Action-------
+    func clickedForgetPwdBtn(btn:UIButton){
+        navigationController?.pushViewController(HPYFgetPasswordCtrler(), animated: true)
+    }
+    func clickedLoginBtn(btn:UIButton){
+        if (self.userName.text!.isEmpty) {
+            SVProgressHUD.showErrorWithStatus("请输入手机号！")
+            //                self.loginBtn.backgroundColor = NavColor
+            return
+        }
+        if (self.pwdText.text!.isEmpty) {
+            SVProgressHUD.showErrorWithStatus("请输入密码！")
+            //                self.loginBtn.backgroundColor = NavColor
+            return
+        }
+        AppRequestManager.shareManager.login(userName.text!, password: pwdText.text!, registrationID: "") { (success, response) in
+            if success{
+                let data1 = JSON(data: response as! NSData)
+                NSLOG(data1["data"].dictionary!)
+                self.userLocationCenter.setBool(true, forKey: "IsLogin")
+                let userInfo = NSMutableDictionary()
+                if data1["data"]["name"].string != nil{
+                    userInfo.setValue(data1["data"]["photo"].string, forKey: "headerPhoto")
+                }
+                if data1["data"]["name"].string != nil{
+                    userInfo.setValue(data1["data"]["name"].string, forKey: "name")
+                }
+                if data1["data"]["id"].string != nil{
+                    userInfo.setValue(data1["data"]["id"].string, forKey: "userid")
+                }
+                if data1["data"]["phone"].string != nil{
+                    userInfo.setValue(data1["data"]["phone"].string, forKey: "phone")
+                }
+                
+                userInfo.setValue(self.pwdText.text!, forKey: "password")
+                self.userLocationCenter.setValue(userInfo, forKey: "UserInfo")
+                NSLOG("-------------------")
+                NSLOG("userinfo:")
+                NSLOG(self.userLocationCenter.objectForKey("UserInfo"))
+                NSLOG("-------------------")
+                
+                self.dismissViewControllerAnimated(true) {
+                    
+                }
+            }else{
+                alert(response as! String, delegate: self)
+                return
+            }
+        }
+        
+    }
+    
+    func endEditState(){
+        view.endEditing(true)
+    }
+    
+    func goRegister(){
+        let vc = HPYRegisterController()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func leftButtonAction(){
+        self.dismissViewControllerAnimated(true) {
+            
+        }
+    }
+    
+    
 }

@@ -30,7 +30,7 @@ class CommunityOlderCareViewController: UIViewController,UITableViewDelegate,UIT
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "社区养老"
-        self.view.backgroundColor = NavColor
+        self.view.backgroundColor = LGBackColor
         
         self.createUI()
         //消除导航栏与self.view之间的黑色分割线
@@ -45,7 +45,7 @@ class CommunityOlderCareViewController: UIViewController,UITableViewDelegate,UIT
         headerButton1.frame = CGRectMake(0, 0, WIDTH/4, 40*px)
         headerButton1.backgroundColor = NavColor
         headerButton1.setTitle("日间照料", forState: .Normal)
-        headerButton1.setTitleColor(RGBACOLOR(149, g: 149, b: 149, a: 1), forState: .Normal)
+        headerButton1.setTitleColor(RGBACOLOR(208, g: 231, b: 255, a: 1), forState: .Normal)
         headerButton1.setTitleColor(UIColor.whiteColor(), forState: .Selected)
         headerButton1.selected = true
         headerButton1.titleLabel?.font = UIFont.systemFontOfSize(13)
@@ -54,7 +54,7 @@ class CommunityOlderCareViewController: UIViewController,UITableViewDelegate,UIT
         headerButton2.frame = CGRectMake(WIDTH/4, 0, WIDTH/4, 40*px)
         headerButton2.backgroundColor = NavColor
         headerButton2.setTitle("助老食堂", forState: .Normal)
-        headerButton2.setTitleColor(RGBACOLOR(149, g: 149, b: 149, a: 1), forState: .Normal)
+        headerButton2.setTitleColor(RGBACOLOR(208, g: 231, b: 255, a: 1), forState: .Normal)
         headerButton2.setTitleColor(UIColor.whiteColor(), forState: .Selected)
         headerButton2.titleLabel?.font = UIFont.systemFontOfSize(13)
         headerButton2.addTarget(self, action: #selector(self.headerButton2Action), forControlEvents: .TouchUpInside)
@@ -62,7 +62,7 @@ class CommunityOlderCareViewController: UIViewController,UITableViewDelegate,UIT
         headerButton3.frame = CGRectMake(WIDTH/4*2, 0, WIDTH/4, 40*px)
         headerButton3.backgroundColor = NavColor
         headerButton3.setTitle("互助养老", forState: .Normal)
-        headerButton3.setTitleColor(RGBACOLOR(149, g: 149, b: 149, a: 1), forState: .Normal)
+        headerButton3.setTitleColor(RGBACOLOR(208, g: 231, b: 255, a: 1), forState: .Normal)
         headerButton3.setTitleColor(UIColor.whiteColor(), forState: .Selected)
         headerButton3.titleLabel?.font = UIFont.systemFontOfSize(13)
         headerButton3.addTarget(self, action: #selector(self.headerButton3Action), forControlEvents: .TouchUpInside)
@@ -70,7 +70,7 @@ class CommunityOlderCareViewController: UIViewController,UITableViewDelegate,UIT
         headerButton4.frame = CGRectMake(WIDTH/4*3, 0, WIDTH/4, 40*px)
         headerButton4.backgroundColor = NavColor
         headerButton4.setTitle("康复中心", forState: .Normal)
-        headerButton4.setTitleColor(RGBACOLOR(149, g: 149, b: 149, a: 1), forState: .Normal)
+        headerButton4.setTitleColor(RGBACOLOR(208, g: 231, b: 255, a: 1), forState: .Normal)
         headerButton4.setTitleColor(UIColor.whiteColor(), forState: .Selected)
         headerButton4.titleLabel?.font = UIFont.systemFontOfSize(13)
         headerButton4.addTarget(self, action: #selector(self.headerButton4Action), forControlEvents: .TouchUpInside)
@@ -97,9 +97,9 @@ class CommunityOlderCareViewController: UIViewController,UITableViewDelegate,UIT
         self.myTableView.separatorStyle = .None
         
         self.myTableView.registerNib(UINib(nibName: "CommunityOlderCareTableViewCell",bundle: nil), forCellReuseIdentifier: "CommunityOlderCareTableViewCell")
-        self.view.addSubview(self.myTableView)
+       
         
-        
+        self.view.addSubview(myTableView)
         
         
         let mytableViewHeaderView = UIView()

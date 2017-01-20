@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="PropertyTableViewCell" customModule="HPY9Pasture" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="352" height="60"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="352" height="59"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y40-Hj-s6U" customClass="AutoScrollLabel" customModule="HPY9Pasture" customModuleProvider="target">
+                        <rect key="frame" x="8" y="1" width="173" height="25"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="25" id="i0G-yT-LCs"/>
+                            <constraint firstAttribute="width" constant="173" id="qff-hS-Eez"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="di7-b6-HMz" customClass="AutoScrollLabel" customModule="HPY9Pasture" customModuleProvider="target">
+                        <rect key="frame" x="194" y="17" width="122" height="25"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="122" id="uny-s3-cWk"/>
+                        </constraints>
+                    </view>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_youjiantou" translatesAutoresizingMaskIntoConstraints="NO" id="0cC-SJ-crv">
+                        <rect key="frame" x="337" y="23" width="7" height="13"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="13" id="3aS-Hs-Ore"/>
+                            <constraint firstAttribute="width" constant="7" id="GuG-4F-5Cn"/>
+                        </constraints>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TOw-IG-gyC" customClass="AutoScrollLabel" customModule="HPY9Pasture" customModuleProvider="target">
+                        <rect key="frame" x="8" y="26" width="173" height="25"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="25" id="GUx-rd-19v"/>
+                            <constraint firstAttribute="width" constant="173" id="LRx-ch-n9a"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Y40-Hj-s6U" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="04Z-bL-VIQ"/>
+                    <constraint firstItem="di7-b6-HMz" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="9" id="3Rp-o1-4Yb"/>
+                    <constraint firstItem="TOw-IG-gyC" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" id="7U7-fs-VWe"/>
+                    <constraint firstItem="0cC-SJ-crv" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="15" id="8Bw-a6-8Dh"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="di7-b6-HMz" secondAttribute="bottom" constant="9" id="FaD-Ru-jXg"/>
+                    <constraint firstItem="0cC-SJ-crv" firstAttribute="leading" secondItem="di7-b6-HMz" secondAttribute="trailing" constant="21" id="NJH-o6-S79"/>
+                    <constraint firstItem="TOw-IG-gyC" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="O5U-Ch-8xd"/>
+                    <constraint firstItem="0cC-SJ-crv" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="XdW-RF-ZKl"/>
+                    <constraint firstItem="Y40-Hj-s6U" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-7" id="tRI-u5-FQH"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="downTextLabel" destination="TOw-IG-gyC" id="p0y-QJ-Ofd"/>
+                <outlet property="rightTextLabel" destination="di7-b6-HMz" id="IrJ-kC-Gj2"/>
+                <outlet property="upTextLabel" destination="Y40-Hj-s6U" id="9wu-sH-BEs"/>
+            </connections>
+            <point key="canvasLocation" x="273" y="232"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="ic_youjiantou" width="7" height="13"/>
+    </resources>
+</document>

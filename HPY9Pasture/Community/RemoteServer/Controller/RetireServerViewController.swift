@@ -15,6 +15,16 @@ class RetireServerViewController: UIViewController,UITableViewDelegate,UITableVi
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        //解决title不居中问题
+        
+        let viewControllerArray = self.navigationController?.viewControllers
+        let previousViewControllerIndex = (viewControllerArray?.indexOf(self))!-1
+        var previous = UIViewController()
+        if previousViewControllerIndex >= 0 {
+            previous = viewControllerArray![previousViewControllerIndex]
+            previous.navigationItem.backBarButtonItem = UIBarButtonItem.init(title: "", style:.Plain, target: self, action: nil)
+        }
+        
         self.view.backgroundColor = LGBackColor
         self.title = "退休远程认证"
         createTableView()

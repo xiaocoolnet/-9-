@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="67" id="KGk-i7-Jjw" customClass="FamilyKitTableViewCell" customModule="HPY9Pasture" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="81"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MBD-4V-9xp">
+                        <rect key="frame" x="8" y="8" width="70" height="65"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="70" id="6sc-Vk-2IQ"/>
+                            <constraint firstAttribute="height" constant="65" id="mAg-2j-Rmw"/>
+                        </constraints>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kdF-ZX-E7J" customClass="AutoScrollLabel" customModule="HPY9Pasture" customModuleProvider="target">
+                        <rect key="frame" x="86" y="8" width="128" height="24"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="128" id="nC1-R5-ieG"/>
+                            <constraint firstAttribute="height" constant="24" id="uSQ-Zr-jk2"/>
+                        </constraints>
+                    </view>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_dizhi" translatesAutoresizingMaskIntoConstraints="NO" id="zZ7-Yo-5Xb">
+                        <rect key="frame" x="86" y="40" width="13" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="13" id="69h-N6-xgT"/>
+                            <constraint firstAttribute="height" constant="15" id="f36-d9-ivm"/>
+                        </constraints>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_call" translatesAutoresizingMaskIntoConstraints="NO" id="kx0-mB-Qvu">
+                        <rect key="frame" x="86" y="56" width="13" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="13" id="3b4-b3-bmi"/>
+                            <constraint firstAttribute="height" constant="15" id="DHH-DF-mxs"/>
+                        </constraints>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="znb-km-thq" customClass="AutoScrollLabel" customModule="HPY9Pasture" customModuleProvider="target">
+                        <rect key="frame" x="102" y="57" width="158" height="15"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="158" id="KMy-0n-wAe"/>
+                            <constraint firstAttribute="height" constant="15" id="KZc-cz-Euz"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uIC-vn-499">
+                        <rect key="frame" x="222" y="8" width="90" height="18"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="18" id="ZBC-Ru-7mZ"/>
+                            <constraint firstAttribute="width" constant="90" id="vPW-ih-6S8"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="32K-zL-MWI" customClass="AutoScrollLabel" customModule="HPY9Pasture" customModuleProvider="target">
+                        <rect key="frame" x="102" y="40" width="158" height="15"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="15" id="2Dr-mz-Kee"/>
+                            <constraint firstAttribute="width" constant="158" id="6TI-Re-8s4"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="kdF-ZX-E7J" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="01B-u7-YIp"/>
+                    <constraint firstItem="zZ7-Yo-5Xb" firstAttribute="top" secondItem="kdF-ZX-E7J" secondAttribute="bottom" constant="8" id="0L0-ac-f6x"/>
+                    <constraint firstItem="MBD-4V-9xp" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="7V1-bO-fnb"/>
+                    <constraint firstItem="32K-zL-MWI" firstAttribute="top" secondItem="kdF-ZX-E7J" secondAttribute="bottom" constant="8" id="7hn-sP-ho3"/>
+                    <constraint firstItem="kx0-mB-Qvu" firstAttribute="leading" secondItem="MBD-4V-9xp" secondAttribute="trailing" constant="8" id="JZV-em-5Ba"/>
+                    <constraint firstItem="uIC-vn-499" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="KOc-z5-oRN"/>
+                    <constraint firstItem="znb-km-thq" firstAttribute="leading" secondItem="kx0-mB-Qvu" secondAttribute="trailing" constant="3" id="KSZ-XD-caj"/>
+                    <constraint firstItem="kdF-ZX-E7J" firstAttribute="leading" secondItem="MBD-4V-9xp" secondAttribute="trailing" constant="8" id="OZB-bc-3c5"/>
+                    <constraint firstItem="zZ7-Yo-5Xb" firstAttribute="leading" secondItem="MBD-4V-9xp" secondAttribute="trailing" constant="8" id="SNz-yA-Hfh"/>
+                    <constraint firstItem="kx0-mB-Qvu" firstAttribute="top" secondItem="zZ7-Yo-5Xb" secondAttribute="bottom" constant="1" id="VNP-ey-BXD"/>
+                    <constraint firstItem="znb-km-thq" firstAttribute="top" secondItem="32K-zL-MWI" secondAttribute="bottom" constant="2" id="fAj-1z-Qkv"/>
+                    <constraint firstItem="MBD-4V-9xp" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="n0x-c9-qOr"/>
+                    <constraint firstItem="uIC-vn-499" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="qmk-mA-ZWZ"/>
+                    <constraint firstItem="32K-zL-MWI" firstAttribute="leading" secondItem="zZ7-Yo-5Xb" secondAttribute="trailing" constant="3" id="zBu-AZ-fSq"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="adress" destination="32K-zL-MWI" id="hsT-hq-cy9"/>
+                <outlet property="headerImage" destination="MBD-4V-9xp" id="Nu3-GI-e1Y"/>
+                <outlet property="money" destination="uIC-vn-499" id="Erb-SC-MRy"/>
+                <outlet property="name" destination="kdF-ZX-E7J" id="uNa-hc-IPi"/>
+                <outlet property="phone" destination="znb-km-thq" id="jDN-3f-8c0"/>
+            </connections>
+            <point key="canvasLocation" x="538" y="230.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="ic_call" width="13" height="13"/>
+        <image name="ic_dizhi" width="12" height="15"/>
+    </resources>
+</document>

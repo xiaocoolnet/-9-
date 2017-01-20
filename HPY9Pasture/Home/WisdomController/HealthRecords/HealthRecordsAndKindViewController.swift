@@ -14,6 +14,7 @@ class HealthRecordsAndKindViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "健康档案"
+        self.view.backgroundColor = LGBackColor
         let recordsViewController = RecordsVC()
         let kindViewController = KindVC()
         recordsViewController.title = "健康档案"

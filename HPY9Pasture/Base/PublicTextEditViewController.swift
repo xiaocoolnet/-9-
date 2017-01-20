@@ -8,15 +8,19 @@
 
 import UIKit
 typealias backForTexefunc = (editedText:String)->Void
-class PublicTextEditViewController: UIViewController {
+class PublicTextEditViewController: UIViewController,UITextViewDelegate {
     
     var myFunc = backForTexefunc?()
     
     let  textField = UITextField()
+    let textview = UITextView()
+    
     let rightButton = UIButton()
     
     var leftTextLabelText = String()
     var myTextStr = String()
+    
+    var isLongText = Bool()
     
     
 
@@ -31,7 +35,12 @@ class PublicTextEditViewController: UIViewController {
         self.textField.leftView = leftTextLabel
         self.textField.textAlignment = .Right
         self.textField.font = MainFont
-        self.textField.placeholder = "(请填写)"
+        if myTextStr != "" {
+            self.textField.text = self.myTextStr
+        }else{
+            self.textField.placeholder = "(请填写)"
+        }
+        
         self.textField.addTarget(self, action: #selector(self.textFieldDidChange(_:)), forControlEvents: .EditingChanged)
         self.textField.clearButtonMode = .Always
         self.textField.backgroundColor = UIColor.whiteColor()
@@ -48,16 +57,71 @@ class PublicTextEditViewController: UIViewController {
         
         self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(customView: self.rightButton)
         
+        self.textview.frame = CGRectMake(20*px, 20*px, WIDTH-40*px, 180*px)
+        self.textview.layer.masksToBounds = true
+        self.textview.layer.cornerRadius = 10*px
+        self.textview.backgroundColor = UIColor.whiteColor()
+        
+        if self.myTextStr != "" {
+            self.textview.textColor = UIColor.blackColor()
+            self.textview.text = myTextStr
+        }else{
+            self.textview.textColor = MainTextBackColor
+            self.textview.text = "(请填写)"
+        }
+        
+        self.textview.font = MainFont
+        self.textview.delegate = self
+        self.view.addSubview(self.textview)
+        
+        if self.isLongText {
+            self.textField.hidden = true
+            self.textview.hidden = false
+        }else{
+            self.textField.hidden = false
+            self.textview.hidden = true
+        }
+        
 
         // Do any additional setup after loading the view.
     }
     
+    //MARK: -----textViewDelegate
+    
+    func textViewDidBeginEditing(textView: UITextView) {
+        if textView.text == self.myTextStr {
+            self.rightButton.setTitleColor(UIColor.lightGrayColor(), forState: .Normal)
+            self.rightButton.userInteractionEnabled = false
+        }else{
+            self.rightButton.setTitleColor(UIColor.whiteColor(), forState: .Normal)
+            self.rightButton.userInteractionEnabled = true
+        }
+        if self.textview == textView {
+            if textview.text ==  "(请填写)"{
+                self.textview.text = ""
+            }else{
+                
+            }
+        }
+        self.textview.textColor = UIColor.blackColor()
+    }
+    
     func rightButtonAction(){
         
+        
         if self.myFunc != nil{
-            if self.textField.text != nil {
-                self.myFunc!(editedText:self.textField.text!)
+            if isLongText {
+                if self.textview.text != nil || self.textview.text != "(请填写)" {
+                    self.myFunc!(editedText:self.textview.text!)
+                }else{
+                   self.myFunc!(editedText:"")
+                }
+            }else{
+                if self.textField.text != nil {
+                    self.myFunc!(editedText:self.textField.text!)
+                }
             }
+            
             
         }
         self.navigationController?.popViewControllerAnimated(true)

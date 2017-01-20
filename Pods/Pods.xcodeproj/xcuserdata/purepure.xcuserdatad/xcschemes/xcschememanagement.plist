@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>MBProgressHUD.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>MJRefresh.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -59,6 +64,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SVProgressHUD.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>SwiftyJSON.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -72,17 +82,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0B09CAF3376E5484EECA374752AB325D</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>12709FF06D1C8041285D0371A0E17024</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>2212E4CAA6F3D602DF324AD4CFBF6475</key>
+		<key>1CB9FD61C0E25911AEF00AC419853623</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -97,17 +97,27 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>39F325916D2DEF5F4F7B9CC099FFFEC5</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>4C2A8C4219874A832BAFD6CBCA783151</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>5BBB34170986C897E8931C1768FD6EE3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6747FC7EC3A6BCA95794972CFB3FF1DF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>69B32F7636A17A609AA4F2F40912AADE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6B50B1E41375B80A86050B9730E085F0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>72685324D73708EDF1B7BA3C10C071A4</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -117,7 +127,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A7E479C8BA60427511AEE0C41D768710</key>
+		<key>84C4A7450D99BE972AB198F389D2C720</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A7A5242F7364F182C89670933270E8F7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -132,7 +147,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>FC143C87AE83A2453B549D9CBC1B0C81</key>
+		<key>D990D3284889BE55CA3C71BED547B1F2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DBA6001481CEA0EBA031CC5C94508FAA</key>
 		<dict>
 			<key>primary</key>
 			<true/>

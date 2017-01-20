@@ -26,7 +26,7 @@ class HPYRootController: UITabBarController {
     func configerUI(){
         //title
         community.title = "社区"
-        convenience.title = "便民"
+        convenience.title = "商城"
         home.title = "首页"
         mine.title = "我的"
         video.title = "视频大厅"

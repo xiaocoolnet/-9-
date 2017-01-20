@@ -72,10 +72,11 @@ class HPYHomeController: UIViewController ,UICollectionViewDataSource,UIScrollVi
         backImageView.image = UIImage(named:"首页圆形")
         self.view.addSubview(backImageView)
         
-        let layout = SACollectionViewVerticalScalingFlowLayout.init()
+        let layout = UICollectionViewFlowLayout.init()
         
-        layout.scaleMode = .Hard
-        layout.alphaMode = .Hard
+//         let layout = SACollectionViewVerticalScalingFlowLayout.init()
+//        layout.scaleMode = .Hard
+//        layout.alphaMode = .Hard
         
         layout.scrollDirection = .Horizontal
         layout.itemSize = CGSizeMake(110*px, 110*px)

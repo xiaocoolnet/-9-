@@ -20,10 +20,23 @@
 #import <AliyunPlayerSDK/AliVcMediaPlayer.h>
 #import <MediaPlayer/MediaPlayer.h>
 #import <AVFoundation/AVAudioSession.h>
+
+#import "JQIndicatorView.h"//正在加载。。。
+//网易云信
 #import "NIMSDK.h"
 #import "NIMNetCallManagerProtocol.h"
 
 #import "NIMAVChat.h"
+
+//大华设备
+#import "openApiService.h"
+#import "DeviceViewController.h"
+
+//阿里云推送
+#import <CloudPushSDK/CloudPushSDK.h>
+
+//图片上传
+#import "ConnectModel.h"
 
 
 

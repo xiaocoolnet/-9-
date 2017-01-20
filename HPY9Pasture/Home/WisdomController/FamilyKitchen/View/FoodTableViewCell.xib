@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="FoodTableViewCell" customModule="HPY9Pasture" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="69"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="68"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mi4-0D-6se">
+                        <rect key="frame" x="8" y="8" width="52" height="52"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="52" id="7DO-bW-epf"/>
+                            <constraint firstAttribute="height" constant="52" id="WeW-ud-9DK"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Mq-lf-imR">
+                        <rect key="frame" x="247" y="8" width="65" height="17"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="17" id="kZt-he-Ho5"/>
+                            <constraint firstAttribute="width" constant="65" id="klH-0B-NFt"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LQc-ac-Aqj" customClass="AutoScrollLabel" customModule="HPY9Pasture" customModuleProvider="target">
+                        <rect key="frame" x="63" y="8" width="168" height="17"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="168" id="JAu-mN-wcY"/>
+                            <constraint firstAttribute="height" constant="17" id="pN2-ct-j90"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hiE-MU-7qY">
+                        <rect key="frame" x="63" y="26" width="249" height="34"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="249" id="1zQ-xR-h8e"/>
+                            <constraint firstAttribute="height" constant="34" id="eIc-DT-UO6"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="6Mq-lf-imR" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="5xM-ZM-KcN"/>
+                    <constraint firstItem="hiE-MU-7qY" firstAttribute="leading" secondItem="mi4-0D-6se" secondAttribute="trailing" constant="3" id="ABg-04-PxO"/>
+                    <constraint firstItem="hiE-MU-7qY" firstAttribute="top" secondItem="LQc-ac-Aqj" secondAttribute="bottom" constant="1" id="CSl-Vq-LRX"/>
+                    <constraint firstItem="LQc-ac-Aqj" firstAttribute="leading" secondItem="mi4-0D-6se" secondAttribute="trailing" constant="3" id="Nis-jl-pgp"/>
+                    <constraint firstItem="mi4-0D-6se" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="PCA-pB-irr"/>
+                    <constraint firstItem="mi4-0D-6se" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="VMH-WG-9NL"/>
+                    <constraint firstItem="LQc-ac-Aqj" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="e0U-qy-iAq"/>
+                    <constraint firstItem="6Mq-lf-imR" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="ute-6g-sGj"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="foodImage" destination="mi4-0D-6se" id="tdZ-ce-XSX"/>
+                <outlet property="foodName" destination="LQc-ac-Aqj" id="oRs-dU-Z4F"/>
+                <outlet property="fooddescribe" destination="hiE-MU-7qY" id="kvx-FI-vFb"/>
+                <outlet property="moneyLabel" destination="6Mq-lf-imR" id="KeQ-oq-Hjs"/>
+            </connections>
+            <point key="canvasLocation" x="538" y="218.5"/>
+        </tableViewCell>
+    </objects>
+</document>

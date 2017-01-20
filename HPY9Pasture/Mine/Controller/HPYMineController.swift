@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 class HPYMineController: UIViewController {
     
@@ -21,6 +22,9 @@ class HPYMineController: UIViewController {
     let toolTextArray = ["健康档案","收藏","关注","足迹","政府采购","通信","卡卷","账单","其他"]
     let toolImageArray = ["wode_dangan","wode_shoucang","wode_guanzhu","wode_zuji","wode_zhegnfucaigou","wode_tongxin","wode_qinqingquan","wode_zhangdan","wode_qita"]
     
+    var userLocationCenter = NSUserDefaults.standardUserDefaults()
+    
+    var userInfor:JSON?
     
     
     
@@ -35,12 +39,32 @@ class HPYMineController: UIViewController {
         
         self.view.addSubview(myScrollView)
         
-        configureUI()
+        
         
         // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(animated: Bool) {
+        
+        if userLocationCenter.objectForKey("UserInfo") != nil{
+            let userInfo = userLocationCenter.objectForKey("UserInfo") as! NSDictionary
+            if userInfo["userid"] != nil {
+                AppRequestManager.shareManager.getUserinfoWithUserId(userInfo["userid"] as! String, handle: { (success, response) in
+                    if success{
+                        let userInfo1 = JSON(data: response as! NSData)
+                        self.userInfor = userInfo1["data"]
+                        
+                        self.configureUI()
+                    }else{
+                        self.configureUI()
+                    }
+                })
+            }else{
+                self.configureUI()
+            }
+            
+        }
+        
         super.viewWillAppear(true)
         self.navigationController?.navigationBar.hidden = true
     }
@@ -57,19 +81,44 @@ class HPYMineController: UIViewController {
         headerBackView.frame = CGRectMake(0, 0, WIDTH, 133*px)
         headerBackView.userInteractionEnabled = true
         self.myScrollView.addSubview(headerBackView)
-        self.myHeaderImageView = ColorfulNameLabel.init(frame: CGRectMake(15*px, 40*px, 55*px, 55*px)) 
-        self.myHeaderImageView.text = "未知"
+        self.myHeaderImageView = ColorfulNameLabel.init(frame: CGRectMake(15*px, 40*px, 55*px, 55*px))
+        if self.userInfor != nil&&self.userInfor!["name"] != nil {
+            self.myHeaderImageView.text = self.userInfor!["name"].string
+        }else{
+            self.myHeaderImageView.text = "未知"
+        }
+        
         headerBackView.addSubview(myHeaderImageView)
         myHeaderImageButton.frame = CGRectMake(15*px, 40*px, 55*px, 55*px)
         myHeaderImageButton.backgroundColor = UIColor.clearColor()
-        myHeaderImageButton.setImage(UIImage(named: "wode_touxinag"), forState: .Normal)
+//        myHeaderImageButton.setImage(UIImage(named: "wode_touxinag"), forState: .Normal)
+//        let domeImageView = UIImageView()
+        if self.userInfor != nil&&self.userInfor!["photo"] != nil {
+            myHeaderImageButton.sd_setImageWithURL(NSURL(string:Happy_ImageUrl+self.userInfor!["photo"].string!), forState: .Normal)
+//            domeImageView.sd_setImageWithURL(NSURL(string:Happy_ImageUrl+self.userInfor!["photo"].string!), placeholderImage: UIImage(named: ""), completed: { (image, error, type, url) in
+//                self.myHeaderImageButton.setImage(image, forState: .Normal)
+//            })
+        }else if self.userInfor != nil && self.userInfor!["sex"] != nil{
+            if self.userInfor!["sex"].string == "1"{
+                self.myHeaderImageButton.setImage(UIImage(named:"ic_touxi" ) , forState: .Normal)
+            }else{
+                self.myHeaderImageButton.setImage(UIImage(named:"ic_toux" ), forState: .Normal)
+            }
+            
+        }
+        
         myHeaderImageButton.layer.masksToBounds = true
         myHeaderImageButton.layer.cornerRadius = myHeaderImageButton.frame.height/2
         myHeaderImageButton.addTarget(self, action: #selector(self.clickedLogBtn(_:)), forControlEvents: .TouchUpInside)
         headerBackView.addSubview(myHeaderImageButton)
         
         loginButton.frame = CGRectMake(75*px, (40+25/2)*px, 90*px, 30*px)
-        loginButton.setTitle("点击登录", forState: .Normal)
+        if self.userInfor != nil&&self.userInfor!["name"] != nil{
+            loginButton.setTitle(self.userInfor!["name"].string, forState: .Normal)
+        }else{
+            loginButton.setTitle("点击登录", forState: .Normal)
+        }
+        
         loginButton.setTitleColor(UIColor.whiteColor(), forState: .Normal)
         loginButton.contentHorizontalAlignment = .Left
         loginButton.titleLabel?.font = MainFont
@@ -268,10 +317,23 @@ class HPYMineController: UIViewController {
     }
     
     func clickedLogBtn(btn:UIButton){
-        let logVC = HPYLoginController()
         
-        logVC.hidesBottomBarWhenPushed = true
-        navigationController?.pushViewController(logVC, animated: true)
+        if self.userInfor != nil{
+            let vc = EditInformationViewController()
+            vc.hidesBottomBarWhenPushed = true
+            self.navigationController?.pushViewController(vc, animated: true)
+//            vc.hidesBottomBarWhenPushed = false
+            
+        }else{
+            let NAV1 = UINavigationController.init(rootViewController: HPYLoginController())
+            
+            self.presentViewController(NAV1, animated: true) {
+                
+            }
+        }
+
+        
+
     }
     func clickedRegister(btn:UIButton){
         let registerVC = HPYRegisterController()

@@ -17,7 +17,8 @@ class WisdomControllerViewController: UIViewController,SDCycleScrollViewDelegate
 //    var c = []
 //    var d = []
     
-    var a = ["mainTitle":"智慧社区","classify":[["image":"fuwudating","text":"服务大厅"],["image":"shequyanglao","text":"社区养老"],["image":"yijiantong","text":"一键通"],["image":"bianminshangcheng-1","text":"便民商城"],["image":"jiatingchufang","text":"家庭厨房"],["image":"wuyefei","text":"物业缴费"]]]
+    var a = ["mainTitle":"智慧社区","classify":[["image":"fuwudating","text":"服务大厅"],["image":"shequyanglao","text":"社区养老"],["image":"yijiantong","text":"一键通"],["image":"bianminshangcheng-1","text":"便民商城"],["image":"jiatingchufang","text":"家庭厨房"],["image":"wuyefei","text":"物业缴费"],
+        ["image":"ic_anbao","text":"安保＋养老"]]]
     
     var b = ["mainTitle":"机构养老","classify":[["image":"qiyexinxi","text":"企业信息"],["image":"tuzhurenyuan","text":"入住人员"],["image":"fangjainfenbu","text":"房间分布"],["image":"kaoqianguanli","text":"考勤管理"],
         ["image":"butieguanli","text":"补贴管理"],
@@ -51,6 +52,12 @@ class WisdomControllerViewController: UIViewController,SDCycleScrollViewDelegate
         self.view.backgroundColor = LGBackColor
         self.createUI()
         // Do any additional setup after loading the view.
+    }
+    
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(true)
+        self.navigationController?.navigationBar.hidden = false
     }
 
     func createUI(){

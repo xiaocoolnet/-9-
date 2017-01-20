@@ -17,6 +17,33 @@ class AppDelegate: UIResponder, UIApplicationDelegate,BMKGeneralDelegate ,NIMNet
     
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        
+        /***********************阿里云推送********************************/
+        // APNs注册，获取deviceToken并上报
+        self
+        
+        
+        
+        
+        
+        /***************** ******网易云信********************************/
+        
+        NIMSDK.sharedSDK().registerWithAppID("45c6af3c98409b18a84451215d0bdd6e", cerName: "ENTERPRISE")
+      
+        //视频通话接听回调添加代理
+        NIMSDK.sharedSDK().netCallManager.addDelegate(self)
+        
+        //        NIMSDK.sharedSDK().loginManager.login(<#T##account: String##String#>, token: <#T##String#>, completion: <#T##NIMLoginHandler##NIMLoginHandler##(NSError?) -> Void#>)
+        
+        /***********************百度地图********************************/
+        // 要使用百度地图，请先启动BaiduMapManager
+        _mapManager = BMKMapManager()
+        // 如果要关注网络及授权验证事件，请设定generalDelegate参数
+        let ret = _mapManager?.start("ZYrOi8YPt6NoNBvaYV5b2RxC1r0z0Bxv", generalDelegate: self)
+        if ret == false {
+            NSLog("manager start failed!")
+        }
+        
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
         window?.rootViewController = NAVC
         window!.makeKeyAndVisible()
@@ -39,26 +66,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate,BMKGeneralDelegate ,NIMNet
             
             })
         }
-        /***********************网易云信********************************/
         
-        NIMSDK.sharedSDK().registerWithAppID("34d065a1b06fb569380c94d4c55841ec", cerName: "快乐9号")
-        //视频通话接听回调添加代理
-        NIMSDK.sharedSDK().netCallManager.addDelegate(self)
-        
-        /***********************百度地图********************************/
-        // 要使用百度地图，请先启动BaiduMapManager
-        _mapManager = BMKMapManager()
-        // 如果要关注网络及授权验证事件，请设定generalDelegate参数
-        let ret = _mapManager?.start("ZYrOi8YPt6NoNBvaYV5b2RxC1r0z0Bxv", generalDelegate: self)
-        if ret == false {
-            NSLog("manager start failed!")
-        }
         
         return true
     }
     //MARK:-- NIMNetCallManagerDelegate//视频通话接听回调代理
     func onReceive(callID: UInt64, from caller: String, type: NIMNetCallType, message extendMessage: String?) {
-        
+        NSLOG("1212121212121")
     }
     
     func applicationWillResignActive(application: UIApplication) {
@@ -96,6 +110,102 @@ class AppDelegate: UIResponder, UIApplicationDelegate,BMKGeneralDelegate ,NIMNet
         
         
         return true
+    }
+    
+    // MARK:- 阿里云推送
+    func initCloudPush() {
+        CloudPushSDK.asyncInit("23598585", appSecret: "1c4a3ca3811066dddfa6bade4503b0be") { (res) in
+            if (res?.success)! {
+                print("Push SDK init success, deviceId: %@.", CloudPushSDK.getDeviceId())
+            }else{
+                print("Push SDK init failed, error: %@", res?.error ?? "error")
+            }
+        }
+    }
+    
+    /**
+     *    注册苹果推送，获取deviceToken用于推送
+     *
+     *    @param     application
+     */
+    func registerAPNS(application:UIApplication) {
+        
+        // iOS 8 Notifications
+        let userSettings = UIUserNotificationSettings(forTypes: [.Badge, .Sound, .Alert],
+                                                      categories: nil)
+        application.registerUserNotificationSettings(UIUserNotificationSettings(forTypes: userSettings.types,
+            categories: nil))
+        application.registerForRemoteNotifications()
+        
+    }
+    
+    /*
+     *  苹果推送注册成功回调，将苹果返回的deviceToken上传到CloudPush服务器
+     */
+    
+    func application(application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData) {
+        CloudPushSDK.registerDevice(deviceToken) { (res) in
+            if (res?.success)! {
+                print("Register deviceToken success.")
+            }else{
+                print("Register deviceToken failed, error: %@", res?.error ?? "error")
+            }
+        }
+    }
+    
+    
+    /*
+     *  苹果推送注册失败回调
+     */
+    func application(application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: NSError) {
+        print("didFailToRegisterForRemoteNotificationsWithError %@", error)
+    }
+    /**
+     *	注册推送通道打开监听
+     */
+    func listenerOnChannelOpened() {
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(onChannelOpened(_:)), name:"CCPDidChannelConnectedSuccess", object: nil)
+        }
+    
+    /**
+     *	推送通道打开回调
+     *
+     *	@param 	notification
+     */
+    func onChannelOpened(notification:NSNotification) {
+        print("温馨提示:消息通道建立成功")
+    }
+    
+    /**
+     *    注册推送消息到来监听
+     */
+    func registerMessageReceive() {
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(onMessageReceived(_:)), name: "CCPDidReceiveMessageNotification", object: nil)
+        }
+
+    /**
+     *    处理到来推送消息
+     *
+     *    @param     notification
+     */
+    func onMessageReceived(notification:NSNotification) {
+        let message = notification.object as! CCPSysMessage
+        let title = NSString(data: message.title, encoding: NSUTF8StringEncoding)
+        let body = NSString(data: message.body, encoding: NSUTF8StringEncoding)
+        
+        print("Receive message title: \(title), content: \(body).")
+    }
+    
+    func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject]) {
+        print("App处于启动状态时，通知打开回调")
+        // 取得APNS通知内容
+        let aps = userInfo["aps"] as? NSDictionary
+        // 内容
+        let content = aps!["alert"] as? NSString
+        // badge数量
+        let badge = aps!["badge"] as? NSInteger
+        // 播放声音
+        let sound = aps!.objectForKey("sound") as? NSString
     }
 }
 

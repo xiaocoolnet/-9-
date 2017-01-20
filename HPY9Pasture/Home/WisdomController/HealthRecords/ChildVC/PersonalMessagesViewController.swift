@@ -41,9 +41,87 @@ class PersonalMessagesViewController: UIViewController,UITableViewDelegate,UITab
                 self.navigationController?.pushViewController(vc, animated: true)
             }
         }else if indexPath.section == 1{
-            
+            switch indexPath.row {
+            case 0:
+                let vc = FamilyMessagesViewController()
+                vc.textArray = ["00001","00002","00003","00004"]
+                vc.title = "个人过敏信息档案"
+                vc.buttonText = "添加过敏史"
+                vc.myFunc = {()->Void in
+                    //添加家族信息事件
+                    let vc1 = AddAllergyRecordsViewController()
+                    vc1.title = "添加过敏史"
+                    
+                    vc.navigationController?.pushViewController(vc1, animated: true)
+                }
+                vc.myIndexFunc = {(selectIndex,selectArray)->Void in
+                    //添加cell点击事件
+                    //                vc.navigationController?.pushViewController(vc1, animated: true)
+                }
+                self.navigationController?.pushViewController(vc, animated: true)
+                break
+            case 1:
+                let vc = FamilyMessagesViewController()
+                vc.textArray = ["00001","00002","00003","00004"]
+                vc.title = "个人体检信息档案"
+                vc.buttonText = "添加体检信息"
+                vc.myFunc = {()->Void in
+                    //添加家族信息事件
+                    let vc1 = AddPhysicalExaminationViewController()
+                    vc1.title = "添加体检信息"
+                    
+                    vc.navigationController?.pushViewController(vc1, animated: true)
+                }
+                vc.myIndexFunc = {(selectIndex,selectArray)->Void in
+                    //添加cell点击事件
+                    //                vc.navigationController?.pushViewController(vc1, animated: true)
+                }
+                self.navigationController?.pushViewController(vc, animated: true)
+                break
+            default:
+                break
+            }
         }else if indexPath.section == 2{
-            
+            switch indexPath.row {
+            case 0:
+                let vc = FamilyMessagesViewController()
+                vc.textArray = ["00001","00002","00003","00004"]
+                vc.title = "个人服药档案"
+                vc.buttonText = "添加服药信息"
+                vc.myFunc = {()->Void in
+                    //添加家族信息事件
+                    let vc1 = AddMedicationMessagesViewController()
+                    vc1.title = "添加服药信息"
+                    
+                    vc.navigationController?.pushViewController(vc1, animated: true)
+                }
+                vc.myIndexFunc = {(selectIndex,selectArray)->Void in
+                    //添加cell点击事件
+                    //                vc.navigationController?.pushViewController(vc1, animated: true)
+                }
+                self.navigationController?.pushViewController(vc, animated: true)
+                break
+            case 1:
+                let vc = FamilyMessagesViewController()
+                vc.textArray = ["00001","00002","00003","00004"]
+                vc.title = "个人医嘱信息档案"
+                vc.buttonText = "添加医嘱"
+                vc.myFunc = {()->Void in
+                    //添加家族信息事件
+                    let vc1 = AddDoctorOrderViewController()
+                    vc1.title = "添加医嘱"
+                    
+                    vc.navigationController?.pushViewController(vc1, animated: true)
+                }
+                vc.myIndexFunc = {(selectIndex,selectArray)->Void in
+                    //添加cell点击事件
+                    //                vc.navigationController?.pushViewController(vc1, animated: true)
+                }
+                self.navigationController?.pushViewController(vc, animated: true)
+                break
+            default:
+                break
+            }
         }
     }
     
