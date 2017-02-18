@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '69B32F7636A17A609AA4F2F40912AADE'
+               BlueprintIdentifier = 'ECBB38475267FEB5DCF3FCAC5544F98B'
                BlueprintName = 'SACollectionViewVerticalScalingFlowLayout'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'SACollectionViewVerticalScalingFlowLayout.framework'>

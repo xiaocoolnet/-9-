@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import CoreData
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate,BMKGeneralDelegate ,NIMNetCallManagerDelegate{
@@ -14,13 +16,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate,BMKGeneralDelegate ,NIMNet
     var window: UIWindow?
     var _mapManager: BMKMapManager?
     let NAVC = HPYRootController()
+    var allowRotation = Bool()
     
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        //预存不允许横屏
+        let ud = NSUserDefaults.standardUserDefaults()
+        ud.setObject("2", forKey: "allowRotation")
         
         /***********************阿里云推送********************************/
         // APNs注册，获取deviceToken并上报
         self
+        
         
         
         
@@ -56,7 +63,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate,BMKGeneralDelegate ,NIMNet
         UIBarButtonItem.appearance().setBackButtonTitlePositionAdjustment(UIOffsetMake(0, -60), forBarMetrics:.Default)
         UITabBar.appearance().translucent = false
         
-        let ud = NSUserDefaults.standardUserDefaults()
+//        let ud = NSUserDefaults.standardUserDefaults()
         if ud.boolForKey("ISLogin") {//判断是否需要登录
             
         }else{
@@ -73,6 +80,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate,BMKGeneralDelegate ,NIMNet
     //MARK:-- NIMNetCallManagerDelegate//视频通话接听回调代理
     func onReceive(callID: UInt64, from caller: String, type: NIMNetCallType, message extendMessage: String?) {
         NSLOG("1212121212121")
+    }
+    //MARK:--是否允许横屏
+    func application(application: UIApplication, supportedInterfaceOrientationsForWindow window: UIWindow?) -> UIInterfaceOrientationMask {
+        
+        let ud = NSUserDefaults.standardUserDefaults()
+        if  ud.objectForKey("allowRotation") != nil {
+            if ud.objectForKey("allowRotation") as! String == "1"  {
+                return UIInterfaceOrientationMask.All
+            }
+        }
+        
+        return UIInterfaceOrientationMask.Portrait
     }
     
     func applicationWillResignActive(application: UIApplication) {
@@ -207,5 +226,72 @@ class AppDelegate: UIResponder, UIApplicationDelegate,BMKGeneralDelegate ,NIMNet
         // 播放声音
         let sound = aps!.objectForKey("sound") as? NSString
     }
+    
+    // MARK: - Core Data stack
+    
+    lazy var applicationDocumentsDirectory: NSURL = {
+        // The directory the application uses to store the Core Data store file. This code uses a directory named "xiaocool.CoreDataDemo" in the application's documents Application Support directory.
+        let urls = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)
+        return urls[urls.count-1]
+    }()
+    
+    lazy var managedObjectModel: NSManagedObjectModel = {
+        // The managed object model for the application. This property is not optional. It is a fatal error for the application not to be able to find and load its model.
+        let modelURL = NSBundle.mainBundle().URLForResource("Happy9", withExtension: "momd")!
+        return NSManagedObjectModel(contentsOfURL: modelURL)!
+    }()
+    
+    lazy var persistentStoreCoordinator: NSPersistentStoreCoordinator = {
+        // The persistent store coordinator for the application. This implementation creates and returns a coordinator, having added the store for the application to it. This property is optional since there are legitimate error conditions that could cause the creation of the store to fail.
+        // Create the coordinator and store
+        let coordinator = NSPersistentStoreCoordinator(managedObjectModel: self.managedObjectModel)
+        let url = self.applicationDocumentsDirectory.URLByAppendingPathComponent("Happy9.sqlite")
+        var failureReason = "There was an error creating or loading the application's saved data."
+        do {
+            try coordinator.addPersistentStoreWithType(NSSQLiteStoreType, configuration: nil, URL: url, options: nil)
+        } catch {
+            // Report any error we got.
+            var dict = [String: AnyObject]()
+            dict[NSLocalizedDescriptionKey] = "Failed to initialize the application's saved data"
+            dict[NSLocalizedFailureReasonErrorKey] = failureReason
+            
+            dict[NSUnderlyingErrorKey] = error as NSError
+            let wrappedError = NSError(domain: "YOUR_ERROR_DOMAIN", code: 9999, userInfo: dict)
+            // Replace this with code to handle the error appropriately.
+            // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+            NSLog("Unresolved error \(wrappedError), \(wrappedError.userInfo)")
+            abort()
+        }
+        
+        return coordinator
+    }()
+    
+    lazy var managedObjectContext: NSManagedObjectContext = {
+        // Returns the managed object context for the application (which is already bound to the persistent store coordinator for the application.) This property is optional since there are legitimate error conditions that could cause the creation of the context to fail.
+        let coordinator = self.persistentStoreCoordinator
+        var managedObjectContext = NSManagedObjectContext(concurrencyType: .MainQueueConcurrencyType)
+        managedObjectContext.persistentStoreCoordinator = coordinator
+        return managedObjectContext
+    }()
+    
+    // MARK: - Core Data Saving support
+    
+    func saveContext () {
+        if managedObjectContext.hasChanges {
+            do {
+                try managedObjectContext.save()
+            } catch {
+                // Replace this implementation with code to handle the error appropriately.
+                // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+                let nserror = error as NSError
+                NSLog("Unresolved error \(nserror), \(nserror.userInfo)")
+                abort()
+            }
+        }
+    }
+
+    
+    
+    
 }
 

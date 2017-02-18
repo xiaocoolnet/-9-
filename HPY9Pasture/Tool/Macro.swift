@@ -10,6 +10,7 @@ import UIKit
 let LGBackColor = UIColor(red: 239/255.0, green: 239/255.0, blue: 239/255.0, alpha: 1)
 let NavColor = UIColor(red: 81/255.0, green: 166/255.0, blue: 255/255, alpha: 1)
 let MainTextBackColor = RGBACOLOR(149, g: 149, b: 149, a: 1)
+let MainTextColor = RGBACOLOR(50, g: 50, b: 50, a: 1)
 let MainFont = UIFont.systemFontOfSize(13)
 let Screen_H = UIScreen.mainScreen().bounds.height
 let Screen_W = UIScreen.mainScreen().bounds.width
@@ -49,15 +50,15 @@ class TimeManager{
     }
     func begainTimerWithKey(key:String,timeInterval:Float,process:TimerHandle,finish:TimerHandle){
         if taskDic.count > 20 {
-            print("任务太多")
+            NSLOG("任务太多")
             return
         }
         if timeInterval>120 {
-            print("不支持120秒以上后台操作")
+            NSLOG("不支持120秒以上后台操作")
             return
         }
         if taskDic[key] != nil{
-            print("存在这个任务")
+            NSLOG("存在这个任务")
             return
         }
         let task = TimeTask().configureWithTime(key,time:timeInterval, processHandle: process, finishHandle:finish)
@@ -101,6 +102,59 @@ class TimeTask :NSObject{
             }
         }
     }
+}
+//计算文字高度
+func calculateHeight(string:String,size:CGFloat,width:  CGFloat) -> CGFloat {
+    let options : NSStringDrawingOptions = NSStringDrawingOptions.UsesLineFragmentOrigin
+    //let screenBounds:CGRect = UIScreen.mainScreen().bounds
+    let boundingRect = String(string).boundingRectWithSize(CGSizeMake(width, 0), options: options, attributes: [NSFontAttributeName:UIFont.systemFontOfSize(size)], context: nil)
+    print(boundingRect.height)
+    return boundingRect.height
+}
+//身份证正则表达式检测
+func validateIdentityCard(card:String) -> Bool{
+    let string = NSString(string: card)
+    let length =  NSString(string: card).length
+    if length != 15 && length != 18 {
+        return false
+    }
+    var regex:String?
+    if length == 15 {
+        regex = "^[1-9]\\d{7}((0\\d)|(1[0-2]))(([0|1|2]\\d)|3[0-1])\\d{3}$"
+    }else{
+        regex = "^[1-9]\\d{5}[1-9]\\d{3}((0\\d)|(1[0-2]))(([0|1|2]\\d)|3[0-1])\\d{3}([0-9]|X)$"
+    }
+    let predicate = NSPredicate.init(format: "SELF MATCHES %@",regex!)
+    
+    return predicate.evaluateWithObject(string)
+}
+//时间格式转换
+func stringToTimeStamp(stringTime:String)->String {
+    
+    let dfmatter = NSDateFormatter()
+    dfmatter.dateFormat="yyyy年MM月dd日 HH:mm:ss"
+    let date = dfmatter.dateFromString(stringTime)
+    
+    let dateStamp:NSTimeInterval = date!.timeIntervalSince1970
+    
+    let dateSt:Int = Int(dateStamp)
+    print(dateSt)
+    return String(dateSt)
+    
+}
+
+func timeStampToStringyyyyMMDD(timeStamp:String)->String {
+    
+    let string = NSString(string: timeStamp)
+    
+    let timeSta:NSTimeInterval = string.doubleValue
+    let dfmatter = NSDateFormatter()
+    dfmatter.dateFormat="yyyy年MM月dd日"
+    
+    let date = NSDate(timeIntervalSince1970: timeSta)
+    
+    print(dfmatter.stringFromDate(date))
+    return dfmatter.stringFromDate(date)
 }
 
 

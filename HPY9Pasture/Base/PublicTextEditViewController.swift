@@ -124,7 +124,7 @@ class PublicTextEditViewController: UIViewController,UITextViewDelegate {
             
             
         }
-        self.navigationController?.popViewControllerAnimated(true)
+//        self.navigationController?.popViewControllerAnimated(true)
     }
     func textFieldDidChange(sender:UITextField){
         if sender.text == self.myTextStr {

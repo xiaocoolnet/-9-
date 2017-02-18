@@ -46,7 +46,6 @@ class PublicTableViewViewController: UIViewController,UITableViewDataSource,UITa
             }
             
         }
-       self.navigationController?.popViewControllerAnimated(true)
     }
     
     

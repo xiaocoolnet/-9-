@@ -30,6 +30,10 @@
 
 - (void) viewDidLoad
 {
+    //打开横屏（详见appdelegate）
+    NSUserDefaults * ud = [NSUserDefaults standardUserDefaults];
+    [ud setObject:@"1" forKey:@"allowRotation"];
+    
     [super viewDidLoad];
     [self initWindowView];
     self.view.backgroundColor = [UIColor colorWithRed:239/255.0 green:239/255.0 blue:239/255.0 alpha:1];
@@ -45,6 +49,13 @@
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(onActive:)
                                                  name:UIApplicationDidBecomeActiveNotification object:nil];
+}
+
+-(void)viewDidDisappear:(BOOL)animated{
+    [super viewDidDisappear:YES];
+    //离开页面取消横屏
+    NSUserDefaults * ud = [NSUserDefaults standardUserDefaults];
+    [ud setObject:@"2" forKey:@"allowRotation"];
 }
 
 - (void)didReceiveMemoryWarning

@@ -52,7 +52,9 @@ class HPYMineController: UIViewController {
                 AppRequestManager.shareManager.getUserinfoWithUserId(userInfo["userid"] as! String, handle: { (success, response) in
                     if success{
                         let userInfo1 = JSON(data: response as! NSData)
-                        self.userInfor = userInfo1["data"]
+                        if userInfo1["data"] != nil{
+                            self.userInfor = userInfo1["data"]
+                        }
                         
                         self.configureUI()
                     }else{
@@ -82,7 +84,7 @@ class HPYMineController: UIViewController {
         headerBackView.userInteractionEnabled = true
         self.myScrollView.addSubview(headerBackView)
         self.myHeaderImageView = ColorfulNameLabel.init(frame: CGRectMake(15*px, 40*px, 55*px, 55*px))
-        if self.userInfor != nil&&self.userInfor!["name"] != nil {
+        if self.userInfor != nil&&self.userInfor!["name"].string != nil {
             self.myHeaderImageView.text = self.userInfor!["name"].string
         }else{
             self.myHeaderImageView.text = "未知"
@@ -93,12 +95,12 @@ class HPYMineController: UIViewController {
         myHeaderImageButton.backgroundColor = UIColor.clearColor()
 //        myHeaderImageButton.setImage(UIImage(named: "wode_touxinag"), forState: .Normal)
 //        let domeImageView = UIImageView()
-        if self.userInfor != nil&&self.userInfor!["photo"] != nil {
+        if self.userInfor != nil&&self.userInfor!["photo"].string != nil {
             myHeaderImageButton.sd_setImageWithURL(NSURL(string:Happy_ImageUrl+self.userInfor!["photo"].string!), forState: .Normal)
 //            domeImageView.sd_setImageWithURL(NSURL(string:Happy_ImageUrl+self.userInfor!["photo"].string!), placeholderImage: UIImage(named: ""), completed: { (image, error, type, url) in
 //                self.myHeaderImageButton.setImage(image, forState: .Normal)
 //            })
-        }else if self.userInfor != nil && self.userInfor!["sex"] != nil{
+        }else if self.userInfor != nil && self.userInfor!["sex"].string != nil{
             if self.userInfor!["sex"].string == "1"{
                 self.myHeaderImageButton.setImage(UIImage(named:"ic_touxi" ) , forState: .Normal)
             }else{
@@ -113,7 +115,7 @@ class HPYMineController: UIViewController {
         headerBackView.addSubview(myHeaderImageButton)
         
         loginButton.frame = CGRectMake(75*px, (40+25/2)*px, 90*px, 30*px)
-        if self.userInfor != nil&&self.userInfor!["name"] != nil{
+        if self.userInfor != nil&&self.userInfor!["name"].string != nil{
             loginButton.setTitle(self.userInfor!["name"].string, forState: .Normal)
         }else{
             loginButton.setTitle("点击登录", forState: .Normal)

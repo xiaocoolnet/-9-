@@ -52,8 +52,7 @@ class HPYHomeController: UIViewController ,UICollectionViewDataSource,UIScrollVi
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
+
         view.backgroundColor = UIColor.whiteColor()
         self.title = "快乐9号"
         self.tabBarItem.title = "首页"

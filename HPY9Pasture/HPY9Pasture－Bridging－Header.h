@@ -38,6 +38,13 @@
 //图片上传
 #import "ConnectModel.h"
 
+//数据库访问FMDB
+#import "FMDB.h"
+#import "DataBase.h"
+
+//带默认文字的textview
+#import "PlaceholderTextView.h"
+
 
 
 /*百度地图*/

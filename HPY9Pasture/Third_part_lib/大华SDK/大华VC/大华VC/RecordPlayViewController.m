@@ -42,7 +42,7 @@ typedef NS_ENUM(NSInteger, PlayState)
 
 - (void)viewDidLoad {
     
-    
+   
     
     [super viewDidLoad];
     [self initWindowView];

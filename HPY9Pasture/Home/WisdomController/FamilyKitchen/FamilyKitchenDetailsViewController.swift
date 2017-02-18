@@ -7,37 +7,93 @@
 //
 
 import UIKit
+import SwiftyJSON
+import MJRefresh
 
 class FamilyKitchenDetailsViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
 
     var headerView = FamilyKitHeaderView()
     let schedulePhoneView = UIView()
+    var phoneLabel = UILabel()
     let kitchenTableView = UITableView()
+    var restaurantInfo:JSON?
+    var userInfo:JSON?
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.hidden = true
         self.view.backgroundColor = LGBackColor
-        NSLOG(80*px)
         createrHeaderUI()
+        
+        
+//        kitchenTableView.mj_header = MJRefreshNormalHeader(refreshingBlock: { () -> Void in
+//            NSLOG("MJ:(下拉刷新)")
+//            self.getData(beginId: "0")
+//            
+//            
+//        })
+//        kitchenTableView.mj_footer = MJRefreshBackNormalFooter(refreshingBlock: { () -> Void in
+//            NSLOG("MJ:(上拉加载)")
+//            self.getData(beginId: "1")
+//            
+//        })
+//        kitchenTableView.mj_header.beginRefreshing()
+        self.getData("")
         // Do any additional setup after loading the view.
     }
+    
+    func getData(beginID:String){
+        AppRequestManager.shareManager.getFoodListByHomeId(self.restaurantInfo!["id"].string!, beginID: beginID) { (success, response) in
+            if success{
+                let userInfo1 = JSON(data: response as! NSData)
+                self.userInfo = userInfo1["data"]
+                self.kitchenTableView.reloadData()
+                if self.userInfo!["name"].string != nil {
+                    self.headerView.name.text = self.userInfo!["name"].string
+                }
+                if self.userInfo!["price"].string != nil && self.userInfo!["expressfee"].string != nil{
+                    self.headerView.money.text = "满¥"+self.userInfo!["price"].string!+"起送｜配送费¥"+self.userInfo!["expressfee"].string!+"元"
+                }
+                if self.userInfo!["image"].string != nil {
+                    self.headerView.headerImageview.sd_setImageWithURL(NSURL.init(string: Happy_ImageUrl+self.userInfo!["image"].string!), placeholderImage: UIImage(named: ""))
+                }
+                if self.userInfo!["noticelist"].array != nil {
+                    if self.userInfo!["noticelist"].array![0]["title"].string != nil{
+                        self.headerView.advertiseMentLabel.text = self.userInfo!["noticelist"].array![0]["title"].string
+                    }
+                    
+                }
+                if self.userInfo!["phone"].string != nil {
+                    if self.userInfo!["phone"].string != nil{
+                        self.phoneLabel.text = self.userInfo!["phone"].string
+                    }
+                    
+                }
+                
+            }else{
+                alert("数据呀加载失败！", delegate: self)
+            }
+        }
+    }
+    
     func createrHeaderUI(){
         self.headerView =  NSBundle.mainBundle().loadNibNamed("FamilyKitHeaderView", owner: nil, options: nil).first as! FamilyKitHeaderView
         self.headerView.setUI()
         self.headerView.backButton.addTarget(self, action: #selector(self.backButtonAction), forControlEvents: .TouchUpInside)
-        self.headerView.name.text = "王纯纯喜欢吃"
-        self.headerView.money.text = "满¥"+"10"+"起送｜配送费¥"+"0"+"元"
-        self.headerView.advertiseMentLabel.text = "这里没有鸡精、味精，所有食材都是正规超市所购买"
+        
+        
         self.headerView.frame = CGRectMake(0, -23, WIDTH, 187)
         self.view.addSubview(self.headerView)
         
-        self.kitchenTableView.frame = CGRectMake(0, self.headerView.height-23, WIDTH, WIDTH-self.headerView.height-23-50*px)
+        self.kitchenTableView.frame = CGRectMake(0, self.headerView.height-23, WIDTH, HEIGHT-self.headerView.height-20)
         self.kitchenTableView.backgroundColor = UIColor.whiteColor()
         self.kitchenTableView.delegate = self
         self.kitchenTableView.dataSource = self
         self.kitchenTableView.separatorStyle = .None
+        self.kitchenTableView.tableFooterView = UIView()
         self.kitchenTableView.registerNib(UINib(nibName: "FoodTableViewCell",bundle: nil), forCellReuseIdentifier: "FoodTableViewCell")
+        
         self.view.addSubview(self.kitchenTableView)
         
         
@@ -53,8 +109,8 @@ class FamilyKitchenDetailsViewController: UIViewController,UITableViewDataSource
         phoneHeaderView.font = UIFont.systemFontOfSize(15)
         phoneHeaderView.font = UIFont.boldSystemFontOfSize(15)
         
-        let phoneLabel = UILabel.init(frame: CGRectMake(phoneHeaderView.width, 0, WIDTH-phoneHeaderView.width, 50*px))
-        phoneLabel.text = "18800001234"
+        phoneLabel = UILabel.init(frame: CGRectMake(phoneHeaderView.width, 0, WIDTH-phoneHeaderView.width, 50*px))
+        
         phoneLabel.textAlignment = .Center
         phoneLabel.backgroundColor = UIColor.whiteColor()
         phoneLabel.textColor = RGBACOLOR(255, g: 81, b: 85, a: 1)
@@ -71,15 +127,40 @@ class FamilyKitchenDetailsViewController: UIViewController,UITableViewDataSource
     }
     //MARK: ------TableViewDatasource
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
-        return 1
+        if self.userInfo?["foodlist"].array != nil {
+            return (self.userInfo?["foodlist"].array!.count)!
+        }else{
+            return 0
+        }
+        
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
         let cell = tableView.dequeueReusableCellWithIdentifier("FoodTableViewCell", forIndexPath: indexPath)as!FoodTableViewCell
         cell.setUI()
-        cell.fooddescribe.text = "测试一下的的的艰苦环境撒谎的哈哈时间和机会一定就会发黄的合法就开始大哭哈客"
-        cell.foodName.text = "王纯纯好吃的"
-        cell.moneyLabel.text = "¥"+"30"
+        if self.userInfo?["foodlist"].array != nil {
+            if self.userInfo?["foodlist"].array![indexPath.row]["description"].string != nil{
+                cell.fooddescribe.text = self.userInfo?["foodlist"].array![indexPath.row]["description"].string
+            }
+            
+            if self.userInfo?["foodlist"].array![indexPath.row]["name"].string != nil{
+                cell.foodName.text = self.userInfo?["foodlist"].array![indexPath.row]["name"].string
+            }
+            if self.userInfo?["foodlist"].array![indexPath.row]["price"].string != nil{
+                cell.moneyLabel.text = "¥"+(self.userInfo?["foodlist"].array![indexPath.row]["price"].string)!
+            }
+            if self.userInfo?["foodlist"].array![indexPath.row]["photolist"].array != nil
+            {
+                if self.userInfo?["foodlist"].array![indexPath.row]["photolist"].array![0].string != nil{
+                    //                NSLOG(self.userInfo?.array![indexPath.row]["photolist"].string)
+                    cell.foodImage.sd_setImageWithURL(NSURL.init(string: Happy_ImageUrl+(self.userInfo?["foodlist"].array![indexPath.row]["photolist"].array![0].string)!), placeholderImage: UIImage(named: ""))
+                }
+            }
+            
+        }
+        
+
+        
         cell.selectionStyle = .None
         return cell
     }

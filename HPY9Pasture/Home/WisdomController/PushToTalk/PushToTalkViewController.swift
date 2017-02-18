@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 class PushToTalkViewController: UIViewController,UITableViewDelegate,UITableViewDataSource,UIPickerViewDelegate,UIPickerViewDataSource {
     
@@ -18,8 +19,11 @@ class PushToTalkViewController: UIViewController,UITableViewDelegate,UITableView
     let phonePickerViewBackView = UIView()
     var phoneString = String()
     
+    var userInfor:JSON?
+    var serverPhoneArrays = NSMutableArray()
     
-    let phoneArray = ["130000000000","18000000000","18000000000"]
+    
+    var phoneArray = NSMutableArray()
     
     
     
@@ -42,6 +46,8 @@ class PushToTalkViewController: UIViewController,UITableViewDelegate,UITableView
         super.viewDidLoad()
         self.title = "北陵社区一键通"
         
+        self.serverPhoneArrays = DataBase.sharedDataBase().getAllPerson()
+        
         self.phoneTableView.frame = CGRectMake(0, 0, WIDTH, HEIGHT-64)
         self.phoneTableView.delegate = self
         self.phoneTableView.dataSource = self
@@ -61,7 +67,7 @@ class PushToTalkViewController: UIViewController,UITableViewDelegate,UITableView
         phonePickerViewBackView.addSubview(phonePickerHeaderLabel)
         
         
-        
+        self.geData()
         
         
         
@@ -118,20 +124,78 @@ class PushToTalkViewController: UIViewController,UITableViewDelegate,UITableView
             self.view.addSubview(lasyEffectView)
         }
     }
+    
+    
+    func geData(){
+        AppRequestManager.shareManager.getcommunityServiceListBycommunityId("1") { (success, response) in
+            if success{
+                let userInfo1 = JSON(data: response as! NSData)
+                
+                if userInfo1["data"] != nil && userInfo1["data"].array != nil{
+                    self.userInfor = userInfo1["data"]
+                    NSLOG(userInfo1["data"].array?.count)
+                    if userInfo1["data"].array != nil{
+                        for phones in userInfo1["data"].array! {
+                            let serverPhone = ServerPhone()
+                            if phones["name"] != nil{
+                                serverPhone.name = phones["name"].string
+                            }
+                            if phones["servicelist"] != nil && phones["servicelist"].array != nil{
+                                let phoness = NSMutableArray()
+                                for phone in phones["servicelist"].array! {
+                                    if phone["phone"] != nil{
+                                        phoness.addObject(phone["phone"].string!)
+                                    }
+                                    
+                                }
+                                serverPhone.phoneArray = phoness
+                            }
 
+                                DataBase.sharedDataBase().addPerson(serverPhone)
+
+                            
+                            
+                            
+                              //删除表
+//                            DataBase.sharedDataBase().deleteTable()
+                        }
+                    }
+                    self.serverPhoneArrays = DataBase.sharedDataBase().getAllPerson()
+//                    NSLOG((self.serverPhoneArrays[0] as! ServerPhone).name!)
+//                    NSLOG((self.serverPhoneArrays[0] as! ServerPhone).phoneArray!)
+                }
+            }else{
+                alert("数据加载错误！", delegate: self)
+            }
+        }
+    }
+    
     
     //MARK: ------TableViewDelegate
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat{
         return 44*px
+        
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath){
         self.showEffectView()
+        NSLOG(self.serverPhoneArrays)
+        for dic in self.serverPhoneArrays {
+           NSLOG((dic as! ServerPhone).name)
+            if (dic as! ServerPhone).name! == self.textArray[indexPath.row]{
+                self.phoneArray = (dic as! ServerPhone).phoneArray!
+                break
+            }else{
+                self.phoneArray = ["暂无纪录"];
+            }
+        }
+//        self.phoneArray = self.serverPhoneArrays
         self.view.addSubview(self.phonePickerViewBackView)
         UIView.animateWithDuration(0.2) { 
             self.phonePickerViewBackView.frame = CGRectMake(0, HEIGHT-280*px-64, WIDTH, 280*px)
         }
+        self.phonePickView.reloadAllComponents()
         
         
         
@@ -168,11 +232,11 @@ class PushToTalkViewController: UIViewController,UITableViewDelegate,UITableView
     //MARK: -------UIPickerView Delegate
     
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return self.phoneArray[row]
+        return self.phoneArray[row] as? String
     }
     
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        self.phoneString = self.phoneArray[row]
+        self.phoneString = self.phoneArray[row] as! String
     }
     //MARK: -------ACTION
     

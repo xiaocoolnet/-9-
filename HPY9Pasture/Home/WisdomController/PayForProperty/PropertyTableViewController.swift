@@ -7,10 +7,14 @@
 //
 
 import UIKit
+import SwiftyJSON
+import MJRefresh
 
 class PropertyTableViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
 
     let mytableView = UITableView()
+    var userid = String()
+    var userinfo:Array<JSON> = []
     
     let textArray = [["青岛斯蒂芬物业公司","福海应景小区12棟506室","58.00"],["青岛斯蒂芬物业公司","福海应景小区12棟506室","58.00"]]
     
@@ -18,6 +22,15 @@ class PropertyTableViewController: UIViewController,UITableViewDataSource,UITabl
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "物业缴费"
+        
+        let userLocationCenter = NSUserDefaults.standardUserDefaults()
+        if userLocationCenter.objectForKey("UserInfo") != nil{
+            if (userLocationCenter.objectForKey("UserInfo") as! NSDictionary)["userid"] != nil{
+                userid = (userLocationCenter.objectForKey("UserInfo") as! NSDictionary)["userid"] as! String
+            }else{
+                
+            }
+        }
 
         self.view.backgroundColor = LGBackColor
         self.mytableView.frame = CGRectMake(0, 0, WIDTH, HEIGHT-64)
@@ -29,6 +42,19 @@ class PropertyTableViewController: UIViewController,UITableViewDataSource,UITabl
         self.mytableView.registerNib(UINib(nibName: "PropertyTableViewCell",bundle: nil), forCellReuseIdentifier: "PropertyTableViewCell")
         self.view.addSubview(self.mytableView)
         // Do any additional setup after loading the view.
+    }
+    
+    
+    func getData(){
+        AppRequestManager.shareManager.getMyCommunityWaitForPayOrder("1", cid: "2") { (success, response) in
+            if success{
+                let userInfo1 = JSON(data: response as! NSData)
+                self.userinfo = userInfo1["data"].array!
+                self.mytableView.reloadData()
+            }else{
+              alert("数据加载错误！", delegate: self)
+            }
+        }
     }
     
     
@@ -51,7 +77,7 @@ class PropertyTableViewController: UIViewController,UITableViewDataSource,UITabl
     //MARK: ------TableViewDatasource
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
         
-        return textArray.count
+        return userinfo.count
     }
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
         let cell = tableView.dequeueReusableCellWithIdentifier("PropertyTableViewCell", forIndexPath: indexPath)as!PropertyTableViewCell

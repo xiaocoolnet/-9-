@@ -67,24 +67,23 @@
 		77363E071DC8679F00893521 /* HealthRecordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77363E061DC8679F00893521 /* HealthRecordsViewController.swift */; };
 		773C57911E0B783B00B43F1E /* PublicTextEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773C57901E0B783B00B43F1E /* PublicTextEditViewController.swift */; };
 		773C57951E0BAA9D00B43F1E /* 民族——nations.json in Resources */ = {isa = PBXBuildFile; fileRef = 773C57941E0BAA9D00B43F1E /* 民族——nations.json */; };
-		773C57981E0BCAFB00B43F1E /* FamilyMessagesEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773C57971E0BCAFB00B43F1E /* FamilyMessagesEditViewController.swift */; };
 		773CA6B21DC33B380062D6D3 /* PublicTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773CA6B11DC33B380062D6D3 /* PublicTableViewController.swift */; };
 		773CA6BF1DC34C8F0062D6D3 /* RetireServerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773CA6BE1DC34C8F0062D6D3 /* RetireServerViewController.swift */; };
 		773E91DD1DC1A45A00B21853 /* AutoScrollLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773E91DC1DC1A45A00B21853 /* AutoScrollLabel.swift */; };
-		774597551E0A132B00902BCE /* PersonalMessagesRecordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774597541E0A132B00902BCE /* PersonalMessagesRecordsViewController.swift */; };
-		774597591E0A1D5400902BCE /* HeaderPhotoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774597571E0A1D5400902BCE /* HeaderPhotoTableViewCell.swift */; };
-		7745975A1E0A1D5400902BCE /* HeaderPhotoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 774597581E0A1D5400902BCE /* HeaderPhotoTableViewCell.xib */; };
-		7745975D1E0A1D8700902BCE /* DoubleLabelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7745975B1E0A1D8700902BCE /* DoubleLabelTableViewCell.swift */; };
-		7745975E1E0A1D8700902BCE /* DoubleLabelTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7745975C1E0A1D8700902BCE /* DoubleLabelTableViewCell.xib */; };
-		774597611E0A1DC500902BCE /* RightArrowAndLabelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7745975F1E0A1DC500902BCE /* RightArrowAndLabelTableViewCell.swift */; };
-		774597621E0A1DC500902BCE /* RightArrowAndLabelTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 774597601E0A1DC500902BCE /* RightArrowAndLabelTableViewCell.xib */; };
 		774597641E0A742C00902BCE /* PublicTableViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774597631E0A742C00902BCE /* PublicTableViewViewController.swift */; };
+		774780561E47164000E98814 /* DataBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 774780551E47164000E98814 /* DataBase.m */; };
 		7747E0EB1DCB1C4100E0B527 /* MapSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7747E0EA1DCB1C4100E0B527 /* MapSelectViewController.swift */; };
-		7749D2751E08FA3100049D98 /* HealthRecordsAndKindViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7749D2741E08FA3100049D98 /* HealthRecordsAndKindViewController.swift */; };
+		774AF9581E4C10E5003CFC7E /* MainMedicalCareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774AF9571E4C10E5003CFC7E /* MainMedicalCareViewController.swift */; };
+		774AF95B1E4C11C2003CFC7E /* DoctorInfoForMedicalCareVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774AF95A1E4C11C2003CFC7E /* DoctorInfoForMedicalCareVC.swift */; };
+		774AF95F1E4C1B5A003CFC7E /* DoctorInfoForMedicalCareVCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774AF95D1E4C1B5A003CFC7E /* DoctorInfoForMedicalCareVCCell.swift */; };
+		774AF9601E4C1B5A003CFC7E /* DoctorInfoForMedicalCareVCCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 774AF95E1E4C1B5A003CFC7E /* DoctorInfoForMedicalCareVCCell.xib */; };
 		774D325B1DC3523600DC0401 /* RetireTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774D32591DC3523600DC0401 /* RetireTableViewCell.swift */; };
 		774D325C1DC3523600DC0401 /* RetireTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 774D325A1DC3523600DC0401 /* RetireTableViewCell.xib */; };
 		774D325F1DC3526200DC0401 /* RetireRecordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774D325D1DC3526200DC0401 /* RetireRecordTableViewCell.swift */; };
 		774D32601DC3526200DC0401 /* RetireRecordTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 774D325E1DC3526200DC0401 /* RetireRecordTableViewCell.xib */; };
+		7750CE0A1E31AE9C00301DAC /* libLechangeSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7750CE091E31AE9C00301DAC /* libLechangeSDK.a */; };
+		7751A4831E5295C00066A6ED /* InvoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7751A4821E5295C00066A6ED /* InvoiceViewController.swift */; };
+		7751A4871E52A5F60066A6ED /* PlaceholderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7751A4861E52A5F60066A6ED /* PlaceholderTextView.m */; };
 		775215021E271594007F09FE /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 775215011E271594007F09FE /* libresolv.tbd */; };
 		7752151B1E2721FE007F09FE /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 775215031E2715BB007F09FE /* libsqlite3.tbd */; };
 		775215231E272589007F09FE /* AlicloudUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7752151F1E272589007F09FE /* AlicloudUtils.framework */; };
@@ -92,6 +91,41 @@
 		775215261E272589007F09FE /* UTMini.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 775215221E272589007F09FE /* UTMini.framework */; };
 		7752152A1E27296C007F09FE /* UTDID.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 775215291E27296C007F09FE /* UTDID.framework */; };
 		7752152C1E27670E007F09FE /* EditInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7752152B1E27670E007F09FE /* EditInformationViewController.swift */; };
+		77556DCE1E54301B006281EE /* PublicWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77556DCD1E54301B006281EE /* PublicWebViewController.swift */; };
+		775CD0D91E553A58000B5564 /* Happy9.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 775CD0D71E553A58000B5564 /* Happy9.xcdatamodeld */; };
+		7760E2EF1E4AF7E1007C57E3 /* OutpatientClinicForCommunityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7760E2EE1E4AF7E1007C57E3 /* OutpatientClinicForCommunityViewController.swift */; };
+		7760E2F31E4AF88E007C57E3 /* ALLOutpatientClinicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7760E2F11E4AF88E007C57E3 /* ALLOutpatientClinicTableViewCell.swift */; };
+		7760E2F41E4AF88E007C57E3 /* ALLOutpatientClinicTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7760E2F21E4AF88E007C57E3 /* ALLOutpatientClinicTableViewCell.xib */; };
+		7760E2F61E4B1024007C57E3 /* OutpatientClinicDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7760E2F51E4B1024007C57E3 /* OutpatientClinicDetailsViewController.swift */; };
+		7761CF771E51460700E9A30E /* ClothesWashServerForChildVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7761CF701E51460700E9A30E /* ClothesWashServerForChildVC.swift */; };
+		7761CF781E51460700E9A30E /* FamilyCareForChildVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7761CF711E51460700E9A30E /* FamilyCareForChildVC.swift */; };
+		7761CF791E51460700E9A30E /* FamilyServerForChildVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7761CF721E51460700E9A30E /* FamilyServerForChildVC.swift */; };
+		7761CF7A1E51460700E9A30E /* FamilyCareForChildTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7761CF741E51460700E9A30E /* FamilyCareForChildTableViewCell.swift */; };
+		7761CF7B1E51460700E9A30E /* FamilyCareForChildTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7761CF751E51460700E9A30E /* FamilyCareForChildTableViewCell.xib */; };
+		7761CF7C1E51460700E9A30E /* FamilyServerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7761CF761E51460700E9A30E /* FamilyServerVC.swift */; };
+		7761CF961E51466100E9A30E /* KindVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7761CF7F1E51466100E9A30E /* KindVC.swift */; };
+		7761CF971E51466100E9A30E /* PersonalMessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7761CF801E51466100E9A30E /* PersonalMessagesViewController.swift */; };
+		7761CF981E51466100E9A30E /* RecordsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7761CF811E51466100E9A30E /* RecordsVC.swift */; };
+		7761CF991E51466100E9A30E /* KindVCTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7761CF831E51466100E9A30E /* KindVCTableViewCell.swift */; };
+		7761CF9A1E51466100E9A30E /* KindVCTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7761CF841E51466100E9A30E /* KindVCTableViewCell.xib */; };
+		7761CF9B1E51466100E9A30E /* FamilyMessagesEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7761CF861E51466100E9A30E /* FamilyMessagesEditViewController.swift */; };
+		7761CF9C1E51466100E9A30E /* FamilyMessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7761CF871E51466100E9A30E /* FamilyMessagesViewController.swift */; };
+		7761CF9D1E51466100E9A30E /* HealthRecordsAndKindViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7761CF881E51466100E9A30E /* HealthRecordsAndKindViewController.swift */; };
+		7761CF9E1E51466100E9A30E /* AddAllergyRecordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7761CF8A1E51466100E9A30E /* AddAllergyRecordsViewController.swift */; };
+		7761CF9F1E51466100E9A30E /* AddDoctorOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7761CF8B1E51466100E9A30E /* AddDoctorOrderViewController.swift */; };
+		7761CFA01E51466100E9A30E /* AddMedicationMessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7761CF8C1E51466100E9A30E /* AddMedicationMessagesViewController.swift */; };
+		7761CFA11E51466100E9A30E /* AddPhysicalExaminationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7761CF8D1E51466100E9A30E /* AddPhysicalExaminationViewController.swift */; };
+		7761CFA21E51466100E9A30E /* PersonalMessagesRecordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7761CF8E1E51466100E9A30E /* PersonalMessagesRecordsViewController.swift */; };
+		7761CFA31E51466100E9A30E /* DoubleLabelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7761CF901E51466100E9A30E /* DoubleLabelTableViewCell.swift */; };
+		7761CFA41E51466100E9A30E /* DoubleLabelTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7761CF911E51466100E9A30E /* DoubleLabelTableViewCell.xib */; };
+		7761CFA51E51466100E9A30E /* HeaderPhotoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7761CF921E51466100E9A30E /* HeaderPhotoTableViewCell.swift */; };
+		7761CFA61E51466100E9A30E /* HeaderPhotoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7761CF931E51466100E9A30E /* HeaderPhotoTableViewCell.xib */; };
+		7761CFA71E51466100E9A30E /* RightArrowAndLabelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7761CF941E51466100E9A30E /* RightArrowAndLabelTableViewCell.swift */; };
+		7761CFA81E51466100E9A30E /* RightArrowAndLabelTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7761CF951E51466100E9A30E /* RightArrowAndLabelTableViewCell.xib */; };
+		7761CFAB1E51475400E9A30E /* SecurityAndOlderCareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7761CFAA1E51475400E9A30E /* SecurityAndOlderCareViewController.swift */; };
+		7761CFAE1E51478D00E9A30E /* SecurityAndOlderCareChildVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7761CFAD1E51478D00E9A30E /* SecurityAndOlderCareChildVC.swift */; };
+		7761CFB31E514DCE00E9A30E /* SecurityAndOlderCareChildVCTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7761CFB11E514DCE00E9A30E /* SecurityAndOlderCareChildVCTableViewCell.swift */; };
+		7761CFB41E514DCE00E9A30E /* SecurityAndOlderCareChildVCTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7761CFB21E514DCE00E9A30E /* SecurityAndOlderCareChildVCTableViewCell.xib */; };
 		77640FF91DEEB8FF0044F03C /* VedioChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77640FF71DEEB8FF0044F03C /* VedioChatViewController.swift */; };
 		77640FFA1DEEB8FF0044F03C /* VedioChatViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77640FF81DEEB8FF0044F03C /* VedioChatViewController.xib */; };
 		7764D1431DDEA64600634618 /* WisdomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7764D1421DDEA64600634618 /* WisdomTableViewCell.swift */; };
@@ -114,22 +148,14 @@
 		776A876E1E1B7F9600F54B75 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776A876D1E1B7F9600F54B75 /* DetailsViewController.swift */; };
 		776A87711E1B885B00F54B75 /* DetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776A876F1E1B885B00F54B75 /* DetailsTableViewCell.swift */; };
 		776A87721E1B885B00F54B75 /* DetailsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 776A87701E1B885B00F54B75 /* DetailsTableViewCell.xib */; };
+		776AFC8E1E56849D00D05840 /* AppointmentTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776AFC8D1E56849D00D05840 /* AppointmentTimeViewController.swift */; };
 		77724D241E2C67970067B24F /* FoodTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77724D221E2C67970067B24F /* FoodTableViewCell.swift */; };
 		77724D251E2C67970067B24F /* FoodTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77724D231E2C67970067B24F /* FoodTableViewCell.xib */; };
 		777E11D11DC0B99F00ABA9C6 /* GXAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 777E11D01DC0B99F00ABA9C6 /* GXAlertView.m */; };
 		77A059701DE2D281006363FD /* OC-Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A0596F1DE2D281006363FD /* OC-Swift.swift */; };
+		77A95D381E45BFFD0033A5EE /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A95D371E45BFFD0033A5EE /* BaseVC.swift */; };
 		77CD097C1DCB47080033454B /* AliyunPlayerSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7708A6BA1DC081D0005573D2 /* AliyunPlayerSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		77D381401E09071F00A1C2BF /* RecordsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D3813F1E09071F00A1C2BF /* RecordsVC.swift */; };
-		77D381421E09073800A1C2BF /* KindVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D381411E09073800A1C2BF /* KindVC.swift */; };
-		77D381461E090EA000A1C2BF /* KindVCTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D381441E090EA000A1C2BF /* KindVCTableViewCell.swift */; };
-		77D381471E090EA000A1C2BF /* KindVCTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77D381451E090EA000A1C2BF /* KindVCTableViewCell.xib */; };
-		77D381491E09152400A1C2BF /* PersonalMessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D381481E09152400A1C2BF /* PersonalMessagesViewController.swift */; };
-		77D3814B1E091BC900A1C2BF /* FamilyMessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D3814A1E091BC900A1C2BF /* FamilyMessagesViewController.swift */; };
 		77E2DCE11DC7393D00CDC80A /* CommunityIntroductionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E2DCE01DC7393D00CDC80A /* CommunityIntroductionViewController.swift */; };
-		77F8DAF11E0CCE38004508E6 /* AddAllergyRecordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F8DAF01E0CCE38004508E6 /* AddAllergyRecordsViewController.swift */; };
-		77F8DAF31E0D006B004508E6 /* AddPhysicalExaminationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F8DAF21E0D006B004508E6 /* AddPhysicalExaminationViewController.swift */; };
-		77F8DAF51E0D046D004508E6 /* AddMedicationMessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F8DAF41E0D046D004508E6 /* AddMedicationMessagesViewController.swift */; };
-		77F8DAF71E0D04D5004508E6 /* AddDoctorOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F8DAF61E0D04D5004508E6 /* AddDoctorOrderViewController.swift */; };
 		77F8DB2C1E0D0E58004508E6 /* cert.pem in Resources */ = {isa = PBXBuildFile; fileRef = 77F8DAFA1E0D0E57004508E6 /* cert.pem */; };
 		77F8DB2F1E0D0F1F004508E6 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77F8DB2E1E0D0F1F004508E6 /* CoreMedia.framework */; };
 		77F8DB311E0D0F2F004508E6 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77F8DB301E0D0F2F004508E6 /* AVFoundation.framework */; };
@@ -364,24 +390,25 @@
 		77363E061DC8679F00893521 /* HealthRecordsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthRecordsViewController.swift; sourceTree = "<group>"; };
 		773C57901E0B783B00B43F1E /* PublicTextEditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublicTextEditViewController.swift; sourceTree = "<group>"; };
 		773C57941E0BAA9D00B43F1E /* 民族——nations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "民族——nations.json"; sourceTree = "<group>"; };
-		773C57971E0BCAFB00B43F1E /* FamilyMessagesEditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FamilyMessagesEditViewController.swift; sourceTree = "<group>"; };
 		773CA6B11DC33B380062D6D3 /* PublicTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublicTableViewController.swift; sourceTree = "<group>"; };
 		773CA6BE1DC34C8F0062D6D3 /* RetireServerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RetireServerViewController.swift; sourceTree = "<group>"; };
 		773E91DC1DC1A45A00B21853 /* AutoScrollLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoScrollLabel.swift; sourceTree = "<group>"; };
-		774597541E0A132B00902BCE /* PersonalMessagesRecordsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalMessagesRecordsViewController.swift; sourceTree = "<group>"; };
-		774597571E0A1D5400902BCE /* HeaderPhotoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderPhotoTableViewCell.swift; sourceTree = "<group>"; };
-		774597581E0A1D5400902BCE /* HeaderPhotoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderPhotoTableViewCell.xib; sourceTree = "<group>"; };
-		7745975B1E0A1D8700902BCE /* DoubleLabelTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoubleLabelTableViewCell.swift; sourceTree = "<group>"; };
-		7745975C1E0A1D8700902BCE /* DoubleLabelTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DoubleLabelTableViewCell.xib; sourceTree = "<group>"; };
-		7745975F1E0A1DC500902BCE /* RightArrowAndLabelTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RightArrowAndLabelTableViewCell.swift; sourceTree = "<group>"; };
-		774597601E0A1DC500902BCE /* RightArrowAndLabelTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RightArrowAndLabelTableViewCell.xib; sourceTree = "<group>"; };
 		774597631E0A742C00902BCE /* PublicTableViewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublicTableViewViewController.swift; sourceTree = "<group>"; };
+		774780541E47164000E98814 /* DataBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataBase.h; sourceTree = "<group>"; };
+		774780551E47164000E98814 /* DataBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataBase.m; sourceTree = "<group>"; };
 		7747E0EA1DCB1C4100E0B527 /* MapSelectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapSelectViewController.swift; sourceTree = "<group>"; };
-		7749D2741E08FA3100049D98 /* HealthRecordsAndKindViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthRecordsAndKindViewController.swift; sourceTree = "<group>"; };
+		774AF9571E4C10E5003CFC7E /* MainMedicalCareViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMedicalCareViewController.swift; sourceTree = "<group>"; };
+		774AF95A1E4C11C2003CFC7E /* DoctorInfoForMedicalCareVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoctorInfoForMedicalCareVC.swift; sourceTree = "<group>"; };
+		774AF95D1E4C1B5A003CFC7E /* DoctorInfoForMedicalCareVCCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoctorInfoForMedicalCareVCCell.swift; sourceTree = "<group>"; };
+		774AF95E1E4C1B5A003CFC7E /* DoctorInfoForMedicalCareVCCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DoctorInfoForMedicalCareVCCell.xib; sourceTree = "<group>"; };
 		774D32591DC3523600DC0401 /* RetireTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RetireTableViewCell.swift; sourceTree = "<group>"; };
 		774D325A1DC3523600DC0401 /* RetireTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RetireTableViewCell.xib; sourceTree = "<group>"; };
 		774D325D1DC3526200DC0401 /* RetireRecordTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RetireRecordTableViewCell.swift; sourceTree = "<group>"; };
 		774D325E1DC3526200DC0401 /* RetireRecordTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RetireRecordTableViewCell.xib; sourceTree = "<group>"; };
+		7750CE091E31AE9C00301DAC /* libLechangeSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libLechangeSDK.a; sourceTree = "<group>"; };
+		7751A4821E5295C00066A6ED /* InvoiceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InvoiceViewController.swift; sourceTree = "<group>"; };
+		7751A4851E52A5F60066A6ED /* PlaceholderTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceholderTextView.h; sourceTree = "<group>"; };
+		7751A4861E52A5F60066A6ED /* PlaceholderTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceholderTextView.m; sourceTree = "<group>"; };
 		775215011E271594007F09FE /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
 		775215031E2715BB007F09FE /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		7752151F1E272589007F09FE /* AlicloudUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AlicloudUtils.framework; sourceTree = "<group>"; };
@@ -389,6 +416,41 @@
 		775215221E272589007F09FE /* UTMini.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UTMini.framework; sourceTree = "<group>"; };
 		775215291E27296C007F09FE /* UTDID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UTDID.framework; sourceTree = "<group>"; };
 		7752152B1E27670E007F09FE /* EditInformationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditInformationViewController.swift; sourceTree = "<group>"; };
+		77556DCD1E54301B006281EE /* PublicWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublicWebViewController.swift; sourceTree = "<group>"; };
+		775CD0D81E553A58000B5564 /* Happy9.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Happy9.xcdatamodel; sourceTree = "<group>"; };
+		7760E2EE1E4AF7E1007C57E3 /* OutpatientClinicForCommunityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OutpatientClinicForCommunityViewController.swift; sourceTree = "<group>"; };
+		7760E2F11E4AF88E007C57E3 /* ALLOutpatientClinicTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ALLOutpatientClinicTableViewCell.swift; sourceTree = "<group>"; };
+		7760E2F21E4AF88E007C57E3 /* ALLOutpatientClinicTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ALLOutpatientClinicTableViewCell.xib; sourceTree = "<group>"; };
+		7760E2F51E4B1024007C57E3 /* OutpatientClinicDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OutpatientClinicDetailsViewController.swift; sourceTree = "<group>"; };
+		7761CF701E51460700E9A30E /* ClothesWashServerForChildVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClothesWashServerForChildVC.swift; sourceTree = "<group>"; };
+		7761CF711E51460700E9A30E /* FamilyCareForChildVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FamilyCareForChildVC.swift; sourceTree = "<group>"; };
+		7761CF721E51460700E9A30E /* FamilyServerForChildVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FamilyServerForChildVC.swift; sourceTree = "<group>"; };
+		7761CF741E51460700E9A30E /* FamilyCareForChildTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FamilyCareForChildTableViewCell.swift; sourceTree = "<group>"; };
+		7761CF751E51460700E9A30E /* FamilyCareForChildTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FamilyCareForChildTableViewCell.xib; sourceTree = "<group>"; };
+		7761CF761E51460700E9A30E /* FamilyServerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FamilyServerVC.swift; sourceTree = "<group>"; };
+		7761CF7F1E51466100E9A30E /* KindVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KindVC.swift; sourceTree = "<group>"; };
+		7761CF801E51466100E9A30E /* PersonalMessagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalMessagesViewController.swift; sourceTree = "<group>"; };
+		7761CF811E51466100E9A30E /* RecordsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordsVC.swift; sourceTree = "<group>"; };
+		7761CF831E51466100E9A30E /* KindVCTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KindVCTableViewCell.swift; sourceTree = "<group>"; };
+		7761CF841E51466100E9A30E /* KindVCTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KindVCTableViewCell.xib; sourceTree = "<group>"; };
+		7761CF861E51466100E9A30E /* FamilyMessagesEditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FamilyMessagesEditViewController.swift; sourceTree = "<group>"; };
+		7761CF871E51466100E9A30E /* FamilyMessagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FamilyMessagesViewController.swift; sourceTree = "<group>"; };
+		7761CF881E51466100E9A30E /* HealthRecordsAndKindViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthRecordsAndKindViewController.swift; sourceTree = "<group>"; };
+		7761CF8A1E51466100E9A30E /* AddAllergyRecordsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddAllergyRecordsViewController.swift; sourceTree = "<group>"; };
+		7761CF8B1E51466100E9A30E /* AddDoctorOrderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddDoctorOrderViewController.swift; sourceTree = "<group>"; };
+		7761CF8C1E51466100E9A30E /* AddMedicationMessagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddMedicationMessagesViewController.swift; sourceTree = "<group>"; };
+		7761CF8D1E51466100E9A30E /* AddPhysicalExaminationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPhysicalExaminationViewController.swift; sourceTree = "<group>"; };
+		7761CF8E1E51466100E9A30E /* PersonalMessagesRecordsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalMessagesRecordsViewController.swift; sourceTree = "<group>"; };
+		7761CF901E51466100E9A30E /* DoubleLabelTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoubleLabelTableViewCell.swift; sourceTree = "<group>"; };
+		7761CF911E51466100E9A30E /* DoubleLabelTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DoubleLabelTableViewCell.xib; sourceTree = "<group>"; };
+		7761CF921E51466100E9A30E /* HeaderPhotoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderPhotoTableViewCell.swift; sourceTree = "<group>"; };
+		7761CF931E51466100E9A30E /* HeaderPhotoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderPhotoTableViewCell.xib; sourceTree = "<group>"; };
+		7761CF941E51466100E9A30E /* RightArrowAndLabelTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RightArrowAndLabelTableViewCell.swift; sourceTree = "<group>"; };
+		7761CF951E51466100E9A30E /* RightArrowAndLabelTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RightArrowAndLabelTableViewCell.xib; sourceTree = "<group>"; };
+		7761CFAA1E51475400E9A30E /* SecurityAndOlderCareViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecurityAndOlderCareViewController.swift; sourceTree = "<group>"; };
+		7761CFAD1E51478D00E9A30E /* SecurityAndOlderCareChildVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecurityAndOlderCareChildVC.swift; sourceTree = "<group>"; };
+		7761CFB11E514DCE00E9A30E /* SecurityAndOlderCareChildVCTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecurityAndOlderCareChildVCTableViewCell.swift; sourceTree = "<group>"; };
+		7761CFB21E514DCE00E9A30E /* SecurityAndOlderCareChildVCTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SecurityAndOlderCareChildVCTableViewCell.xib; sourceTree = "<group>"; };
 		77640FF71DEEB8FF0044F03C /* VedioChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VedioChatViewController.swift; sourceTree = "<group>"; };
 		77640FF81DEEB8FF0044F03C /* VedioChatViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VedioChatViewController.xib; sourceTree = "<group>"; };
 		7764D1421DDEA64600634618 /* WisdomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WisdomTableViewCell.swift; sourceTree = "<group>"; };
@@ -416,22 +478,14 @@
 		776A876D1E1B7F9600F54B75 /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		776A876F1E1B885B00F54B75 /* DetailsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsTableViewCell.swift; sourceTree = "<group>"; };
 		776A87701E1B885B00F54B75 /* DetailsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailsTableViewCell.xib; sourceTree = "<group>"; };
+		776AFC8D1E56849D00D05840 /* AppointmentTimeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppointmentTimeViewController.swift; sourceTree = "<group>"; };
 		77724D221E2C67970067B24F /* FoodTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodTableViewCell.swift; sourceTree = "<group>"; };
 		77724D231E2C67970067B24F /* FoodTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FoodTableViewCell.xib; sourceTree = "<group>"; };
 		777E11CF1DC0B99F00ABA9C6 /* GXAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GXAlertView.h; sourceTree = "<group>"; };
 		777E11D01DC0B99F00ABA9C6 /* GXAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GXAlertView.m; sourceTree = "<group>"; };
-		77A0596F1DE2D281006363FD /* OC-Swift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "OC-Swift.swift"; sourceTree = "<group>"; };
-		77D3813F1E09071F00A1C2BF /* RecordsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordsVC.swift; sourceTree = "<group>"; };
-		77D381411E09073800A1C2BF /* KindVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KindVC.swift; sourceTree = "<group>"; };
-		77D381441E090EA000A1C2BF /* KindVCTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KindVCTableViewCell.swift; sourceTree = "<group>"; };
-		77D381451E090EA000A1C2BF /* KindVCTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KindVCTableViewCell.xib; sourceTree = "<group>"; };
-		77D381481E09152400A1C2BF /* PersonalMessagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PersonalMessagesViewController.swift; path = ChildVC/PersonalMessagesViewController.swift; sourceTree = "<group>"; };
-		77D3814A1E091BC900A1C2BF /* FamilyMessagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FamilyMessagesViewController.swift; sourceTree = "<group>"; };
+		77A0596F1DE2D281006363FD /* OC-Swift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "OC-Swift.swift"; path = "Mine/Controller/OC-Swift.swift"; sourceTree = "<group>"; };
+		77A95D371E45BFFD0033A5EE /* BaseVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
 		77E2DCE01DC7393D00CDC80A /* CommunityIntroductionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommunityIntroductionViewController.swift; sourceTree = "<group>"; };
-		77F8DAF01E0CCE38004508E6 /* AddAllergyRecordsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddAllergyRecordsViewController.swift; sourceTree = "<group>"; };
-		77F8DAF21E0D006B004508E6 /* AddPhysicalExaminationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPhysicalExaminationViewController.swift; sourceTree = "<group>"; };
-		77F8DAF41E0D046D004508E6 /* AddMedicationMessagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddMedicationMessagesViewController.swift; sourceTree = "<group>"; };
-		77F8DAF61E0D04D5004508E6 /* AddDoctorOrderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddDoctorOrderViewController.swift; sourceTree = "<group>"; };
 		77F8DAFA1E0D0E57004508E6 /* cert.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cert.pem; sourceTree = "<group>"; };
 		77F8DAFC1E0D0E57004508E6 /* basedef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = basedef.h; sourceTree = "<group>"; };
 		77F8DAFD1E0D0E57004508E6 /* ConstString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConstString.h; sourceTree = "<group>"; };
@@ -585,6 +639,7 @@
 				77F8DB3B1E0D0FAD004508E6 /* AudioToolbox.framework in Frameworks */,
 				77F8DB391E0D0FA0004508E6 /* VideoToolbox.framework in Frameworks */,
 				77F8DB371E0D0F8D004508E6 /* OpenGLES.framework in Frameworks */,
+				7750CE0A1E31AE9C00301DAC /* libLechangeSDK.a in Frameworks */,
 				775215261E272589007F09FE /* UTMini.framework in Frameworks */,
 				77F8DB351E0D0F81004508E6 /* MediaAccessibility.framework in Frameworks */,
 				77F8DB331E0D0F3B004508E6 /* CoreVideo.framework in Frameworks */,
@@ -714,6 +769,8 @@
 				7708A61D1DC08137005573D2 /* AppDelegate.swift */,
 				7708A61E1DC08137005573D2 /* Assets.xcassets */,
 				7708A6331DC08137005573D2 /* HPY9Pasture－Bridging－Header.h */,
+				775CD0D71E553A58000B5564 /* Happy9.xcdatamodeld */,
+				77A0596F1DE2D281006363FD /* OC-Swift.swift */,
 				7708A6341DC08137005573D2 /* HPYRootController.swift */,
 				7708A6351DC08137005573D2 /* happyInfo.plist */,
 			);
@@ -723,6 +780,8 @@
 		7708A61F1DC08137005573D2 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				7751A4841E52A5F60066A6ED /* PlaceholderTextView */,
+				774780531E47164000E98814 /* 数据库访问DataBase */,
 				7765083C1E285F4C007E85AB /* ConnectModel */,
 				776506AE1E23670C0018E2A6 /* JQIndicatorView */,
 				77640FF61DEEB8BB0044F03C /* VedioChat */,
@@ -736,6 +795,8 @@
 				7768FBDA1DC98EB7008586F6 /* PublicTableViewCell.swift */,
 				774597631E0A742C00902BCE /* PublicTableViewViewController.swift */,
 				773C57901E0B783B00B43F1E /* PublicTextEditViewController.swift */,
+				77A95D371E45BFFD0033A5EE /* BaseVC.swift */,
+				77556DCD1E54301B006281EE /* PublicWebViewController.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -787,6 +848,7 @@
 			children = (
 				77FBABF61DC899F10068F995 /* HPYHomeController.swift */,
 				77FBAC041DC89AE40068F995 /* WisdomController */,
+				7795FC1B1E486C460023BB8B /* FamilyOlderCare */,
 				77FBABF81DC89A620068F995 /* CAREController */,
 				7708A6311DC08137005573D2 /* View */,
 			);
@@ -815,7 +877,6 @@
 			children = (
 				776508401E28684A007E85AB /* ChildVC */,
 				7708A6381DC08137005573D2 /* HPYMineController.swift */,
-				77A0596F1DE2D281006363FD /* OC-Swift.swift */,
 				7752152B1E27670E007F09FE /* EditInformationViewController.swift */,
 			);
 			path = Controller;
@@ -1060,6 +1121,7 @@
 		7734D7851E07D0200084B50E /* PushToTalk */ = {
 			isa = PBXGroup;
 			children = (
+				7747804E1E470E5A00E98814 /* Model */,
 				7734D7861E07D0200084B50E /* PushToTalkViewController.swift */,
 			);
 			path = PushToTalk;
@@ -1079,14 +1141,6 @@
 				773C57941E0BAA9D00B43F1E /* 民族——nations.json */,
 			);
 			path = "JSON数据";
-			sourceTree = "<group>";
-		};
-		773C57961E0BCAAB00B43F1E /* FamilyMessages */ = {
-			isa = PBXGroup;
-			children = (
-				773C57971E0BCAFB00B43F1E /* FamilyMessagesEditViewController.swift */,
-			);
-			path = FamilyMessages;
 			sourceTree = "<group>";
 		};
 		773CA6B01DC33B0B0062D6D3 /* PublicTableView */ = {
@@ -1191,43 +1245,55 @@
 			path = AutoScrollLabel;
 			sourceTree = "<group>";
 		};
-		774597531E0A12E200902BCE /* PersonalMessages */ = {
+		7747804E1E470E5A00E98814 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				774597561E0A191A00902BCE /* View */,
-				774597541E0A132B00902BCE /* PersonalMessagesRecordsViewController.swift */,
-				77F8DAF01E0CCE38004508E6 /* AddAllergyRecordsViewController.swift */,
-				77F8DAF21E0D006B004508E6 /* AddPhysicalExaminationViewController.swift */,
-				77F8DAF41E0D046D004508E6 /* AddMedicationMessagesViewController.swift */,
-				77F8DAF61E0D04D5004508E6 /* AddDoctorOrderViewController.swift */,
 			);
-			path = PersonalMessages;
+			path = Model;
 			sourceTree = "<group>";
 		};
-		774597561E0A191A00902BCE /* View */ = {
+		774780531E47164000E98814 /* 数据库访问DataBase */ = {
 			isa = PBXGroup;
 			children = (
-				774597571E0A1D5400902BCE /* HeaderPhotoTableViewCell.swift */,
-				774597581E0A1D5400902BCE /* HeaderPhotoTableViewCell.xib */,
-				7745975B1E0A1D8700902BCE /* DoubleLabelTableViewCell.swift */,
-				7745975C1E0A1D8700902BCE /* DoubleLabelTableViewCell.xib */,
-				7745975F1E0A1DC500902BCE /* RightArrowAndLabelTableViewCell.swift */,
-				774597601E0A1DC500902BCE /* RightArrowAndLabelTableViewCell.xib */,
+				774780541E47164000E98814 /* DataBase.h */,
+				774780551E47164000E98814 /* DataBase.m */,
+			);
+			path = "数据库访问DataBase";
+			sourceTree = "<group>";
+		};
+		774AF9591E4C1174003CFC7E /* ChildVC */ = {
+			isa = PBXGroup;
+			children = (
+				774AF95C1E4C1B33003CFC7E /* View */,
+				774AF95A1E4C11C2003CFC7E /* DoctorInfoForMedicalCareVC.swift */,
+			);
+			path = ChildVC;
+			sourceTree = "<group>";
+		};
+		774AF95C1E4C1B33003CFC7E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				774AF95D1E4C1B5A003CFC7E /* DoctorInfoForMedicalCareVCCell.swift */,
+				774AF95E1E4C1B5A003CFC7E /* DoctorInfoForMedicalCareVCCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		7749D2731E08FA1C00049D98 /* HealthRecords */ = {
+		7751A47D1E5291C80066A6ED /* InvoiceChildVC */ = {
 			isa = PBXGroup;
 			children = (
-				773C57961E0BCAAB00B43F1E /* FamilyMessages */,
-				774597531E0A12E200902BCE /* PersonalMessages */,
-				77DA3E3B1E0906D4008FE57A /* ChildVC */,
-				77D381481E09152400A1C2BF /* PersonalMessagesViewController.swift */,
-				7749D2741E08FA3100049D98 /* HealthRecordsAndKindViewController.swift */,
-				77D3814A1E091BC900A1C2BF /* FamilyMessagesViewController.swift */,
+				7751A4821E5295C00066A6ED /* InvoiceViewController.swift */,
 			);
-			path = HealthRecords;
+			path = InvoiceChildVC;
+			sourceTree = "<group>";
+		};
+		7751A4841E52A5F60066A6ED /* PlaceholderTextView */ = {
+			isa = PBXGroup;
+			children = (
+				7751A4851E52A5F60066A6ED /* PlaceholderTextView.h */,
+				7751A4861E52A5F60066A6ED /* PlaceholderTextView.m */,
+			);
+			path = PlaceholderTextView;
 			sourceTree = "<group>";
 		};
 		7752151E1E27255A007F09FE /* alipush */ = {
@@ -1239,6 +1305,151 @@
 				775215221E272589007F09FE /* UTMini.framework */,
 			);
 			path = alipush;
+			sourceTree = "<group>";
+		};
+		7760E2ED1E4AF7BA007C57E3 /* OutpatientClinicForCommunity */ = {
+			isa = PBXGroup;
+			children = (
+				774AF9591E4C1174003CFC7E /* ChildVC */,
+				7760E2F01E4AF858007C57E3 /* View */,
+				7760E2EE1E4AF7E1007C57E3 /* OutpatientClinicForCommunityViewController.swift */,
+				7760E2F51E4B1024007C57E3 /* OutpatientClinicDetailsViewController.swift */,
+				774AF9571E4C10E5003CFC7E /* MainMedicalCareViewController.swift */,
+			);
+			path = OutpatientClinicForCommunity;
+			sourceTree = "<group>";
+		};
+		7760E2F01E4AF858007C57E3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7760E2F11E4AF88E007C57E3 /* ALLOutpatientClinicTableViewCell.swift */,
+				7760E2F21E4AF88E007C57E3 /* ALLOutpatientClinicTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7761CF6E1E5145D400E9A30E /* FamilyServer */ = {
+			isa = PBXGroup;
+			children = (
+				7761CF6F1E51460700E9A30E /* ChildVC */,
+				7761CF761E51460700E9A30E /* FamilyServerVC.swift */,
+			);
+			path = FamilyServer;
+			sourceTree = "<group>";
+		};
+		7761CF6F1E51460700E9A30E /* ChildVC */ = {
+			isa = PBXGroup;
+			children = (
+				776AFC8C1E56809300D05840 /* FamilyCareChildVC */,
+				7751A47D1E5291C80066A6ED /* InvoiceChildVC */,
+				7761CF701E51460700E9A30E /* ClothesWashServerForChildVC.swift */,
+				7761CF711E51460700E9A30E /* FamilyCareForChildVC.swift */,
+				7761CF721E51460700E9A30E /* FamilyServerForChildVC.swift */,
+				7761CF731E51460700E9A30E /* View */,
+			);
+			path = ChildVC;
+			sourceTree = "<group>";
+		};
+		7761CF731E51460700E9A30E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7761CF741E51460700E9A30E /* FamilyCareForChildTableViewCell.swift */,
+				7761CF751E51460700E9A30E /* FamilyCareForChildTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7761CF7D1E51466100E9A30E /* HealthRecords */ = {
+			isa = PBXGroup;
+			children = (
+				7761CF7E1E51466100E9A30E /* ChildVC */,
+				7761CF851E51466100E9A30E /* FamilyMessages */,
+				7761CF871E51466100E9A30E /* FamilyMessagesViewController.swift */,
+				7761CF881E51466100E9A30E /* HealthRecordsAndKindViewController.swift */,
+				7761CF891E51466100E9A30E /* PersonalMessages */,
+			);
+			path = HealthRecords;
+			sourceTree = "<group>";
+		};
+		7761CF7E1E51466100E9A30E /* ChildVC */ = {
+			isa = PBXGroup;
+			children = (
+				7761CF7F1E51466100E9A30E /* KindVC.swift */,
+				7761CF801E51466100E9A30E /* PersonalMessagesViewController.swift */,
+				7761CF811E51466100E9A30E /* RecordsVC.swift */,
+				7761CF821E51466100E9A30E /* View */,
+			);
+			path = ChildVC;
+			sourceTree = "<group>";
+		};
+		7761CF821E51466100E9A30E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7761CF831E51466100E9A30E /* KindVCTableViewCell.swift */,
+				7761CF841E51466100E9A30E /* KindVCTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7761CF851E51466100E9A30E /* FamilyMessages */ = {
+			isa = PBXGroup;
+			children = (
+				7761CF861E51466100E9A30E /* FamilyMessagesEditViewController.swift */,
+			);
+			path = FamilyMessages;
+			sourceTree = "<group>";
+		};
+		7761CF891E51466100E9A30E /* PersonalMessages */ = {
+			isa = PBXGroup;
+			children = (
+				7761CF8A1E51466100E9A30E /* AddAllergyRecordsViewController.swift */,
+				7761CF8B1E51466100E9A30E /* AddDoctorOrderViewController.swift */,
+				7761CF8C1E51466100E9A30E /* AddMedicationMessagesViewController.swift */,
+				7761CF8D1E51466100E9A30E /* AddPhysicalExaminationViewController.swift */,
+				7761CF8E1E51466100E9A30E /* PersonalMessagesRecordsViewController.swift */,
+				7761CF8F1E51466100E9A30E /* View */,
+			);
+			path = PersonalMessages;
+			sourceTree = "<group>";
+		};
+		7761CF8F1E51466100E9A30E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7761CF901E51466100E9A30E /* DoubleLabelTableViewCell.swift */,
+				7761CF911E51466100E9A30E /* DoubleLabelTableViewCell.xib */,
+				7761CF921E51466100E9A30E /* HeaderPhotoTableViewCell.swift */,
+				7761CF931E51466100E9A30E /* HeaderPhotoTableViewCell.xib */,
+				7761CF941E51466100E9A30E /* RightArrowAndLabelTableViewCell.swift */,
+				7761CF951E51466100E9A30E /* RightArrowAndLabelTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7761CFA91E5146B000E9A30E /* SecurityAndOlderCare */ = {
+			isa = PBXGroup;
+			children = (
+				7761CFAC1E51476C00E9A30E /* ChildVC */,
+				7761CFAA1E51475400E9A30E /* SecurityAndOlderCareViewController.swift */,
+			);
+			path = SecurityAndOlderCare;
+			sourceTree = "<group>";
+		};
+		7761CFAC1E51476C00E9A30E /* ChildVC */ = {
+			isa = PBXGroup;
+			children = (
+				7761CFAF1E514D9000E9A30E /* View */,
+				7761CFAD1E51478D00E9A30E /* SecurityAndOlderCareChildVC.swift */,
+			);
+			path = ChildVC;
+			sourceTree = "<group>";
+		};
+		7761CFAF1E514D9000E9A30E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7761CFB11E514DCE00E9A30E /* SecurityAndOlderCareChildVCTableViewCell.swift */,
+				7761CFB21E514DCE00E9A30E /* SecurityAndOlderCareChildVCTableViewCell.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		77640FF61DEEB8BB0044F03C /* VedioChat */ = {
@@ -1332,6 +1543,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		776AFC8C1E56809300D05840 /* FamilyCareChildVC */ = {
+			isa = PBXGroup;
+			children = (
+				776AFC8D1E56849D00D05840 /* AppointmentTimeViewController.swift */,
+			);
+			path = FamilyCareChildVC;
+			sourceTree = "<group>";
+		};
 		777E11CE1DC0B99F00ABA9C6 /* GXAlertView */ = {
 			isa = PBXGroup;
 			children = (
@@ -1341,23 +1560,14 @@
 			path = GXAlertView;
 			sourceTree = "<group>";
 		};
-		77D381431E090E8800A1C2BF /* View */ = {
+		7795FC1B1E486C460023BB8B /* FamilyOlderCare */ = {
 			isa = PBXGroup;
 			children = (
-				77D381441E090EA000A1C2BF /* KindVCTableViewCell.swift */,
-				77D381451E090EA000A1C2BF /* KindVCTableViewCell.xib */,
+				7761CFA91E5146B000E9A30E /* SecurityAndOlderCare */,
+				7761CF7D1E51466100E9A30E /* HealthRecords */,
+				7761CF6E1E5145D400E9A30E /* FamilyServer */,
 			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		77DA3E3B1E0906D4008FE57A /* ChildVC */ = {
-			isa = PBXGroup;
-			children = (
-				77D381431E090E8800A1C2BF /* View */,
-				77D3813F1E09071F00A1C2BF /* RecordsVC.swift */,
-				77D381411E09073800A1C2BF /* KindVC.swift */,
-			);
-			path = ChildVC;
+			path = FamilyOlderCare;
 			sourceTree = "<group>";
 		};
 		77F8DAF81E0D0E2F004508E6 /* 大华SDK */ = {
@@ -1373,6 +1583,7 @@
 		77F8DAF91E0D0E57004508E6 /* ios_sdk */ = {
 			isa = PBXGroup;
 			children = (
+				7750CE091E31AE9C00301DAC /* libLechangeSDK.a */,
 				77F8DAFA1E0D0E57004508E6 /* cert.pem */,
 				77F8DAFB1E0D0E57004508E6 /* LCOpenApiClientSDK */,
 				77F8DB211E0D0E58004508E6 /* LCOpenSDK */,
@@ -1657,9 +1868,9 @@
 		77FBAC041DC89AE40068F995 /* WisdomController */ = {
 			isa = PBXGroup;
 			children = (
+				7760E2ED1E4AF7BA007C57E3 /* OutpatientClinicForCommunity */,
 				776508431E2875C1007E85AB /* FamilyKitchen */,
 				776A87651E1B74BE00F54B75 /* PayForProperty */,
-				7749D2731E08FA1C00049D98 /* HealthRecords */,
 				7734D7851E07D0200084B50E /* PushToTalk */,
 				7734D77A1E077C370084B50E /* Wisdom */,
 				77FBAC051DC89B100068F995 /* WisdomControllerViewController.swift */,
@@ -1804,25 +2015,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				7765084A1E28B63E007E85AB /* FamilyKitTableViewCell.xib in Resources */,
-				774597621E0A1DC500902BCE /* RightArrowAndLabelTableViewCell.xib in Resources */,
+				7761CFA61E51466100E9A30E /* HeaderPhotoTableViewCell.xib in Resources */,
 				774D32601DC3526200DC0401 /* RetireRecordTableViewCell.xib in Resources */,
 				774D325C1DC3523600DC0401 /* RetireTableViewCell.xib in Resources */,
+				7761CFA41E51466100E9A30E /* DoubleLabelTableViewCell.xib in Resources */,
+				7761CFA81E51466100E9A30E /* RightArrowAndLabelTableViewCell.xib in Resources */,
 				77640FFA1DEEB8FF0044F03C /* VedioChatViewController.xib in Resources */,
-				7745975A1E0A1D5400902BCE /* HeaderPhotoTableViewCell.xib in Resources */,
+				7760E2F41E4AF88E007C57E3 /* ALLOutpatientClinicTableViewCell.xib in Resources */,
 				7708A6BC1DC081D0005573D2 /* AlipaySDK.bundle in Resources */,
 				7708A64D1DC08137005573D2 /* happyInfo.plist in Resources */,
 				7708A6461DC08137005573D2 /* Main.storyboard in Resources */,
 				7765084E1E28C427007E85AB /* FamilyKitHeaderView.xib in Resources */,
 				77F8DB2C1E0D0E58004508E6 /* cert.pem in Resources */,
+				774AF9601E4C1B5A003CFC7E /* DoctorInfoForMedicalCareVCCell.xib in Resources */,
 				7708A6421DC08137005573D2 /* Assets.xcassets in Resources */,
 				77FBAC031DC89A630068F995 /* OutpatientTableViewCell.xib in Resources */,
 				7734D7811E07BB120084B50E /* CommunityOlderCareTableViewCell.xib in Resources */,
+				7761CFB41E514DCE00E9A30E /* SecurityAndOlderCareChildVCTableViewCell.xib in Resources */,
 				7708A6451DC08137005573D2 /* LaunchScreen.storyboard in Resources */,
-				7745975E1E0A1D8700902BCE /* DoubleLabelTableViewCell.xib in Resources */,
 				7708A6D51DC08237005573D2 /* Default-568h@2x.png in Resources */,
 				77724D251E2C67970067B24F /* FoodTableViewCell.xib in Resources */,
 				7708A6D81DC08237005573D2 /* README.txt in Resources */,
-				77D381471E090EA000A1C2BF /* KindVCTableViewCell.xib in Resources */,
+				7761CF9A1E51466100E9A30E /* KindVCTableViewCell.xib in Resources */,
+				7761CF7B1E51460700E9A30E /* FamilyCareForChildTableViewCell.xib in Resources */,
 				773C57951E0BAA9D00B43F1E /* 民族——nations.json in Resources */,
 				776A876C1E1B771C00F54B75 /* PropertyTableViewCell.xib in Resources */,
 				7708A6D71DC08237005573D2 /* read_me.txt in Resources */,
@@ -2008,9 +2223,11 @@
 				7708A6C51DC081D0005573D2 /* NSDataEx.m in Sources */,
 				77F8DB831E0D13A1004508E6 /* LCOpenApi_FreeBuffer.cpp in Sources */,
 				7764D1431DDEA64600634618 /* WisdomTableViewCell.swift in Sources */,
+				7761CFA21E51466100E9A30E /* PersonalMessagesRecordsViewController.swift in Sources */,
 				776508501E28C47F007E85AB /* FamilyKitchenDetailsViewController.swift in Sources */,
 				7708A6C41DC081D0005573D2 /* MD5DataSigner.m in Sources */,
 				777E11D11DC0B99F00ABA9C6 /* GXAlertView.m in Sources */,
+				7761CF9F1E51466100E9A30E /* AddDoctorOrderViewController.swift in Sources */,
 				7734D7801E07BB120084B50E /* CommunityOlderCareTableViewCell.swift in Sources */,
 				77FBABF71DC899F10068F995 /* HPYHomeController.swift in Sources */,
 				773CA6BF1DC34C8F0062D6D3 /* RetireServerViewController.swift in Sources */,
@@ -2018,20 +2235,24 @@
 				7734D77C1E077C6C0084B50E /* CommunityOlderCareViewController.swift in Sources */,
 				7765084D1E28C427007E85AB /* FamilyKitHeaderView.swift in Sources */,
 				77363E071DC8679F00893521 /* HealthRecordsViewController.swift in Sources */,
-				77D3814B1E091BC900A1C2BF /* FamilyMessagesViewController.swift in Sources */,
 				7708A6411DC08137005573D2 /* AppDelegate.swift in Sources */,
 				776508421E286912007E85AB /* ChangePhoneViewController.swift in Sources */,
 				773CA6B21DC33B380062D6D3 /* PublicTableViewController.swift in Sources */,
-				7745975D1E0A1D8700902BCE /* DoubleLabelTableViewCell.swift in Sources */,
-				77D381491E09152400A1C2BF /* PersonalMessagesViewController.swift in Sources */,
-				77F8DAF31E0D006B004508E6 /* AddPhysicalExaminationViewController.swift in Sources */,
+				7761CF9E1E51466100E9A30E /* AddAllergyRecordsViewController.swift in Sources */,
+				776AFC8E1E56849D00D05840 /* AppointmentTimeViewController.swift in Sources */,
+				7761CFB31E514DCE00E9A30E /* SecurityAndOlderCareChildVCTableViewCell.swift in Sources */,
+				7761CF971E51466100E9A30E /* PersonalMessagesViewController.swift in Sources */,
+				77A95D381E45BFFD0033A5EE /* BaseVC.swift in Sources */,
 				774D325F1DC3526200DC0401 /* RetireRecordTableViewCell.swift in Sources */,
+				7761CFAE1E51478D00E9A30E /* SecurityAndOlderCareChildVC.swift in Sources */,
 				77F8DB791E0D13A1004508E6 /* LCOpenApi_md5.cpp in Sources */,
+				7761CF991E51466100E9A30E /* KindVCTableViewCell.swift in Sources */,
 				7768FBEB1DC9E781008586F6 /* ColorfulNameLabel.m in Sources */,
+				7761CFA31E51466100E9A30E /* DoubleLabelTableViewCell.swift in Sources */,
 				7708A6471DC08137005573D2 /* HPYCommunityCtrler.swift in Sources */,
 				77FBAC011DC89A630068F995 /* OutpatientViewController.swift in Sources */,
 				7708A6C71DC081D0005573D2 /* RSADataSigner.m in Sources */,
-				77F8DAF11E0CCE38004508E6 /* AddAllergyRecordsViewController.swift in Sources */,
+				7761CF771E51460700E9A30E /* ClothesWashServerForChildVC.swift in Sources */,
 				77724D241E2C67970067B24F /* FoodTableViewCell.swift in Sources */,
 				77F8DBBC1E0D2282004508E6 /* MyViewController.m in Sources */,
 				7747E0EB1DCB1C4100E0B527 /* MapSelectViewController.swift in Sources */,
@@ -2040,17 +2261,16 @@
 				77F8DB771E0D13A1004508E6 /* OpenApiService.mm in Sources */,
 				77F8DBA11E0D1B6F004508E6 /* LiveVideoViewController.m in Sources */,
 				7708A6501DC08137005573D2 /* HPYFgetPasswordCtrler.swift in Sources */,
+				7761CFAB1E51475400E9A30E /* SecurityAndOlderCareViewController.swift in Sources */,
 				77F8DB801E0D13A1004508E6 /* LCOpenApi_ClientSdk.cpp in Sources */,
 				7708A6C81DC081D0005573D2 /* RSADataVerifier.m in Sources */,
-				77F8DAF51E0D046D004508E6 /* AddMedicationMessagesViewController.swift in Sources */,
 				77F8DB7F1E0D13A1004508E6 /* cJSON.cpp in Sources */,
 				77E2DCE11DC7393D00CDC80A /* CommunityIntroductionViewController.swift in Sources */,
-				77D381421E09073800A1C2BF /* KindVC.swift in Sources */,
+				7761CF791E51460700E9A30E /* FamilyServerForChildVC.swift in Sources */,
 				77FBAC021DC89A630068F995 /* OutpatientTableViewCell.swift in Sources */,
 				7708A64E1DC08137005573D2 /* HPYMineController.swift in Sources */,
 				7708A6C01DC081D0005573D2 /* Order.m in Sources */,
 				776506B41E23670C0018E2A6 /* JQBounceSpot1Animation.m in Sources */,
-				77F8DAF71E0D04D5004508E6 /* AddDoctorOrderViewController.swift in Sources */,
 				77F8DB841E0D13A1004508E6 /* LCOpenApi_Reflection.cpp in Sources */,
 				77F8DBB61E0D1EF3004508E6 /* DeviceOperationViewController.m in Sources */,
 				7708A6C21DC081D0005573D2 /* DataSigner.m in Sources */,
@@ -2060,52 +2280,68 @@
 				776A876E1E1B7F9600F54B75 /* DetailsViewController.swift in Sources */,
 				77F8DB811E0D13A1004508E6 /* LCOpenApi_Common.cpp in Sources */,
 				77F8DB7C1E0D13A1004508E6 /* UserBind.cpp in Sources */,
-				77D381461E090EA000A1C2BF /* KindVCTableViewCell.swift in Sources */,
 				77F8DB781E0D13A1004508E6 /* LCOpenApi_base64.cpp in Sources */,
 				774597641E0A742C00902BCE /* PublicTableViewViewController.swift in Sources */,
 				7708A6441DC08137005573D2 /* UIBounceButton.m in Sources */,
 				7708A6C61DC081D0005573D2 /* openssl_wrapper.m in Sources */,
+				7761CF9C1E51466100E9A30E /* FamilyMessagesViewController.swift in Sources */,
 				77F8DB7D1E0D13A1004508E6 /* UserBindSms.cpp in Sources */,
+				7761CF961E51466100E9A30E /* KindVC.swift in Sources */,
 				77640FF91DEEB8FF0044F03C /* VedioChatViewController.swift in Sources */,
 				776A87711E1B885B00F54B75 /* DetailsTableViewCell.swift in Sources */,
+				77556DCE1E54301B006281EE /* PublicWebViewController.swift in Sources */,
 				7708A6C31DC081D0005573D2 /* DataVerifier.m in Sources */,
+				7760E2EF1E4AF7E1007C57E3 /* OutpatientClinicForCommunityViewController.swift in Sources */,
 				776A87671E1B74DB00F54B75 /* PropertyTableViewController.swift in Sources */,
 				7708A6C11DC081D0005573D2 /* base64.m in Sources */,
+				7761CF9B1E51466100E9A30E /* FamilyMessagesEditViewController.swift in Sources */,
+				7751A4871E52A5F60066A6ED /* PlaceholderTextView.m in Sources */,
 				7708A6D91DC08237005573D2 /* Macro.swift in Sources */,
-				77D381401E09071F00A1C2BF /* RecordsVC.swift in Sources */,
 				77F8DBA21E0D1B6F004508E6 /* UIDevice+LeChange.m in Sources */,
 				77FBAC001DC89A630068F995 /* HPYHomeCareViewController.swift in Sources */,
 				7734D7871E07D0200084B50E /* PushToTalkViewController.swift in Sources */,
+				7761CF981E51466100E9A30E /* RecordsVC.swift in Sources */,
+				7761CFA11E51466100E9A30E /* AddPhysicalExaminationViewController.swift in Sources */,
+				7761CF781E51460700E9A30E /* FamilyCareForChildVC.swift in Sources */,
 				77F8DBB01E0D1E93004508E6 /* AddDeviceViewController.m in Sources */,
+				7761CF7A1E51460700E9A30E /* FamilyCareForChildTableViewCell.swift in Sources */,
+				7751A4831E5295C00066A6ED /* InvoiceViewController.swift in Sources */,
 				773E91DD1DC1A45A00B21853 /* AutoScrollLabel.swift in Sources */,
+				774780561E47164000E98814 /* DataBase.m in Sources */,
 				773C57911E0B783B00B43F1E /* PublicTextEditViewController.swift in Sources */,
 				77F8DB7A1E0D13A1004508E6 /* LCOpenApi_sha1.cpp in Sources */,
 				7708A64C1DC08137005573D2 /* HPYRootController.swift in Sources */,
 				77FBABF51DC884810068F995 /* FXLabel.m in Sources */,
-				774597611E0A1DC500902BCE /* RightArrowAndLabelTableViewCell.swift in Sources */,
+				7761CF7C1E51460700E9A30E /* FamilyServerVC.swift in Sources */,
+				774AF9581E4C10E5003CFC7E /* MainMedicalCareViewController.swift in Sources */,
 				7708A64F1DC08137005573D2 /* HPYVideoController.swift in Sources */,
 				77F8DBA31E0D1B6F004508E6 /* VideoPlay.m in Sources */,
-				774597591E0A1D5400902BCE /* HeaderPhotoTableViewCell.swift in Sources */,
-				773C57981E0BCAFB00B43F1E /* FamilyMessagesEditViewController.swift in Sources */,
+				774AF95F1E4C1B5A003CFC7E /* DoctorInfoForMedicalCareVCCell.swift in Sources */,
 				7708A6511DC08137005573D2 /* HPYLoginController.swift in Sources */,
 				7768FBDB1DC98EB7008586F6 /* PublicTableViewCell.swift in Sources */,
 				776506AD1E231DAB0018E2A6 /* AppRequestManager.swift in Sources */,
+				774AF95B1E4C11C2003CFC7E /* DoctorInfoForMedicalCareVC.swift in Sources */,
 				7708A6481DC08137005573D2 /* HPYConvenienceCtrler.swift in Sources */,
 				776508491E28B63E007E85AB /* FamilyKitTableViewCell.swift in Sources */,
 				776508451E2875D9007E85AB /* FamilyKitchenViewController.swift in Sources */,
 				77F8DB821E0D13A1004508E6 /* LCOpenApi_ConstString.cpp in Sources */,
-				7749D2751E08FA3100049D98 /* HealthRecordsAndKindViewController.swift in Sources */,
-				774597551E0A132B00902BCE /* PersonalMessagesRecordsViewController.swift in Sources */,
+				7761CFA01E51466100E9A30E /* AddMedicationMessagesViewController.swift in Sources */,
+				7761CF9D1E51466100E9A30E /* HealthRecordsAndKindViewController.swift in Sources */,
 				77F8DBB31E0D1EBA004508E6 /* RecordViewController.m in Sources */,
+				7761CFA51E51466100E9A30E /* HeaderPhotoTableViewCell.swift in Sources */,
 				7708A6521DC08137005573D2 /* HPYRegisterController.swift in Sources */,
 				77F8DB7E1E0D13A1004508E6 /* UserToken.cpp in Sources */,
 				77F8DBB91E0D1F56004508E6 /* RecordPlayViewController.m in Sources */,
 				7708A6431DC08137005573D2 /* MainImageAndTextButton.swift in Sources */,
 				77F8DBA71E0D1BD5004508E6 /* DownloadPicture.m in Sources */,
 				77F8DBAC1E0D1CA9004508E6 /* RestApiInfo.m in Sources */,
+				7760E2F61E4B1024007C57E3 /* OutpatientClinicDetailsViewController.swift in Sources */,
 				774D325B1DC3523600DC0401 /* RetireTableViewCell.swift in Sources */,
+				7760E2F31E4AF88E007C57E3 /* ALLOutpatientClinicTableViewCell.swift in Sources */,
+				7761CFA71E51466100E9A30E /* RightArrowAndLabelTableViewCell.swift in Sources */,
 				77F8DB851E0D13A1004508E6 /* LCOpenApi_ReflectionObject.cpp in Sources */,
 				77A059701DE2D281006363FD /* OC-Swift.swift in Sources */,
+				775CD0D91E553A58000B5564 /* Happy9.xcdatamodeld in Sources */,
 				776506B51E23670C0018E2A6 /* JQIndicatorView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2286,6 +2522,7 @@
 					"$(PROJECT_DIR)/HPY9Pasture/Third_part_lib",
 					"$(PROJECT_DIR)/HPY9Pasture/Third_part_lib/大华SDK/ios_sdk",
 				);
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = xiaocool.happy9;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -2434,6 +2671,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		775CD0D71E553A58000B5564 /* Happy9.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				775CD0D81E553A58000B5564 /* Happy9.xcdatamodel */,
+			);
+			currentVersion = 775CD0D81E553A58000B5564 /* Happy9.xcdatamodel */;
+			name = Happy9.xcdatamodeld;
+			path = VideoHall/Happy9.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 7708A5E31DC080B9005573D2 /* Project object */;
 }

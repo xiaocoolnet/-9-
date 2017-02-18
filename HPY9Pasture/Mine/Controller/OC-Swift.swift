@@ -18,6 +18,13 @@ public class Test: NSObject {
         print("这是Swift的方法")
     }
 }
+public class ServerPhone: NSObject {
+    
+    var name:NSString?
+    var phoneArray:NSMutableArray?
+    
+    
+}
 
 public func globalLog() {
     print("这是Swift全局的log方法")

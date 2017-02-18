@@ -17,6 +17,7 @@ pod 'NIMSDK'
 pod 'PagingMenuController','~>0.7.6'
 pod 'SVProgressHUD', '1.1.3’
 pod 'MBProgressHUD'
+pod 'FMDB'
 
 
 

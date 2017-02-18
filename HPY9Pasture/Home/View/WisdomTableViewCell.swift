@@ -191,7 +191,7 @@ class WisdomTableViewCell: UITableViewCell {
             onlineLabel.layer.cornerRadius = 10*px
             onlineLabel.text = "⦁看直播"
             onlineLabel.font = UIFont.systemFontOfSize(13)
-            onlineLabel.textColor = UIColor.greenColor()
+            onlineLabel.textColor = RGBACOLOR(77, g: 195, b: 172, a: 1)
             
             
             let watchOnlineButton = UIButton.init(frame: CGRectMake(WIDTH/2-55*px, 75*px, 100*px, 35*px))
@@ -255,23 +255,39 @@ class WisdomTableViewCell: UITableViewCell {
         if mainTitle.text ==  "智慧社区"{
             switch sender.tag {
             case 0:
+                //服务大厅
                 break
             case 1:
+                //社区养老
                 let vc = CommunityOlderCareViewController()
                 targets.navigationController?.pushViewController(vc, animated: true)
                 break
             case 2:
+                //一键通
                 let vc = PushToTalkViewController()
                 targets.navigationController?.pushViewController(vc, animated: true)
                 break
             case 5:
+                //物业缴费
                 let vc = PropertyTableViewController()
                 targets.navigationController?.pushViewController(vc, animated: true)
                 break
             case 4:
+                //家庭厨房
                 let vc = FamilyKitchenViewController()
                 targets.navigationController?.pushViewController(vc, animated: true)
                 break
+            case 6:
+                //护理站
+//                let vc = FamilyKitchenViewController()
+//                targets.navigationController?.pushViewController(vc, animated: true)
+                break
+            case 7:
+                //社区门诊
+                let vc = OutpatientClinicForCommunityViewController()
+                targets.navigationController?.pushViewController(vc, animated: true)
+                break
+
                 
                 
             default:
@@ -282,15 +298,50 @@ class WisdomTableViewCell: UITableViewCell {
             
             switch sender.tag {
             case 0:
+                //健康档案
                 let vc = HealthRecordsAndKindViewController()
                 targets.navigationController?.pushViewController(vc, animated: true)
                 break
             case 1:
+                //安保＋养老
+                let vc = SecurityAndOlderCareViewController()
+                targets.navigationController?.pushViewController(vc, animated: true)
                 break
             case 2:
+                //家庭服务
+                let vc = FamilyServerVC()
+                targets.navigationController?.pushViewController(vc, animated: true)
+                break
+            case 11:
+                //嘀嘀打车
+                let vc = PublicWebViewController()
+                vc.title = "嘀嘀打车"
+                vc.url = NSURL.init(string: "https://common.diditaxi.com.cn/general/webEntry?channel=1264#/")!
+                targets.navigationController?.pushViewController(vc, animated: true)
                 break
                 
+            case 8:
+                //机票
+                let vc = PublicWebViewController()
+                vc.title = "携程机票"
+                vc.url = NSURL.init(string: "http://m.ctrip.com/webapp/flightswift/index")!
+                targets.navigationController?.pushViewController(vc, animated: true)
+                break
+            case 9:
+                //火车票
+                let vc = PublicWebViewController()
+                vc.title = "携程火车票"
+                vc.url = NSURL.init(string: "http://m.ctrip.com/webapp/train/v2/index.html?from=http%3A%2F%2Fm.ctrip.com%2Fhtml5%2F%3Fallianceid%3D283272%26sid%3D780530%26sourceid%3D2135%26popup%3Dclose%26autoawaken%3Dclose")!
+                targets.navigationController?.pushViewController(vc, animated: true)
+                break
+            case 10:
+                //汽车票
                 
+                let vc = PublicWebViewController()
+                vc.title = "携程汽车票"
+                vc.url = NSURL.init(string: "http://m.ctrip.com/webapp/bus/?from=http%3A%2F%2Fm.ctrip.com%2Fhtml5%2F%3Fallianceid%3D283272%26sid%3D780530%26sourceid%3D2135%26popup%3Dclose%26autoawaken%3Dclose")!
+                targets.navigationController?.pushViewController(vc, animated: true)
+                break
             default:
                 break
             }
