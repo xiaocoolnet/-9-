@@ -1,1 +1,0 @@
-../../../NIMSDK/SDK/ExportHeaders/NIMMessageApnsMemberOption.h

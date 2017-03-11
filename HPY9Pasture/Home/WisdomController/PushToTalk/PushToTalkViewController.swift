@@ -165,7 +165,7 @@ class PushToTalkViewController: UIViewController,UITableViewDelegate,UITableView
 //                    NSLOG((self.serverPhoneArrays[0] as! ServerPhone).phoneArray!)
                 }
             }else{
-                alert("数据加载错误！", delegate: self)
+                Alert.shareManager.alert("数据加载错误！", delegate: self)
             }
         }
     }
@@ -260,7 +260,7 @@ class PushToTalkViewController: UIViewController,UITableViewDelegate,UITableView
                 }
             }
         }else{
-            alert("拨打出现错误，请重试", delegate: self)
+            Alert.shareManager.alert("拨打出现错误，请重试", delegate: self)
         }
         
         

@@ -850,6 +850,482 @@ class AppRequestManager: NSObject {
             
         }
     }
+    //MARK:根据类型获取家政服务价格列表
+    func getPriceByServiceType(type:String, handle:ResponseBlock){
+        let indicator = JQIndicatorView.init(type: .BounceSpot1)
+        indicator.startAnimating()
+        let url = Happy_HeaderUrl+"getPriceByServiceType"
+        let paramDic = ["type":type]
+        
+        Alamofire.request(.GET,url, parameters: paramDic).response { request, response, json, error in
+            NSLOG(json)
+            NSLOG(request)
+            let json1 = JSON(data:json!)
+            indicator.stopAnimating()
+            
+            if json1["status"].string != nil && json1["status"].string == "success"{
+                //                print(result.datas)
+                handle(success: true, response: json!)
+            }else{
+                if json1["data"].string != nil{
+                    handle(success: false, response:json1["data"].string!)
+                }
+                
+            }
+            
+        }
+    }
+    
+    //MARK:服务类型（下单功能）
+    func AddServiceOrder(userid:String,type:String,servicetime:String,money:String,begintime:Array<String>,address:String,longitude:String,latitude:String,remark:String,projectid:String,number:String,price:String, handle:ResponseBlock){
+        let indicator = JQIndicatorView.init(type: .BounceSpot1)
+        indicator.startAnimating()
+        let url = Happy_HeaderUrl+"AddServiceOrder"
+        
+        
+        var tiemArrayStr = String()
+        var counts = 0
+        if begintime.count == 1{
+            tiemArrayStr = stringToTimeStampWithWeek(begintime[0])
+        }else{
+            for time in begintime {
+                let timeIntStr = stringToTimeStampWithWeek(time)
+                if counts == begintime.count - 1 {
+                    tiemArrayStr = tiemArrayStr + timeIntStr
+                }else{
+                    tiemArrayStr = tiemArrayStr + timeIntStr + ","
+                }
+                
+                counts = counts + 1
+            }
+        }
+        
+
+        
+        let paramDic = [
+            "userid":userid,
+            "type":type,
+            "servicetime":servicetime,
+            "money":money,
+            "begintime":tiemArrayStr,
+            "address":address,
+            "longitude":longitude,
+            "latitude":latitude,
+            "remark":remark,
+            "projectid":projectid,
+            "number":number,
+            "price":price
+        ]
+        
+        Alamofire.request(.GET,url, parameters: paramDic).response { request, response, json, error in
+            NSLOG(json)
+            NSLOG(request)
+            let json1 = JSON(data:json!)
+            indicator.stopAnimating()
+            if json1["status"].string != nil && json1["status"].string == "success"{
+                //                print(result.datas)
+                handle(success: true, response: json!)
+            }else{
+                if json1["data"].string != nil{
+                    handle(success: false, response:json1["data"].string!)
+                }
+                
+            }
+            
+        }
+    }
+    //MARK:洗护服务（下单功能）
+    func AddServiceOrderForCloths(userid:String,type:String,servicetime:String,money:String,begintime:String,address:String,longitude:String,latitude:String,remark:String,goodInfo:Array<clothsType>,number:Array<String>, handle:ResponseBlock){
+        let indicator = JQIndicatorView.init(type: .BounceSpot1)
+        indicator.startAnimating()
+        let url = Happy_HeaderUrl+"AddServiceOrder"
+        
+        
+        var tiemArrayStr = String()
+        tiemArrayStr = stringToTimeStampWithWeek(begintime)
+        var numbers = String()
+        var projectids = String()
+        var price = String()
+        var names = String()
+        var counts = 0
+        var count2 = 0
+       
+        if number.count == 1{
+            numbers = number[0]
+        }else{
+            for number3 in number {
+                if count2 == number.count-1{
+                    numbers = numbers+number3
+                }else{
+                    numbers = numbers+number3+","
+                }
+                count2 = count2 + 1
+            }
+        }
+        
+        if goodInfo.count == 1{
+            projectids = goodInfo[0].projectid
+            price = goodInfo[0].price
+            names = goodInfo[0].name
+        }else{
+            for cloths in goodInfo {
+                if counts == goodInfo.count - 1 {
+                    projectids = projectids+cloths.projectid
+                    price = price+cloths.price
+                    names = names + cloths.name
+                }else{
+                    projectids = projectids+cloths.projectid+","
+                    price = price+cloths.price+","
+                    names = names + cloths.name + ","
+                }
+                
+                counts = counts + 1
+            }
+        }
+        
+        
+        
+        let paramDic = [
+            "userid":userid,
+            "type":type,
+            "servicetime":servicetime,
+            "money":money,
+            "begintime":tiemArrayStr,
+            "address":address,
+            "longitude":longitude,
+            "latitude":latitude,
+            "remark":remark,
+            "projectid":projectids,
+            "number":numbers,
+            "price":price
+        ]
+        
+        Alamofire.request(.GET,url, parameters: paramDic).response { request, response, json, error in
+            NSLOG(json)
+            NSLOG(request)
+            let json1 = JSON(data:json!)
+            indicator.stopAnimating()
+            if json1["status"].string != nil && json1["status"].string == "success"{
+                //                print(result.datas)
+                handle(success: true, response: json!)
+            }else{
+                if json1["data"].string != nil{
+                    handle(success: false, response:json1["data"].string!)
+                }
+                
+            }
+            
+        }
+    }
+
+    
+    //MARK:添加用户地址
+    func AddAddress(userid:String,address:String,longitude:String,latitude:String,isdefault:String,name:String,phone:String, handle:ResponseBlock){
+        let indicator = JQIndicatorView.init(type: .BounceSpot1)
+        indicator.startAnimating()
+        let url = Happy_HeaderUrl+"AddAddress"
+        let paramDic = [
+            "userid":userid,
+            "address":address,
+            "longitude":longitude,
+            "latitude":latitude,
+            "isdefault":isdefault,
+            "name":name,
+            "phone":phone
+            
+        ]
+        
+        Alamofire.request(.GET,url, parameters: paramDic).response { request, response, json, error in
+            NSLOG(json)
+            NSLOG(request)
+            let json1 = JSON(data:json!)
+            indicator.stopAnimating()
+            
+            if json1["status"].string != nil && json1["status"].string == "success"{
+                //                print(result.datas)
+                handle(success: true, response: json!)
+            }else{
+                if json1["data"].string != nil{
+                    handle(success: false, response:json1["data"].string!)
+                }
+                
+            }
+            
+        }
+    }
+    
+    //MARK:获取用户地址列表
+    func GetMyAddressList(userid:String, handle:ResponseBlock){
+        let indicator = JQIndicatorView.init(type: .BounceSpot1)
+        indicator.startAnimating()
+        let url = Happy_HeaderUrl+"GetMyAddressList"
+        let paramDic = ["userid":userid]
+        
+        Alamofire.request(.GET,url, parameters: paramDic).response { request, response, json, error in
+            NSLOG(json)
+            NSLOG(request)
+            let json1 = JSON(data:json!)
+            indicator.stopAnimating()
+            
+            if json1["status"].string != nil && json1["status"].string == "success"{
+                //                print(result.datas)
+                handle(success: true, response: json!)
+            }else{
+                if json1["data"].string != nil{
+                    handle(success: false, response:json1["data"].string!)
+                }
+                
+            }
+            
+        }
+    }
+    //MARK:获取用户地址列表
+    func DeleteAddress(userid:String,addressid:String, handle:ResponseBlock){
+        let indicator = JQIndicatorView.init(type: .BounceSpot1)
+        indicator.startAnimating()
+        let url = Happy_HeaderUrl+"DeleteAddress"
+        let paramDic = ["userid":userid,"addressid":addressid]
+        
+        Alamofire.request(.GET,url, parameters: paramDic).response { request, response, json, error in
+            NSLOG(json)
+            NSLOG(request)
+            let json1 = JSON(data:json!)
+            indicator.stopAnimating()
+            
+            if json1["status"].string != nil && json1["status"].string == "success"{
+                //                print(result.datas)
+                handle(success: true, response: json!)
+            }else{
+                if json1["data"].string != nil{
+                    handle(success: false, response:json1["data"].string!)
+                }
+                
+            }
+            
+        }
+    }
+    
+    
+    //MARK:月嫂服务项目列表
+    func GetMoonWomanProjectList( handle:ResponseBlock){
+        let indicator = JQIndicatorView.init(type: .BounceSpot1)
+        indicator.startAnimating()
+        let url = Happy_HeaderUrl+"GetMoonWomanProjectList"
+        
+        Alamofire.request(.GET,url, parameters: nil).response { request, response, json, error in
+            NSLOG(json)
+            NSLOG(request)
+            let json1 = JSON(data:json!)
+            indicator.stopAnimating()
+            
+            if json1["status"].string != nil && json1["status"].string == "success"{
+                //                print(result.datas)
+                handle(success: true, response: json!)
+            }else{
+                if json1["data"].string != nil{
+                    handle(success: false, response:json1["data"].string!)
+                }
+                
+            }
+            
+        }
+    }
+    //MARK:育儿嫂服务项目列表
+    func GetParentingProjectList( handle:ResponseBlock){
+        let indicator = JQIndicatorView.init(type: .BounceSpot1)
+        indicator.startAnimating()
+        let url = Happy_HeaderUrl+"GetParentingProjectList"
+        
+        Alamofire.request(.GET,url, parameters: nil).response { request, response, json, error in
+            NSLOG(json)
+            NSLOG(request)
+            let json1 = JSON(data:json!)
+            indicator.stopAnimating()
+            
+            if json1["status"].string != nil && json1["status"].string == "success"{
+                //                print(result.datas)
+                handle(success: true, response: json!)
+            }else{
+                if json1["data"].string != nil{
+                    handle(success: false, response:json1["data"].string!)
+                }
+                
+            }
+            
+        }
+    }
+    
+    
+    //MARK:专业保洁服务项目列表
+    func GetCleaningProjectList( handle:ResponseBlock){
+        let indicator = JQIndicatorView.init(type: .BounceSpot1)
+        indicator.startAnimating()
+        let url = Happy_HeaderUrl+"GetCleaningProjectList"
+        
+        Alamofire.request(.GET,url, parameters: nil).response { request, response, json, error in
+            NSLOG(json)
+            NSLOG(request)
+            let json1 = JSON(data:json!)
+            indicator.stopAnimating()
+            
+            if json1["status"].string != nil && json1["status"].string == "success"{
+                //                print(result.datas)
+                handle(success: true, response: json!)
+            }else{
+                if json1["data"].string != nil{
+                    handle(success: false, response:json1["data"].string!)
+                }
+                
+            }
+            
+        }
+    }
+    
+    //MARK:家庭维修服务项目列表
+    func GetMaintenanceProjectList( handle:ResponseBlock){
+        let indicator = JQIndicatorView.init(type: .BounceSpot1)
+        indicator.startAnimating()
+        let url = Happy_HeaderUrl+"GetMaintenanceProjectList"
+        
+        Alamofire.request(.GET,url, parameters: nil).response { request, response, json, error in
+            NSLOG(json)
+            NSLOG(request)
+            let json1 = JSON(data:json!)
+            indicator.stopAnimating()
+            
+            if json1["status"].string != nil && json1["status"].string == "success"{
+                //                print(result.datas)
+                handle(success: true, response: json!)
+            }else{
+                if json1["data"].string != nil{
+                    handle(success: false, response:json1["data"].string!)
+                }
+                
+            }
+            
+        }
+    }
+    
+    //MARK:家电清洗服务项目列表
+    func GetAppliancesProjectList( handle:ResponseBlock){
+        let indicator = JQIndicatorView.init(type: .BounceSpot1)
+        indicator.startAnimating()
+        let url = Happy_HeaderUrl+"GetAppliancesProjectList"
+        
+        Alamofire.request(.GET,url, parameters: nil).response { request, response, json, error in
+            NSLOG(json)
+            NSLOG(request)
+            let json1 = JSON(data:json!)
+            indicator.stopAnimating()
+            
+            if json1["status"].string != nil && json1["status"].string == "success"{
+                //                print(result.datas)
+                handle(success: true, response: json!)
+            }else{
+                if json1["data"].string != nil{
+                    handle(success: false, response:json1["data"].string!)
+                }
+                
+            }
+            
+        }
+    }
+    
+    
+    //MARK:洗护服务项目列表
+    func GetLaundryProjectList( handle:ResponseBlock){
+        let indicator = JQIndicatorView.init(type: .BounceSpot1)
+        indicator.startAnimating()
+        let url = Happy_HeaderUrl+"GetLaundryProjectList"
+        
+        Alamofire.request(.GET,url, parameters: nil).response { request, response, json, error in
+            NSLOG(json)
+            NSLOG(request)
+            let json1 = JSON(data:json!)
+            indicator.stopAnimating()
+            
+            if json1["status"].string != nil && json1["status"].string == "success"{
+                //                print(result.datas)
+                handle(success: true, response: json!)
+            }else{
+                if json1["data"].string != nil{
+                    handle(success: false, response:json1["data"].string!)
+                }
+                
+            }
+            
+        }
+    }
+    
+    
+    //MARK:急救箱服务项目列表
+    func GetFirstidkitProjectList( handle:ResponseBlock){
+        let indicator = JQIndicatorView.init(type: .BounceSpot1)
+        indicator.startAnimating()
+        let url = Happy_HeaderUrl+"GetFirstidkitProjectList"
+        
+        Alamofire.request(.GET,url, parameters: nil).response { request, response, json, error in
+            NSLOG(json)
+            NSLOG(request)
+            let json1 = JSON(data:json!)
+            indicator.stopAnimating()
+            
+            if json1["status"].string != nil && json1["status"].string == "success"{
+                //                print(result.datas)
+                handle(success: true, response: json!)
+            }else{
+                if json1["data"].string != nil{
+                    handle(success: false, response:json1["data"].string!)
+                }
+                
+            }
+            
+        }
+    }
+    
+    
+    //MARK:预约家庭陪护人员（下单功能）
+    func AddCarersOrder(userid:String,carersid:String,servicetime:String,money:String,begintime:String,address:String,longitude:String,latitude:String,phone:String,linkman:String,price:String,number:String,remark:String, handle:ResponseBlock){
+        let indicator = JQIndicatorView.init(type: .BounceSpot1)
+        indicator.startAnimating()
+        let url = Happy_HeaderUrl+"AddCarersOrder"
+        let paramDic = [
+            "userid":userid,
+            "carersid":carersid,
+            "servicetime":servicetime,
+            "money":money,
+            "begintime":begintime,
+            "address":address,
+            "longitude":longitude,
+            "latitude":latitude,
+            "phone":phone,
+            "linkman":linkman,
+            "price":price,
+            "number":number,
+            "remark":remark
+            ]
+        
+        Alamofire.request(.GET,url, parameters: paramDic).response { request, response, json, error in
+            NSLOG(json)
+            NSLOG(request)
+            let json1 = JSON(data:json!)
+            indicator.stopAnimating()
+            
+            if json1["status"].string != nil && json1["status"].string == "success"{
+                //                print(result.datas)
+                handle(success: true, response: json!)
+            }else{
+                if json1["data"].string != nil{
+                    handle(success: false, response:json1["data"].string!)
+                }
+                
+            }
+            
+        }
+    }
+    
+
+    
     //MARK:上传图片
     
     func uploadImage(imageName:String,imageData:NSData,handle:ResponseBlock){

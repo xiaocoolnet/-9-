@@ -218,7 +218,7 @@ class AddMedicationMessagesViewController: UIViewController,UITableViewDataSourc
             let vc = PublicTableViewViewController()
             vc.myArray = ["是","否","未知"]
             vc.title = self.textArray[indexPath.row]
-            vc.myFunc = {(selectText) ->Void in
+            vc.myFunc = {(selectText,index) ->Void in
                 self.lastText[indexPath.row] = selectText
                 let index = NSIndexPath.init(forRow: indexPath.row, inSection: 0)
                 self.myTableView.reloadRowsAtIndexPaths([index], withRowAnimation:.Automatic)

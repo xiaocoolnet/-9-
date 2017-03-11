@@ -15,9 +15,9 @@ class FamilyServerForChildVC: UIViewController,UITableViewDelegate,UITableViewDa
     let headerImageArray = ["ic_baojie","ic_zhouqibaojie"]
     let tableHeaderUpLabelText = ["日常保洁","周期保洁"]
     let tableHeaderDownLabelText = ["家庭保洁 预约随心","一次下单 保洁无忧"]
-    let cellTopTextArray = ["月嫂","育儿嫂","保姆","专业保洁","家庭维修","家电清洗","洗护服务","生活急救箱"]
-    let cellDownTextArray = ["具备专业的知识与技术","全面掌握生活照料、保育方面的相关知识","专业服务，体贴放心","深度清洁，让您的家焕然一新","家电、房屋维修、局部换新（装修）等","拆洗杀菌去污，延长家电寿命","洗衣、洗鞋、洗窗帘、皮具护理等","专业除虫、开锁、管道疏通等"]
-    let cellImageView = ["ic_yuesao-1","ic_yuersao","ic_yuesao","ic_zhuanyebaojie","ic_jiatingweixiu","ic_jiadianqingxi","ic_xihufuwu","ic_shenghuojijiu"]
+    let cellTopTextArray = ["月嫂","育儿嫂","保姆","专业保洁","家庭维修","家电清洗","生活急救箱"]
+    let cellDownTextArray = ["具备专业的知识与技术","全面掌握生活照料、保育方面的相关知识","专业服务，体贴放心","深度清洁，让您的家焕然一新","家电、房屋维修、局部换新（装修）等","拆洗杀菌去污，延长家电寿命","专业除虫、开锁、管道疏通等"]
+    let cellImageView = ["ic_yuesao-1","ic_yuersao","ic_yuesao","ic_zhuanyebaojie","ic_jiatingweixiu","ic_jiadianqingxi","ic_shenghuojijiu"]
     
     
     
@@ -94,7 +94,7 @@ class FamilyServerForChildVC: UIViewController,UITableViewDelegate,UITableViewDa
             
             let vc = InvoiceViewController()
             vc.headerTextArray = ["选择地址","工作性质","工作时长（天）","选择开始时间","说明"]
-            vc.cellTextArray = [[""],["住家"],["1"],[""],[""]]
+            vc.cellTextArray = [[""],["请选择工作性质"],["1"],[""],[""]]
             vc.title = "月嫂"
             vc.type = String(indexPath.row+2)
             self.navigationController?.pushViewController(vc, animated: true)
@@ -102,7 +102,7 @@ class FamilyServerForChildVC: UIViewController,UITableViewDelegate,UITableViewDa
         case 1:
             let vc = InvoiceViewController()
             vc.headerTextArray = ["选择地址","工作性质","工作时长（天）","选择开始时间","说明"]
-            vc.cellTextArray = [[""],["住家"],["1"],[""],[""]]
+            vc.cellTextArray = [[""],["请选择工作性质"],["1"],[""],[""]]
             vc.title = "育儿嫂"
             vc.type = String(indexPath.row+2)
             self.navigationController?.pushViewController(vc, animated: true)
@@ -110,24 +110,42 @@ class FamilyServerForChildVC: UIViewController,UITableViewDelegate,UITableViewDa
         case 2:
             let vc = InvoiceViewController()
             vc.headerTextArray = ["选择地址","工作性质","工作时长（天）","选择开始时间","说明"]
-            vc.cellTextArray = [[""],["住家"],["1"],[""],[""]]
+            vc.cellTextArray = [[""],["请选择工作性质"],["1"],[""],[""]]
             vc.title = "保姆"
             vc.type = String(indexPath.row+2)
             self.navigationController?.pushViewController(vc, animated: true)
             break
         case 3:
             let vc = InvoiceViewController()
-            vc.headerTextArray = ["选择地址","打扫时长","选择清洁范围","选择第一次开始时间","说明"]
-            vc.cellTextArray = [[""],["2小时"],["地板清洁"],[""],[""]]
+            vc.headerTextArray = ["选择地址","选择清洁范围","选择第一次开始时间","说明"]
+            vc.cellTextArray = [[""],["请选择清洁范围"],[""],[""]]
             vc.title = "专业保洁"
             vc.type = String(indexPath.row+2)
             self.navigationController?.pushViewController(vc, animated: true)
             break
         case 4:
+            let vc = InvoiceViewController()
+            vc.headerTextArray = ["选择地址","选择维修物品","选择开始时间","说明"]
+            vc.cellTextArray = [[""],["请选择维修物品"],[""],[""]]
+            vc.title = "家庭维修"
+            vc.type = String(indexPath.row+2)
+            self.navigationController?.pushViewController(vc, animated: true)
             break
         case 5:
+            let vc = InvoiceViewController()
+            vc.headerTextArray = ["选择地址","清洗物品","选择开始时间","说明"]
+            vc.cellTextArray = [[""],["请选择清洗物品"],[""],[""]]
+            vc.title = "家电清洗"
+            vc.type = String(indexPath.row+2)
+            self.navigationController?.pushViewController(vc, animated: true)
             break
         case 6:
+            let vc = InvoiceViewController()
+            vc.headerTextArray = ["选择地址","选择服务类型","选择开始时间","说明"]
+            vc.cellTextArray = [[""],["请选择服务类型"],[""],[""]]
+            vc.title = "生活急救箱"
+            vc.type = String(indexPath.row+2)
+            self.navigationController?.pushViewController(vc, animated: true)
             break
         default:
             break

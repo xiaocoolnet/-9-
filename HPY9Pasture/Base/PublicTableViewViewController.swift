@@ -7,14 +7,16 @@
 //
 
 import UIKit
-typealias callbackfunc=(selectText:String)->Void
+typealias callbackfunc=(selectText:String,index:Int)->Void
+typealias getListData=()->Void
 
 class PublicTableViewViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
     
     var myFunc = callbackfunc?()
+    var dataBlock = getListData?()
     
     let myTableView = UITableView()
-    var myArray = NSArray()
+    var myArray :Array<String> = []
     var nationArray = NSArray()
     
     
@@ -29,6 +31,10 @@ class PublicTableViewViewController: UIViewController,UITableViewDataSource,UITa
         myTableView.separatorStyle = .None
         self.myTableView.registerNib(UINib(nibName: "PublicTableViewCell",bundle: nil), forCellReuseIdentifier: "PublicTableViewCell")
         self.view.addSubview(myTableView)
+        if dataBlock != nil{
+           self.dataBlock!() 
+        }
+        
         // Do any additional setup after loading the view.
     }
     //MARK: ------UITableViewDelegate
@@ -40,9 +46,9 @@ class PublicTableViewViewController: UIViewController,UITableViewDataSource,UITa
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath){
         if self.myFunc != nil{
             if self.myArray.count < 1 {
-                self.myFunc!(selectText:self.nationArray[indexPath.row].objectForKey("name") as! String)
+                self.myFunc!(selectText:self.nationArray[indexPath.row].objectForKey("name") as! String,index: indexPath.row)
             }else{
-                self.myFunc!(selectText:self.myArray[indexPath.row] as! String)
+                self.myFunc!(selectText:self.myArray[indexPath.row] ,index: indexPath.row)
             }
             
         }
@@ -67,7 +73,7 @@ class PublicTableViewViewController: UIViewController,UITableViewDataSource,UITa
             cell.textLabel?.text = self.nationArray[indexPath.row].objectForKey("name") as? String
 
         }else{
-            cell.textLabel?.text = self.myArray[indexPath.row] as? String
+            cell.textLabel?.text = self.myArray[indexPath.row]
 
         }
         cell.textLabel?.font = MainFont

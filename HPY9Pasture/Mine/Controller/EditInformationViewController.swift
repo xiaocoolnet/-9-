@@ -201,11 +201,11 @@ class EditInformationViewController: UIViewController,UITableViewDataSource,UITa
             let vc = PublicTableViewViewController()
             vc.myArray = ["男","女"]
             vc.title = self.textArray[indexPath.row]
-            vc.myFunc = {(selectText) ->Void in
+            vc.myFunc = {(selectText,index) ->Void in
                 if selectText == "男" {
                     AppRequestManager.shareManager.UpdateUserSex(self.userid, sex: "1", handle: { (success, response) in
                         if !success{
-                            alert("修改失败", delegate: self)
+                            Alert.shareManager.alert("修改失败", delegate: self)
                         }else{
                             vc.navigationController?.popViewControllerAnimated(true)
                         }
@@ -213,7 +213,7 @@ class EditInformationViewController: UIViewController,UITableViewDataSource,UITa
                 }else{
                     AppRequestManager.shareManager.UpdateUserSex(self.userid, sex: "0", handle: { (success, response) in
                         if !success{
-                            alert("修改失败", delegate: self)
+                            Alert.shareManager.alert("修改失败", delegate: self)
                         }else{
                             vc.navigationController?.popViewControllerAnimated(true)
                         }
@@ -238,7 +238,7 @@ class EditInformationViewController: UIViewController,UITableViewDataSource,UITa
             vc.myFunc = {(editedText) ->Void in
                 AppRequestManager.shareManager.UpdateUserName(editedText, userid: self.userid, handle: { (success, response) in
                     if !success{
-                        alert("修改失败", delegate: self)
+                        Alert.shareManager.alert("修改失败", delegate: self)
                     }else{
                         vc.navigationController?.popViewControllerAnimated(true)
                     }
@@ -456,7 +456,7 @@ class EditInformationViewController: UIViewController,UITableViewDataSource,UITa
                 if json["data"].string != nil{
                     AppRequestManager.shareManager.UpdateUserAvatar(json["data"].string!, userid: self.userid, handle: { (success, response) in
                         if !success{
-                            alert("修改失败！", delegate: self)
+                            Alert.shareManager.alert("修改失败！", delegate: self)
                         }else{
                             self.getUserInfo()
                         }
@@ -499,7 +499,7 @@ class EditInformationViewController: UIViewController,UITableViewDataSource,UITa
             if success {
                 self.getUserInfo()
             }else{
-                alert("修改失败", delegate: self)
+                Alert.shareManager.alert("修改失败", delegate: self)
             }
         }
         

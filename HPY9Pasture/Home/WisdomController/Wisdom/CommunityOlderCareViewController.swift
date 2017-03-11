@@ -83,7 +83,7 @@ class CommunityOlderCareViewController: UIViewController,UITableViewDelegate,UIT
             }else{
                 self.myTableView.mj_header.endRefreshing()
                 self.myTableView.mj_footer.endRefreshing()
-                alert("数据获取失败", delegate: self)
+                Alert.shareManager.alert("数据获取失败", delegate: self)
             }
             
         }

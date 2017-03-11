@@ -122,7 +122,7 @@ class ChangePhoneViewController: UIViewController {
                 if !success {
                     //                    let codeJson = JSON(data: response as! NSData)
                     
-                    alert("修改失败！", delegate: self)
+                    Alert.shareManager.alert("修改失败！", delegate: self)
                     
                     
                 }else{
@@ -136,20 +136,20 @@ class ChangePhoneViewController: UIViewController {
     func getCodeAction(btn:UIButton){
         //  1.判断手机号是否为空
         if phoneNum.text!.isEmpty {
-            alert("请输入手机号", delegate: self)
+            Alert.shareManager.alert("请输入手机号", delegate: self)
             return
         }
         AppRequestManager.shareManager.comfirmPhoneHasRegister(phoneNum.text!, handle: {[unowned self](success, response) in
             if !success {
                 //  2.1成功,验证码传到手机,执行倒计时操作
-                alert("手机号未注册", delegate: self)
+                Alert.shareManager.alert("手机号未注册", delegate: self)
                 return
             }else{
                 //没有注册
                 TimeManager.shareManager.begainTimerWithKey("register", timeInterval: 30, process: self.processHandle!, finish: self.finishHandle!)
                 AppRequestManager.shareManager.sendMobileCodeWithPhoneNumber(self.phoneNum.text!, handle: {[unowned self](success, response) in
                     if !success{
-                        alert("发送验证码失败", delegate: self)
+                        Alert.shareManager.alert("发送验证码失败", delegate: self)
                     }
                     
                     })

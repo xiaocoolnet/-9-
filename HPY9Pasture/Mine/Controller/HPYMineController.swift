@@ -28,6 +28,7 @@ class HPYMineController: UIViewController {
     
     
     
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,7 +46,7 @@ class HPYMineController: UIViewController {
     }
     
     override func viewWillAppear(animated: Bool) {
-        
+        super.viewWillAppear(true)
         if userLocationCenter.objectForKey("UserInfo") != nil{
             let userInfo = userLocationCenter.objectForKey("UserInfo") as! NSDictionary
             if userInfo["userid"] != nil {
@@ -67,7 +68,6 @@ class HPYMineController: UIViewController {
             
         }
         
-        super.viewWillAppear(true)
         self.navigationController?.navigationBar.hidden = true
     }
     override func viewDidAppear(animated: Bool) {
@@ -355,7 +355,9 @@ class HPYMineController: UIViewController {
         
     }
     func setButtonAction(){
-        
+        let vc = InfoSetViewController()
+        vc.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     func messageButtonAction(){
         

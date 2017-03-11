@@ -149,7 +149,7 @@ class HPYLoginController: UIViewController {
                     
                 }
             }else{
-                alert(response as! String, delegate: self)
+                Alert.shareManager.alert(response as! String, delegate: self)
                 return
             }
         }
@@ -161,8 +161,14 @@ class HPYLoginController: UIViewController {
     }
     
     func goRegister(){
-        let vc = HPYRegisterController()
-        self.navigationController?.pushViewController(vc, animated: true)
+        
+        
+        
+        CallManager.shareManager.aplVideoWidh("xiaocool",ext: "123")
+        
+//        
+//        let vc = HPYRegisterController()
+//        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     func leftButtonAction(){

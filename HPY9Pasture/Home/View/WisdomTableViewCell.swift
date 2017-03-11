@@ -312,10 +312,30 @@ class WisdomTableViewCell: UITableViewCell {
                 let vc = FamilyServerVC()
                 targets.navigationController?.pushViewController(vc, animated: true)
                 break
+            case 3:
+                //医院陪护
+                let vc = CareForHospitalViewController()
+                targets.navigationController?.pushViewController(vc, animated: true)
+                break
+            case 4:
+                //精神慰藉
+                let vc = SpiritualComfortViewController()
+                targets.navigationController?.pushViewController(vc, animated: true)
+                break
+            case 5:
+                //权益保障
+                let vc = RightsAndInterestsEnsureViewController()
+                targets.navigationController?.pushViewController(vc, animated: true)
+                break
+            case 7:
+                //工具箱
+                let vc = ToolboxViewController()
+                targets.navigationController?.pushViewController(vc, animated: true)
+                break
             case 11:
                 //嘀嘀打车
                 let vc = PublicWebViewController()
-                vc.title = "嘀嘀打车"
+                vc.title = "滴滴打车"
                 vc.url = NSURL.init(string: "https://common.diditaxi.com.cn/general/webEntry?channel=1264#/")!
                 targets.navigationController?.pushViewController(vc, animated: true)
                 break
@@ -379,11 +399,11 @@ class WisdomTableViewCell: UITableViewCell {
         let ret = openApi.getAccessToken(m_strSrv, port: m_iPort, appId: m_strAppId, appSecret: m_strAppSecret, phone: phone, token: &accessTok, errcode: &errCode, errmsg: &errMsg)
         if ret < 0 {
             if errCode == "TK1006" {
-                alert("该号码不是开发者账号的手机号码，开发者创建应用后，可在开放平台网站>开发中心>应用详情页中找到管理员账号。", delegate: self)
+                Alert.shareManager.alert("该号码不是开发者账号的手机号码，开发者创建应用后，可在开放平台网站>开发中心>应用详情页中找到管理员账号。", delegate: self)
             }else if errMsg != nil{
-                alert(errMsg as! String, delegate: self)
+                Alert.shareManager.alert(errMsg as! String, delegate: self)
             }else{
-                alert("网络超时，请重试", delegate: self)
+                Alert.shareManager.alert("网络超时，请重试", delegate: self)
             }
         }
         let m_strAccessTok = accessTok as!String

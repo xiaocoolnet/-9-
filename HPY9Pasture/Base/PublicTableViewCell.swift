@@ -29,7 +29,7 @@ class PublicTableViewCell: UITableViewCell {
         .heightIs(1)
         .leftSpaceToView(self,0)
         .bottomSpaceToView(self,0)
-        self.addSubview(lineView)
+//        self.addSubview(lineView)
     }
     
     required init?(coder aDecoder: NSCoder) {

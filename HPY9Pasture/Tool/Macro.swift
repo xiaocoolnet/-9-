@@ -6,6 +6,7 @@
 //  Copyright © 2016年 北京校酷网络科技有限公司. All rights reserved.
 //
 import UIKit
+import MBProgressHUD
 
 let LGBackColor = UIColor(red: 239/255.0, green: 239/255.0, blue: 239/255.0, alpha: 1)
 let NavColor = UIColor(red: 81/255.0, green: 166/255.0, blue: 255/255, alpha: 1)
@@ -19,6 +20,8 @@ let px = Screen_W/375
 let HEIGHT = UIScreen.mainScreen().bounds.height
 let WIDTH = UIScreen.mainScreen().bounds.width
 
+let USERLC = (NSUserDefaults.standardUserDefaults().objectForKey("UserInfo")) != nil ?  (NSUserDefaults.standardUserDefaults().objectForKey("UserInfo") ):nil
+
 let Happy_MainURL = "http://yanglao.xiaocool.net/"
 
 let Happy_HeaderUrl = Happy_MainURL+"index.php?g=apps&m=index&a="
@@ -30,14 +33,32 @@ func RGBACOLOR(r:Float,g:Float,b:Float,a:Float) -> UIColor{
 //#warning 
 //FIXME:测试用打印到控制台，产品发布之后注释掉，否则影响app
 func NSLOG(someThing:Any){
-    print(someThing)
+//    print(someThing)
+    debugPrint(someThing)
 }
 //提示框
+class Alert{
+    //两行代码创建一个单例
+    static let shareManager = Alert()
+    private init() {
+    }
+    func alert(message:String,delegate:AnyObject){
+        let alert = UIAlertView(title: "提示", message: message, delegate: delegate, cancelButtonTitle: "确定")
+        alert.show()
+    }
+    func MBAlert(message:String,view:UIView){
+        let hud = MBProgressHUD.showHUDAddedTo(view, animated: true)
+        hud.mode = MBProgressHUDMode.Text;
+        hud.label.text = message
+        hud.margin = 10.0
+        hud.offset.y = HEIGHT/2-80
+        hud.label.font = UIFont.systemFontOfSize(14)
+        hud.hideAnimated(true, afterDelay: 1.5)
+    }
 
-func alert(message:String,delegate:AnyObject){
-    let alert = UIAlertView(title: "提示", message: message, delegate: delegate, cancelButtonTitle: "确定")
-    alert.show()
+
 }
+
 
 typealias TimerHandle = (timeInterVal:Int)->Void
 //计时器类
@@ -137,9 +158,18 @@ func stringToTimeStamp(stringTime:String)->String {
     
     let dateStamp:NSTimeInterval = date!.timeIntervalSince1970
     
-    let dateSt:Int = Int(dateStamp)
-    print(dateSt)
-    return String(dateSt)
+    return String(dateStamp)
+    
+}
+func stringToTimeStampWithWeek(stringTime:String)->String {
+    
+    let dfmatter = NSDateFormatter()
+    dfmatter.dateFormat="yyyy-MM-dd EEE HH:mm"
+    let date = dfmatter.dateFromString(stringTime)
+    
+    let dateStamp:NSTimeInterval = date!.timeIntervalSince1970
+    
+    return String(format:"%.0f",dateStamp)
     
 }
 

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="SpiritualComfortChildVCTableViewCell" customModule="HPY9Pasture" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="73"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="72"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YBU-vu-uTL">
+                        <rect key="frame" x="8" y="8" width="54" height="54"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="54" id="7uO-6b-ngl"/>
+                            <constraint firstAttribute="height" constant="54" id="HpE-xt-hxa"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="43p-ci-hur">
+                        <rect key="frame" x="70" y="8" width="56" height="18"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="18" id="Wfx-vf-BYh"/>
+                            <constraint firstAttribute="width" constant="56" id="xJG-2K-lwD"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zzk-yp-XPc">
+                        <rect key="frame" x="126" y="12" width="116" height="13"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="13" id="GGY-wk-0mJ"/>
+                            <constraint firstAttribute="width" constant="116" id="UDK-A9-rXn"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cQF-wh-SEg">
+                        <rect key="frame" x="70" y="27" width="114" height="18"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="18" id="EyS-74-mNt"/>
+                            <constraint firstAttribute="width" constant="114" id="P3S-ss-lAN"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="chi-1Z-UWU" customClass="AutoScrollLabel" customModule="HPY9Pasture" customModuleProvider="target">
+                        <rect key="frame" x="70" y="44" width="172" height="18"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="18" id="6Ki-Vb-qDs"/>
+                            <constraint firstAttribute="width" constant="172" id="PSM-cp-Adh"/>
+                        </constraints>
+                    </view>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="43E-mW-rfZ">
+                        <rect key="frame" x="256" y="12" width="44" height="44"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="44" id="X9D-rq-6hg"/>
+                            <constraint firstAttribute="height" constant="44" id="YOB-aQ-wsT"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailingMargin" secondItem="43E-mW-rfZ" secondAttribute="trailing" constant="12" id="5X8-bo-tKf"/>
+                    <constraint firstItem="YBU-vu-uTL" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="81n-Ck-EhT"/>
+                    <constraint firstItem="43E-mW-rfZ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="4" id="E4f-r7-ltP"/>
+                    <constraint firstItem="cQF-wh-SEg" firstAttribute="top" secondItem="43p-ci-hur" secondAttribute="bottom" constant="1" id="EVY-lE-77T"/>
+                    <constraint firstItem="zzk-yp-XPc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="4" id="HZZ-Fb-iPW"/>
+                    <constraint firstItem="zzk-yp-XPc" firstAttribute="leading" secondItem="43p-ci-hur" secondAttribute="trailing" id="P6s-TB-2sO"/>
+                    <constraint firstItem="43p-ci-hur" firstAttribute="leading" secondItem="YBU-vu-uTL" secondAttribute="trailing" constant="8" id="TzQ-3L-WEz"/>
+                    <constraint firstItem="YBU-vu-uTL" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="bKY-GM-OWM"/>
+                    <constraint firstItem="43p-ci-hur" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="hJE-BF-zdt"/>
+                    <constraint firstItem="chi-1Z-UWU" firstAttribute="leading" secondItem="YBU-vu-uTL" secondAttribute="trailing" constant="8" id="kw6-Lr-mRV"/>
+                    <constraint firstItem="cQF-wh-SEg" firstAttribute="leading" secondItem="YBU-vu-uTL" secondAttribute="trailing" constant="8" id="lCk-tR-7U7"/>
+                    <constraint firstItem="chi-1Z-UWU" firstAttribute="top" secondItem="43p-ci-hur" secondAttribute="bottom" constant="18" id="uyU-gv-Tca"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="HeaderImageView" destination="YBU-vu-uTL" id="XiC-mM-f0C"/>
+                <outlet property="desLabel" destination="chi-1Z-UWU" id="qNG-AG-ksG"/>
+                <outlet property="goButton" destination="43E-mW-rfZ" id="6GK-ur-aXc"/>
+                <outlet property="money" destination="cQF-wh-SEg" id="g31-Cf-M74"/>
+                <outlet property="name" destination="43p-ci-hur" id="kFx-TH-uEC"/>
+                <outlet property="socreBackView" destination="zzk-yp-XPc" id="Dr4-tM-w9V"/>
+            </connections>
+            <point key="canvasLocation" x="394" y="308.5"/>
+        </tableViewCell>
+    </objects>
+</document>

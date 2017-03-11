@@ -115,7 +115,7 @@ class PersonalMessagesRecordsViewController: UIViewController,UITableViewDataSou
                 self.userInfo = userInfo1["data"]
                 self.myTableView.reloadData()
             }else{
-                alert("数据加载错误！", delegate: self)
+                Alert.shareManager.alert("数据加载错误！", delegate: self)
             }
         }
         
@@ -265,7 +265,7 @@ class PersonalMessagesRecordsViewController: UIViewController,UITableViewDataSou
                 vc.myFunc = {(editedText) ->Void in
                     AppRequestManager.shareManager.UpdateUserName(editedText, userid: self.userid, handle: { (success, response) in
                         if !success{
-                            alert("修改失败", delegate: self)
+                            Alert.shareManager.alert("修改失败", delegate: self)
                         }else{
                             self.getData()
                             vc.navigationController?.popViewControllerAnimated(true)
@@ -279,11 +279,11 @@ class PersonalMessagesRecordsViewController: UIViewController,UITableViewDataSou
                 let vc = PublicTableViewViewController()
                 vc.myArray = ["男","女"]
                 vc.title = self.textArray[indexPath.section][indexPath.row]
-                vc.myFunc = {(selectText) ->Void in
+                vc.myFunc = {(selectText,index) ->Void in
                     if selectText == "男" {
                         AppRequestManager.shareManager.UpdateUserSex(self.userid, sex: "1", handle: { (success, response) in
                             if !success{
-                                alert("修改失败", delegate: self)
+                                Alert.shareManager.alert("修改失败", delegate: self)
                                 
                             }else{
                                 self.getData()
@@ -294,7 +294,7 @@ class PersonalMessagesRecordsViewController: UIViewController,UITableViewDataSou
                     }else{
                         AppRequestManager.shareManager.UpdateUserSex(self.userid, sex: "0", handle: { (success, response) in
                             if !success{
-                                alert("修改失败", delegate: self)
+                                Alert.shareManager.alert("修改失败", delegate: self)
                                 
                             }else{
                                 self.getData()
@@ -332,13 +332,13 @@ class PersonalMessagesRecordsViewController: UIViewController,UITableViewDataSou
                 let vc = PublicTableViewViewController()
                 vc.title = self.textArray[indexPath.section][indexPath.row]
                 vc.myArray = ["农业户口","非农业户口"]
-                vc.myFunc = {(selectText) ->Void in
+                vc.myFunc = {(selectText,index) ->Void in
                     AppRequestManager.shareManager.UpdateUserHouseholdregistration(self.userid, householdregistration: selectText as String, handle: { (success, response) in
                         if success{
                             self.getData()
                             vc.navigationController?.popViewControllerAnimated(true)
                         }else{
-                            alert("修改失败！", delegate: self)
+                            Alert.shareManager.alert("修改失败！", delegate: self)
                         }
                     })
                     
@@ -355,7 +355,7 @@ class PersonalMessagesRecordsViewController: UIViewController,UITableViewDataSou
                             self.getData()
                             vc.navigationController?.popViewControllerAnimated(true)
                         }else{
-                            alert("修改失败！", delegate: self)
+                            Alert.shareManager.alert("修改失败！", delegate: self)
                         }
                     })
 //                    let index = NSIndexPath.init(forRow: 1, inSection: 1)
@@ -368,7 +368,7 @@ class PersonalMessagesRecordsViewController: UIViewController,UITableViewDataSou
                 vc.leftTextLabelText = "身份证:"
                 vc.myFunc = {(editedText) ->Void in
                     if !validateIdentityCard(editedText as String){
-                        alert("身份证格式不正确", delegate: self)
+                        Alert.shareManager.alert("身份证格式不正确", delegate: self)
                         return
                     }
                     
@@ -377,7 +377,7 @@ class PersonalMessagesRecordsViewController: UIViewController,UITableViewDataSou
                             self.getData()
                             vc.navigationController?.popViewControllerAnimated(true)
                         }else{
-                            alert("修改失败！", delegate: self)
+                            Alert.shareManager.alert("修改失败！", delegate: self)
                         }
                     })
                     
@@ -412,13 +412,13 @@ class PersonalMessagesRecordsViewController: UIViewController,UITableViewDataSou
                 }
                 
                 vc.nationArray = datasource
-                vc.myFunc = {(selectText) ->Void in
+                vc.myFunc = {(selectText,index) ->Void in
                     AppRequestManager.shareManager.UpdateUserNation(self.userid, nation: selectText, handle: { (success, response) in
                         if success{
                             self.getData()
                             vc.navigationController?.popViewControllerAnimated(true)
                         }else{
-                            alert("修改失败！", delegate: self)
+                            Alert.shareManager.alert("修改失败！", delegate: self)
                         }
                     })
                     
@@ -431,13 +431,13 @@ class PersonalMessagesRecordsViewController: UIViewController,UITableViewDataSou
                 let vc = PublicTableViewViewController()
                 vc.title = "是否党员"
                 vc.myArray = ["党员","群众"]
-                vc.myFunc = {(selectText) ->Void in
+                vc.myFunc = {(selectText,index) ->Void in
                     AppRequestManager.shareManager.UpdateUserParty(self.userid, party: selectText, handle: { (success, response) in
                         if success{
                             self.getData()
                             vc.navigationController?.popViewControllerAnimated(true)
                         }else{
-                            alert("修改失败！", delegate: self)
+                            Alert.shareManager.alert("修改失败！", delegate: self)
                         }
                         
                     })
@@ -449,14 +449,14 @@ class PersonalMessagesRecordsViewController: UIViewController,UITableViewDataSou
                 let vc = PublicTableViewViewController()
                 vc.title = "婚否"
                 vc.myArray = ["未婚","已婚"]
-                vc.myFunc = {(selectText) ->Void in
+                vc.myFunc = {(selectText,index) ->Void in
                     
                     AppRequestManager.shareManager.UpdateUserMarriageStatus(self.userid, marriage: selectText, handle: { (success, response) in
                         if success{
                             self.getData()
                             vc.navigationController?.popViewControllerAnimated(true)
                         }else{
-                            alert("修改失败！", delegate: self)
+                            Alert.shareManager.alert("修改失败！", delegate: self)
                         }
                     })
                     
@@ -473,14 +473,14 @@ class PersonalMessagesRecordsViewController: UIViewController,UITableViewDataSou
                 let vc = PublicTableViewViewController()
                 vc.myArray = ["新农合医疗保险","城镇职工（含离退休人员）医疗保险","城镇居民医疗保险"]
                 vc.title = self.textArray[indexPath.section][indexPath.row]
-                vc.myFunc = {(selectText) ->Void in
+                vc.myFunc = {(selectText,index) ->Void in
                     //                    self.sexStr = selectText
                     AppRequestManager.shareManager.UpdateUserHealthInsuranceType(self.userid, type: selectText, handle: { (success, response) in
                         if success{
                             self.getData()
                             vc.navigationController?.popViewControllerAnimated(true)
                         }else{
-                            alert("修改失败！", delegate: self)
+                            Alert.shareManager.alert("修改失败！", delegate: self)
                         }
                     })
                     
@@ -491,14 +491,14 @@ class PersonalMessagesRecordsViewController: UIViewController,UITableViewDataSou
                 let vc = PublicTableViewViewController()
                 vc.myArray = ["有","无"]
                 vc.title = self.textArray[indexPath.section][indexPath.row]
-                vc.myFunc = {(selectText) ->Void in
+                vc.myFunc = {(selectText,index) ->Void in
                     //                    self.sexStr = selectText
                     AppRequestManager.shareManager.UpdateUserMedicalhistory(self.userid, medicalhistory: selectText, handle: { (success, response) in
                         if success{
                             self.getData()
                             vc.navigationController?.popViewControllerAnimated(true)
                         }else{
-                            alert("修改失败！", delegate: self)
+                            Alert.shareManager.alert("修改失败！", delegate: self)
                         }
                     })
                     
@@ -509,14 +509,14 @@ class PersonalMessagesRecordsViewController: UIViewController,UITableViewDataSou
                 let vc = PublicTableViewViewController()
                 vc.myArray = ["心脏病","脑血管病变","胃肠炎","流行性感冒及肺炎","支气管炎","糖尿病","肝病","结核病","感染性疾病及外伤","其他"]
                 vc.title = self.textArray[indexPath.section][indexPath.row]
-                vc.myFunc = {(selectText) ->Void in
+                vc.myFunc = {(selectText,index) ->Void in
                     //                    self.sexStr = selectText
                     AppRequestManager.shareManager.UpdateUserDiseasetype(self.userid, diseasetype: selectText, handle: { (success, response) in
                         if success{
                             self.getData()
                             vc.navigationController?.popViewControllerAnimated(true)
                         }else{
-                            alert("修改失败！", delegate: self)
+                            Alert.shareManager.alert("修改失败！", delegate: self)
                         }
                     })
                     
@@ -527,14 +527,14 @@ class PersonalMessagesRecordsViewController: UIViewController,UITableViewDataSou
                 let vc = PublicTableViewViewController()
                 vc.myArray = ["是","否","不确定"]
                 vc.title = self.textArray[indexPath.section][indexPath.row]
-                vc.myFunc = {(selectText) ->Void in
+                vc.myFunc = {(selectText,index) ->Void in
 //                    self.sexStr = selectText
                     AppRequestManager.shareManager.UpdateUserIrritability(self.userid, irritability: selectText, handle: { (success, response) in
                         if success{
                             self.getData()
                             vc.navigationController?.popViewControllerAnimated(true)
                         }else{
-                            alert("修改失败！", delegate: self)
+                            Alert.shareManager.alert("修改失败！", delegate: self)
                         }
                     })
                     
@@ -866,7 +866,7 @@ class PersonalMessagesRecordsViewController: UIViewController,UITableViewDataSou
                 if json["data"].string != nil{
                     AppRequestManager.shareManager.UpdateUserAvatar(json["data"].string!, userid: self.userid, handle: { (success, response) in
                         if !success{
-                            alert("修改失败！", delegate: self)
+                            Alert.shareManager.alert("修改失败！", delegate: self)
                         }else{
                             self.getData()
                             
@@ -912,7 +912,7 @@ class PersonalMessagesRecordsViewController: UIViewController,UITableViewDataSou
                 if success {
                     self.getData()
                 }else{
-                    alert("修改失败", delegate: self)
+                    Alert.shareManager.alert("修改失败", delegate: self)
                 }
             }
             
@@ -925,7 +925,7 @@ class PersonalMessagesRecordsViewController: UIViewController,UITableViewDataSou
                 if success {
                     self.getData()
                 }else{
-                    alert("修改失败", delegate: self)
+                    Alert.shareManager.alert("修改失败", delegate: self)
                 }
             }
             
@@ -939,7 +939,7 @@ class PersonalMessagesRecordsViewController: UIViewController,UITableViewDataSou
             if success {
                 self.getData()
             }else{
-                alert("修改失败", delegate: self)
+                Alert.shareManager.alert("修改失败", delegate: self)
             }
         }
     }

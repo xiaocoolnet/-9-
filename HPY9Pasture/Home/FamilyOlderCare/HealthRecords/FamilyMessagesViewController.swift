@@ -134,7 +134,7 @@ class FamilyMessagesViewController: UIViewController,UITableViewDelegate,UITable
     func addButtonAction(){
         if self.mytableView.editing {
             if self.deleteArr.count<1 {
-                alert("请选中需要删除的数据", delegate: self)
+                Alert.shareManager.alert("请选中需要删除的数据", delegate: self)
                 return
             }
             self.textArray.removeObjectsInArray(self.deleteArr as [AnyObject])

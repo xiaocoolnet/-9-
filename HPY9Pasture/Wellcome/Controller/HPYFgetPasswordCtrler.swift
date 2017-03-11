@@ -79,14 +79,14 @@ class HPYFgetPasswordCtrler: UIViewController {
         AppRequestManager.shareManager.comfirmPhoneHasRegister(phoneNum.text!, handle: {[unowned self](success, response) in
             if !success {
                 //  2.1成功,验证码传到手机,执行倒计时操作
-                alert("手机未注册！", delegate: self)
+                Alert.shareManager.alert("手机未注册！", delegate: self)
                 return
             }else{
                 //没有注册
                 TimeManager.shareManager.begainTimerWithKey("forget", timeInterval: 30, process: self.processHandle!, finish: self.finishHandle!)
                 AppRequestManager.shareManager.sendMobileCodeWithPhoneNumber(self.phoneNum.text!, handle: {[unowned self](success, response) in
                     if !success{
-                        alert("发送验证码失败", delegate: self)
+                        Alert.shareManager.alert("发送验证码失败", delegate: self)
                     }
                     
                     })
@@ -126,11 +126,11 @@ class HPYFgetPasswordCtrler: UIViewController {
         }
         AppRequestManager.shareManager.forgetPassword(phoneNum.text!, code: codeNum.text!, password: passwordNum.text!) { (success, response) in
             if success{
-                alert("修改成功", delegate: self)
+                Alert.shareManager.alert("修改成功", delegate: self)
                 self.navigationController?.popViewControllerAnimated(true)
                 
             }else{
-                alert(response as! String, delegate: self)
+                Alert.shareManager.alert(response as! String, delegate: self)
             }
         }
     }

@@ -22,15 +22,8 @@ class FamilyCareForChildTableViewCell: UITableViewCell {
     
     @IBOutlet weak var timesForServer: UILabel!
     
-    @IBOutlet weak var stateImage: UIImageView!
-    
-    @IBOutlet weak var zanLabel: UILabel!
-    
-    @IBOutlet weak var commentLabel: UILabel!
-    
-    @IBOutlet weak var zanButton: UIButton!
-    
-    @IBOutlet weak var commentButton: UIButton!
+    @IBOutlet weak var moneyLabel: UILabel!
+
     
     @IBOutlet weak var appointmentButton: UIButton!//预约Button
     

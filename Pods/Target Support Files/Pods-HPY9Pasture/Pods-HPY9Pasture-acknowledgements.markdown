@@ -126,10 +126,6 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
 
-## NIMSDK
-
-Copyright 2016 Netease 
-
 ## PagingMenuController
 
 The MIT License (MIT)

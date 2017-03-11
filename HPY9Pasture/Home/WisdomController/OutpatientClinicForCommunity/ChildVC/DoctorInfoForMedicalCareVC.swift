@@ -29,7 +29,7 @@ class DoctorInfoForMedicalCareVC: UIViewController,UITableViewDelegate,UITableVi
                 self.userInfo = userinfo1["data"].array!
                 self.mainTableview.reloadData()
             }else{
-                alert("数据加载错误！", delegate: self)
+                Alert.shareManager.alert("数据加载错误！", delegate: self)
             }
         }
     }

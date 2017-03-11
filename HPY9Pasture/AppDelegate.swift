@@ -11,7 +11,7 @@ import CoreData
 
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate,BMKGeneralDelegate ,NIMNetCallManagerDelegate{
+class AppDelegate: UIResponder, UIApplicationDelegate,BMKGeneralDelegate {
 
     var window: UIWindow?
     var _mapManager: BMKMapManager?
@@ -26,22 +26,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate,BMKGeneralDelegate ,NIMNet
         
         /***********************阿里云推送********************************/
         // APNs注册，获取deviceToken并上报
-        self
         
         
         
         
         
         
-        /***************** ******网易云信********************************/
         
-        NIMSDK.sharedSDK().registerWithAppID("45c6af3c98409b18a84451215d0bdd6e", cerName: "ENTERPRISE")
       
-        //视频通话接听回调添加代理
-        NIMSDK.sharedSDK().netCallManager.addDelegate(self)
-        
-        //        NIMSDK.sharedSDK().loginManager.login(<#T##account: String##String#>, token: <#T##String#>, completion: <#T##NIMLoginHandler##NIMLoginHandler##(NSError?) -> Void#>)
-        
         /***********************百度地图********************************/
         // 要使用百度地图，请先启动BaiduMapManager
         _mapManager = BMKMapManager()
@@ -50,6 +42,35 @@ class AppDelegate: UIResponder, UIApplicationDelegate,BMKGeneralDelegate ,NIMNet
         if ret == false {
             NSLog("manager start failed!")
         }
+        
+        
+        
+        /***********************环信即时通信云********************************/
+        let options = EMOptions.init(appkey: "easemob-demo#chatdemoui")
+        options.apnsCertName = "chatdemoui_dev"
+        
+        var error = EMClient.sharedClient().initializeSDKWithOptions(options)
+        if error == nil{
+            NSLOG("初始化成功")
+        }
+        
+//        error = EMClient.sharedClient().registerWithUsername("purepureooo", password: "123456")
+//        if error == nil{
+//            NSLOG("注册成功")
+//        }else{
+//            NSLOG("注册失败")
+//        }
+        error  = EMClient.sharedClient().loginWithUsername("purepure", password: "123456")
+        if error == nil{
+            NSLOG("登录成功")
+            EMClient.sharedClient().options.isAutoLogin = true
+            CallManager.shareManager
+        }else{
+            NSLOG("登录失败")
+        }
+        
+        
+        
         
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
         window?.rootViewController = NAVC
@@ -77,10 +98,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate,BMKGeneralDelegate ,NIMNet
         
         return true
     }
-    //MARK:-- NIMNetCallManagerDelegate//视频通话接听回调代理
-    func onReceive(callID: UInt64, from caller: String, type: NIMNetCallType, message extendMessage: String?) {
-        NSLOG("1212121212121")
-    }
     //MARK:--是否允许横屏
     func application(application: UIApplication, supportedInterfaceOrientationsForWindow window: UIWindow?) -> UIInterfaceOrientationMask {
         
@@ -100,11 +117,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate,BMKGeneralDelegate ,NIMNet
     }
 
     func applicationDidEnterBackground(application: UIApplication) {
+        
+        EMClient.sharedClient().applicationDidEnterBackground(application)
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
     }
 
     func applicationWillEnterForeground(application: UIApplication) {
+        EMClient.sharedClient().applicationWillEnterForeground(application)
         // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
     }
 

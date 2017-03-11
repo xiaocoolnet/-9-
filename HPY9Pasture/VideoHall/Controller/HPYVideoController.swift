@@ -74,11 +74,11 @@ class HPYVideoController: UIViewController,UITableViewDataSource,UITableViewDele
             let ret = openApi.getAccessToken(m_strSrv, port: m_iPort, appId: m_strAppId, appSecret: m_strAppSecret, phone: phone, token: &accessTok, errcode: &errCode, errmsg: &errMsg)
             if ret < 0 {
                 if errCode == "TK1006" {
-                    alert("该号码不是开发者账号的手机号码，开发者创建应用后，可在开放平台网站>开发中心>应用详情页中找到管理员账号。", delegate: self)
+                    Alert.shareManager.alert("该号码不是开发者账号的手机号码，开发者创建应用后，可在开放平台网站>开发中心>应用详情页中找到管理员账号。", delegate: self)
                 }else if errMsg != nil{
-                    alert(errMsg as! String, delegate: self)
+                    Alert.shareManager.alert(errMsg as! String, delegate: self)
                 }else{
-                    alert("网络超时，请重试", delegate: self)
+                    Alert.shareManager.alert("网络超时，请重试", delegate: self)
                 }
             }
             let m_strAccessTok = accessTok as!String

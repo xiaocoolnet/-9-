@@ -16,7 +16,11 @@ class SarchModel {
     
 }
 
+typealias backForMapInfo = (adressInfo:BMKPoiInfo)->Void
+
 class MapSelectViewController: UIViewController,BMKMapViewDelegate,BMKGeoCodeSearchDelegate,BMKLocationServiceDelegate ,BMKSuggestionSearchDelegate,UITableViewDelegate,UITableViewDataSource,UISearchBarDelegate {
+    
+    var mapBlock = backForMapInfo?()
 
     
     var searchBar = UISearchBar.init(frame: CGRectMake(0, 0, WIDTH, 35))
@@ -40,7 +44,7 @@ class MapSelectViewController: UIViewController,BMKMapViewDelegate,BMKGeoCodeSea
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "请选择社区"
+        self.title = "请选择地址"
         showRegion.span.latitudeDelta = 0.05
         showRegion.span.longitudeDelta = 0.05
         
@@ -58,20 +62,22 @@ class MapSelectViewController: UIViewController,BMKMapViewDelegate,BMKGeoCodeSea
     }
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(true)
-        geocodeSearch.delegate = self
+        
         mapView.viewWillAppear()
         mapView.delegate = self
         searcher.delegate = self
+        geocodeSearch.delegate = self
     }
     
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(true)
         geocodeSearch.delegate = nil
-        mapView.viewWillDisappear()
+        
         mapView.delegate = nil
         searcher.delegate = nil
         locationService.delegate = nil
-        self.tabBarController?.tabBar.hidden = false
+        mapView.viewWillDisappear()
+        
     }
     
     //MARK: set
@@ -131,7 +137,7 @@ class MapSelectViewController: UIViewController,BMKMapViewDelegate,BMKGeoCodeSea
     //在线建议搜索
     func suggestionResult(keyWord:String)
     {
-        option.cityname = "烟台市"
+        option.cityname = "青岛市"
         option.keyword = keyWord
         if( searcher.suggestionSearch(option) )
         {
@@ -228,6 +234,12 @@ class MapSelectViewController: UIViewController,BMKMapViewDelegate,BMKGeoCodeSea
             let loc = CLLocation.init(latitude: interstArray[indexPath.row].pt.latitude, longitude: interstArray[indexPath.row].pt.longitude)
             tableView.reloadData()
             createPointAnmation(loc, Title: "")
+            if self.mapBlock != nil{
+                self.mapBlock!(adressInfo: self.interstArray[indexPath.row])
+                self.navigationController?.popViewControllerAnimated(true)
+            }
+            
+            
             
         }else{
             
@@ -320,12 +332,13 @@ class MapSelectViewController: UIViewController,BMKMapViewDelegate,BMKGeoCodeSea
             mapView.addAnnotation(pointAnmation)
             
             mapView.selectAnnotation(pointAnmation, animated: true)
+            locationService.stopUserLocationService()
         }
     }
     
     func mapView(mapView: BMKMapView!, regionDidChangeAnimated animated: Bool)
     {
-        
+        searchBar.resignFirstResponder()
         let point :CGPoint = CGPointMake( self.mapView.frame.size.width * 0.5, self.mapView.frame.size.height * 0.5)
         let location = self.mapView.convertPoint(point, toCoordinateFromView: self.mapView)
         LocationForView = CLLocation.init(latitude: location.latitude, longitude: location.longitude)

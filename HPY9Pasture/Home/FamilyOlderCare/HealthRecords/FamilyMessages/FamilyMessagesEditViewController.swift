@@ -203,7 +203,7 @@ class FamilyMessagesEditViewController: UIViewController,UITableViewDataSource,U
             let vc = PublicTableViewViewController()
             vc.myArray = ["男","女"]
             vc.title = self.textArray[indexPath.row]
-            vc.myFunc = {(selectText) ->Void in
+            vc.myFunc = {(selectText,index) ->Void in
                 self.lastText[indexPath.row] = selectText
                 let index = NSIndexPath.init(forRow: indexPath.row, inSection: 0)
                 self.myTableView.reloadRowsAtIndexPaths([index], withRowAnimation:.Automatic)
@@ -231,7 +231,7 @@ class FamilyMessagesEditViewController: UIViewController,UITableViewDataSource,U
             }
             
             vc.nationArray = datasource
-            vc.myFunc = {(selectText) ->Void in
+            vc.myFunc = {(selectText,index) ->Void in
                 self.lastText[indexPath.row] = selectText
                 let index = NSIndexPath.init(forRow: indexPath.row, inSection: 0)
                 self.myTableView.reloadRowsAtIndexPaths([index], withRowAnimation:.Automatic)
@@ -244,7 +244,7 @@ class FamilyMessagesEditViewController: UIViewController,UITableViewDataSource,U
             let vc = PublicTableViewViewController()
             vc.myArray = ["未婚","已婚","离异"]
             vc.title = self.textArray[indexPath.row]
-            vc.myFunc = {(selectText) ->Void in
+            vc.myFunc = {(selectText,index) ->Void in
                 self.lastText[indexPath.row] = selectText
                 let index = NSIndexPath.init(forRow: indexPath.row, inSection: 0)
                 self.myTableView.reloadRowsAtIndexPaths([index], withRowAnimation:.Automatic)
@@ -256,7 +256,7 @@ class FamilyMessagesEditViewController: UIViewController,UITableViewDataSource,U
             let vc = PublicTableViewViewController()
             vc.myArray = ["身份证","护照","其他"]
             vc.title = self.textArray[indexPath.row]
-            vc.myFunc = {(selectText) ->Void in
+            vc.myFunc = {(selectText,index) ->Void in
                 self.lastText[indexPath.row] = selectText
                 let index = NSIndexPath.init(forRow: indexPath.row, inSection: 0)
                 self.myTableView.reloadRowsAtIndexPaths([index], withRowAnimation:.Automatic)

@@ -58,7 +58,7 @@ class FamilyKitchenViewController: UIViewController,UISearchBarDelegate,UITableV
             }else{
                 self.mainTableview.mj_header.endRefreshing()
                 self.mainTableview.mj_footer.endRefreshing()
-                alert("数据加载错误！", delegate: self)
+                Alert.shareManager.alert("数据加载错误！", delegate: self)
             }
         }
     }

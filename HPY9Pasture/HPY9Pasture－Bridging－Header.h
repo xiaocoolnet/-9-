@@ -9,6 +9,7 @@
 
 #ifndef HPY9Pasture_Bridging_Header_h
 #define HPY9Pasture_Bridging_Header_h
+#import <Foundation/Foundation.h>
 
 #import "UIBounceButton.h"
 #import "SDAutoLayout.h"
@@ -17,16 +18,11 @@
 #import "SDCycleScrollView.h"
 #import "FXLabel.h"
 #import "ColorfulNameLabel.h"//自定义头像
-#import <AliyunPlayerSDK/AliVcMediaPlayer.h>
 #import <MediaPlayer/MediaPlayer.h>
 #import <AVFoundation/AVAudioSession.h>
 
 #import "JQIndicatorView.h"//正在加载。。。
-//网易云信
-#import "NIMSDK.h"
-#import "NIMNetCallManagerProtocol.h"
 
-#import "NIMAVChat.h"
 
 //大华设备
 #import "openApiService.h"
@@ -45,6 +41,7 @@
 //带默认文字的textview
 #import "PlaceholderTextView.h"
 
+#import <Hyphenate/EMSDKFull.h>
 
 
 /*百度地图*/

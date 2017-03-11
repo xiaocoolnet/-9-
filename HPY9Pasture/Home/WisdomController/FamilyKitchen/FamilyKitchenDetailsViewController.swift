@@ -72,7 +72,7 @@ class FamilyKitchenDetailsViewController: UIViewController,UITableViewDataSource
                 }
                 
             }else{
-                alert("数据呀加载失败！", delegate: self)
+                Alert.shareManager.alert("数据呀加载失败！", delegate: self)
             }
         }
     }

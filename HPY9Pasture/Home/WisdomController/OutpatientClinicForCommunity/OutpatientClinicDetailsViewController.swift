@@ -45,7 +45,7 @@ class OutpatientClinicDetailsViewController: UIViewController,SDCycleScrollViewD
                     }
                     
                 }else{
-                    alert("数据请求失败", delegate: self)
+                    Alert.shareManager.alert("数据请求失败", delegate: self)
                 }
             }
 

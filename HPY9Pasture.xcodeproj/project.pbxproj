@@ -60,6 +60,7 @@
 		7708A6EF1DC0830B005573D2 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7708A6EE1DC0830B005573D2 /* CoreTelephony.framework */; };
 		7708A6F11DC08313005573D2 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7708A6F01DC08313005573D2 /* CoreFoundation.framework */; };
 		7708A6F31DC0831C005573D2 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7708A6F21DC0831C005573D2 /* CFNetwork.framework */; };
+		772BE6791E7132BA005FB875 /* TimeSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772BE6781E7132BA005FB875 /* TimeSelector.swift */; };
 		7734D77C1E077C6C0084B50E /* CommunityOlderCareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7734D77B1E077C6C0084B50E /* CommunityOlderCareViewController.swift */; };
 		7734D7801E07BB120084B50E /* CommunityOlderCareTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7734D77E1E07BB120084B50E /* CommunityOlderCareTableViewCell.swift */; };
 		7734D7811E07BB120084B50E /* CommunityOlderCareTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7734D77F1E07BB120084B50E /* CommunityOlderCareTableViewCell.xib */; };
@@ -77,10 +78,23 @@
 		774AF95B1E4C11C2003CFC7E /* DoctorInfoForMedicalCareVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774AF95A1E4C11C2003CFC7E /* DoctorInfoForMedicalCareVC.swift */; };
 		774AF95F1E4C1B5A003CFC7E /* DoctorInfoForMedicalCareVCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774AF95D1E4C1B5A003CFC7E /* DoctorInfoForMedicalCareVCCell.swift */; };
 		774AF9601E4C1B5A003CFC7E /* DoctorInfoForMedicalCareVCCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 774AF95E1E4C1B5A003CFC7E /* DoctorInfoForMedicalCareVCCell.xib */; };
+		774B87EC1E6907D800E1BB89 /* AppointmentInfoForSpiritViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774B87EB1E6907D800E1BB89 /* AppointmentInfoForSpiritViewController.swift */; };
 		774D325B1DC3523600DC0401 /* RetireTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774D32591DC3523600DC0401 /* RetireTableViewCell.swift */; };
 		774D325C1DC3523600DC0401 /* RetireTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 774D325A1DC3523600DC0401 /* RetireTableViewCell.xib */; };
 		774D325F1DC3526200DC0401 /* RetireRecordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774D325D1DC3526200DC0401 /* RetireRecordTableViewCell.swift */; };
 		774D32601DC3526200DC0401 /* RetireRecordTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 774D325E1DC3526200DC0401 /* RetireRecordTableViewCell.xib */; };
+		774F2C8D1E63BF34005BC3DE /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 774F2C8C1E63BF34005BC3DE /* MobileCoreServices.framework */; };
+		774F2C8F1E63BF43005BC3DE /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 774F2C8E1E63BF43005BC3DE /* ImageIO.framework */; };
+		774F2C911E63BF66005BC3DE /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 774F2C901E63BF66005BC3DE /* libstdc++.6.0.9.tbd */; };
+		774F2C931E63BF81005BC3DE /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 774F2C921E63BF81005BC3DE /* libiconv.tbd */; };
+		774F2C961E63D356005BC3DE /* Hyphenate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 774F2C951E63D356005BC3DE /* Hyphenate.framework */; };
+		774F2C971E63D5AE005BC3DE /* Hyphenate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 774F2C951E63D356005BC3DE /* Hyphenate.framework */; };
+		774F2C981E63D5AE005BC3DE /* Hyphenate.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 774F2C951E63D356005BC3DE /* Hyphenate.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		774F2C9B1E63F68D005BC3DE /* CareForHospitalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774F2C9A1E63F68D005BC3DE /* CareForHospitalViewController.swift */; };
+		774F2C9E1E63F7EA005BC3DE /* SelfHelpServerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774F2C9D1E63F7EA005BC3DE /* SelfHelpServerViewController.swift */; };
+		774F2CA01E63F815005BC3DE /* AssignSeverForHosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774F2C9F1E63F815005BC3DE /* AssignSeverForHosViewController.swift */; };
+		774F2CA41E642860005BC3DE /* InfoHeaderViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774F2CA21E642860005BC3DE /* InfoHeaderViewTableViewCell.swift */; };
+		774F2CA51E642860005BC3DE /* InfoHeaderViewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 774F2CA31E642860005BC3DE /* InfoHeaderViewTableViewCell.xib */; };
 		7750CE0A1E31AE9C00301DAC /* libLechangeSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7750CE091E31AE9C00301DAC /* libLechangeSDK.a */; };
 		7751A4831E5295C00066A6ED /* InvoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7751A4821E5295C00066A6ED /* InvoiceViewController.swift */; };
 		7751A4871E52A5F60066A6ED /* PlaceholderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7751A4861E52A5F60066A6ED /* PlaceholderTextView.m */; };
@@ -92,7 +106,20 @@
 		7752152A1E27296C007F09FE /* UTDID.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 775215291E27296C007F09FE /* UTDID.framework */; };
 		7752152C1E27670E007F09FE /* EditInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7752152B1E27670E007F09FE /* EditInformationViewController.swift */; };
 		77556DCE1E54301B006281EE /* PublicWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77556DCD1E54301B006281EE /* PublicWebViewController.swift */; };
+		775778931E723F4F0094A857 /* ToolboxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775778921E723F4F0094A857 /* ToolboxViewController.swift */; };
+		7758B7BF1E70EE9400F90D8D /* EquityProtectServerDetailedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7758B7BE1E70EE9400F90D8D /* EquityProtectServerDetailedViewController.swift */; };
+		7758B7C11E70FB1100F90D8D /* EquityProtectGoAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7758B7C01E70FB1100F90D8D /* EquityProtectGoAppViewController.swift */; };
+		775B7F971E5D1CA300DDC465 /* EvaluateListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775B7F951E5D1CA300DDC465 /* EvaluateListTableViewCell.swift */; };
+		775B7F981E5D1CA300DDC465 /* EvaluateListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 775B7F961E5D1CA300DDC465 /* EvaluateListTableViewCell.xib */; };
+		775C22E81E66BCE400CA67DF /* SpiritualComfortChildVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775C22E71E66BCE400CA67DF /* SpiritualComfortChildVCViewController.swift */; };
+		775C22EC1E66C30800CA67DF /* SpiritualComfortChildVCTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775C22EA1E66C30800CA67DF /* SpiritualComfortChildVCTableViewCell.swift */; };
+		775C22ED1E66C30800CA67DF /* SpiritualComfortChildVCTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 775C22EB1E66C30800CA67DF /* SpiritualComfortChildVCTableViewCell.xib */; };
 		775CD0D91E553A58000B5564 /* Happy9.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 775CD0D71E553A58000B5564 /* Happy9.xcdatamodeld */; };
+		775D12DF1E6E376A0061C9E5 /* AddAdressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775D12DE1E6E376A0061C9E5 /* AddAdressViewController.swift */; };
+		775D12E21E6E37DF0061C9E5 /* AddAdressTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775D12E01E6E37DF0061C9E5 /* AddAdressTableViewCell.swift */; };
+		775D12E31E6E37DF0061C9E5 /* AddAdressTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 775D12E11E6E37DF0061C9E5 /* AddAdressTableViewCell.xib */; };
+		775D12F71E6EA4570061C9E5 /* ChatWithVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775D12F61E6EA4570061C9E5 /* ChatWithVideoViewController.swift */; };
+		775D12FA1E6EA77F0061C9E5 /* CallManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775D12F91E6EA77F0061C9E5 /* CallManager.swift */; };
 		7760E2EF1E4AF7E1007C57E3 /* OutpatientClinicForCommunityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7760E2EE1E4AF7E1007C57E3 /* OutpatientClinicForCommunityViewController.swift */; };
 		7760E2F31E4AF88E007C57E3 /* ALLOutpatientClinicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7760E2F11E4AF88E007C57E3 /* ALLOutpatientClinicTableViewCell.swift */; };
 		7760E2F41E4AF88E007C57E3 /* ALLOutpatientClinicTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7760E2F21E4AF88E007C57E3 /* ALLOutpatientClinicTableViewCell.xib */; };
@@ -126,8 +153,17 @@
 		7761CFAE1E51478D00E9A30E /* SecurityAndOlderCareChildVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7761CFAD1E51478D00E9A30E /* SecurityAndOlderCareChildVC.swift */; };
 		7761CFB31E514DCE00E9A30E /* SecurityAndOlderCareChildVCTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7761CFB11E514DCE00E9A30E /* SecurityAndOlderCareChildVCTableViewCell.swift */; };
 		7761CFB41E514DCE00E9A30E /* SecurityAndOlderCareChildVCTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7761CFB21E514DCE00E9A30E /* SecurityAndOlderCareChildVCTableViewCell.xib */; };
+		7762430B1E6D38960040D3BF /* RightsAndInterestsEnsureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7762430A1E6D38960040D3BF /* RightsAndInterestsEnsureViewController.swift */; };
+		7762430E1E6D39820040D3BF /* LawHelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7762430D1E6D39820040D3BF /* LawHelpViewController.swift */; };
+		776243161E6D3BD70040D3BF /* LawHelpTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776243141E6D3BD70040D3BF /* LawHelpTableViewCell.swift */; };
+		776243171E6D3BD70040D3BF /* LawHelpTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 776243151E6D3BD70040D3BF /* LawHelpTableViewCell.xib */; };
+		776243191E6D4BE40040D3BF /* InfoSetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776243181E6D4BE40040D3BF /* InfoSetViewController.swift */; };
+		7762431B1E6D4ED40040D3BF /* AdressEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7762431A1E6D4ED40040D3BF /* AdressEditViewController.swift */; };
+		7762431F1E6D50990040D3BF /* AdressEditTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7762431D1E6D50990040D3BF /* AdressEditTableViewCell.swift */; };
+		776243201E6D50990040D3BF /* AdressEditTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7762431E1E6D50990040D3BF /* AdressEditTableViewCell.xib */; };
 		77640FF91DEEB8FF0044F03C /* VedioChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77640FF71DEEB8FF0044F03C /* VedioChatViewController.swift */; };
 		77640FFA1DEEB8FF0044F03C /* VedioChatViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77640FF81DEEB8FF0044F03C /* VedioChatViewController.xib */; };
+		77648AB61E6560A90023566A /* SpiritualComfortViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77648AB51E6560A90023566A /* SpiritualComfortViewController.swift */; };
 		7764D1431DDEA64600634618 /* WisdomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7764D1421DDEA64600634618 /* WisdomTableViewCell.swift */; };
 		776506AD1E231DAB0018E2A6 /* AppRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776506AC1E231DAB0018E2A6 /* AppRequestManager.swift */; };
 		776506B41E23670C0018E2A6 /* JQBounceSpot1Animation.m in Sources */ = {isa = PBXBuildFile; fileRef = 776506B01E23670C0018E2A6 /* JQBounceSpot1Animation.m */; };
@@ -152,6 +188,8 @@
 		77724D241E2C67970067B24F /* FoodTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77724D221E2C67970067B24F /* FoodTableViewCell.swift */; };
 		77724D251E2C67970067B24F /* FoodTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77724D231E2C67970067B24F /* FoodTableViewCell.xib */; };
 		777E11D11DC0B99F00ABA9C6 /* GXAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 777E11D01DC0B99F00ABA9C6 /* GXAlertView.m */; };
+		778C4EAF1E5C2264001FEF4C /* ServerInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 778C4EAE1E5C2264001FEF4C /* ServerInfoViewController.swift */; };
+		778C4EB21E5C2DDF001FEF4C /* InfoForServerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 778C4EB11E5C2DDF001FEF4C /* InfoForServerViewController.swift */; };
 		77A059701DE2D281006363FD /* OC-Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A0596F1DE2D281006363FD /* OC-Swift.swift */; };
 		77A95D381E45BFFD0033A5EE /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A95D371E45BFFD0033A5EE /* BaseVC.swift */; };
 		77CD097C1DCB47080033454B /* AliyunPlayerSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7708A6BA1DC081D0005573D2 /* AliyunPlayerSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -200,6 +238,7 @@
 		77FBAC021DC89A630068F995 /* OutpatientTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FBABFE1DC89A620068F995 /* OutpatientTableViewCell.swift */; };
 		77FBAC031DC89A630068F995 /* OutpatientTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77FBABFF1DC89A630068F995 /* OutpatientTableViewCell.xib */; };
 		77FBAC061DC89B100068F995 /* WisdomControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FBAC051DC89B100068F995 /* WisdomControllerViewController.swift */; };
+		77FCEB111E5C2F5000FDD43D /* EvaluateListForServerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FCEB101E5C2F5000FDD43D /* EvaluateListForServerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -227,6 +266,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				77CD097C1DCB47080033454B /* AliyunPlayerSDK.framework in Embed Frameworks */,
+				774F2C981E63D5AE005BC3DE /* Hyphenate.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -383,6 +423,7 @@
 		7708A6EE1DC0830B005573D2 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		7708A6F01DC08313005573D2 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		7708A6F21DC0831C005573D2 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		772BE6781E7132BA005FB875 /* TimeSelector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeSelector.swift; sourceTree = "<group>"; };
 		7734D77B1E077C6C0084B50E /* CommunityOlderCareViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommunityOlderCareViewController.swift; sourceTree = "<group>"; };
 		7734D77E1E07BB120084B50E /* CommunityOlderCareTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommunityOlderCareTableViewCell.swift; sourceTree = "<group>"; };
 		7734D77F1E07BB120084B50E /* CommunityOlderCareTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommunityOlderCareTableViewCell.xib; sourceTree = "<group>"; };
@@ -401,10 +442,21 @@
 		774AF95A1E4C11C2003CFC7E /* DoctorInfoForMedicalCareVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoctorInfoForMedicalCareVC.swift; sourceTree = "<group>"; };
 		774AF95D1E4C1B5A003CFC7E /* DoctorInfoForMedicalCareVCCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoctorInfoForMedicalCareVCCell.swift; sourceTree = "<group>"; };
 		774AF95E1E4C1B5A003CFC7E /* DoctorInfoForMedicalCareVCCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DoctorInfoForMedicalCareVCCell.xib; sourceTree = "<group>"; };
+		774B87EB1E6907D800E1BB89 /* AppointmentInfoForSpiritViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppointmentInfoForSpiritViewController.swift; sourceTree = "<group>"; };
 		774D32591DC3523600DC0401 /* RetireTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RetireTableViewCell.swift; sourceTree = "<group>"; };
 		774D325A1DC3523600DC0401 /* RetireTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RetireTableViewCell.xib; sourceTree = "<group>"; };
 		774D325D1DC3526200DC0401 /* RetireRecordTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RetireRecordTableViewCell.swift; sourceTree = "<group>"; };
 		774D325E1DC3526200DC0401 /* RetireRecordTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RetireRecordTableViewCell.xib; sourceTree = "<group>"; };
+		774F2C8C1E63BF34005BC3DE /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		774F2C8E1E63BF43005BC3DE /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		774F2C901E63BF66005BC3DE /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
+		774F2C921E63BF81005BC3DE /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
+		774F2C951E63D356005BC3DE /* Hyphenate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Hyphenate.framework; sourceTree = "<group>"; };
+		774F2C9A1E63F68D005BC3DE /* CareForHospitalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CareForHospitalViewController.swift; sourceTree = "<group>"; };
+		774F2C9D1E63F7EA005BC3DE /* SelfHelpServerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelfHelpServerViewController.swift; sourceTree = "<group>"; };
+		774F2C9F1E63F815005BC3DE /* AssignSeverForHosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssignSeverForHosViewController.swift; sourceTree = "<group>"; };
+		774F2CA21E642860005BC3DE /* InfoHeaderViewTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoHeaderViewTableViewCell.swift; sourceTree = "<group>"; };
+		774F2CA31E642860005BC3DE /* InfoHeaderViewTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InfoHeaderViewTableViewCell.xib; sourceTree = "<group>"; };
 		7750CE091E31AE9C00301DAC /* libLechangeSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libLechangeSDK.a; sourceTree = "<group>"; };
 		7751A4821E5295C00066A6ED /* InvoiceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InvoiceViewController.swift; sourceTree = "<group>"; };
 		7751A4851E52A5F60066A6ED /* PlaceholderTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceholderTextView.h; sourceTree = "<group>"; };
@@ -417,7 +469,20 @@
 		775215291E27296C007F09FE /* UTDID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UTDID.framework; sourceTree = "<group>"; };
 		7752152B1E27670E007F09FE /* EditInformationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditInformationViewController.swift; sourceTree = "<group>"; };
 		77556DCD1E54301B006281EE /* PublicWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublicWebViewController.swift; sourceTree = "<group>"; };
+		775778921E723F4F0094A857 /* ToolboxViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolboxViewController.swift; sourceTree = "<group>"; };
+		7758B7BE1E70EE9400F90D8D /* EquityProtectServerDetailedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EquityProtectServerDetailedViewController.swift; sourceTree = "<group>"; };
+		7758B7C01E70FB1100F90D8D /* EquityProtectGoAppViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EquityProtectGoAppViewController.swift; sourceTree = "<group>"; };
+		775B7F951E5D1CA300DDC465 /* EvaluateListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EvaluateListTableViewCell.swift; sourceTree = "<group>"; };
+		775B7F961E5D1CA300DDC465 /* EvaluateListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EvaluateListTableViewCell.xib; sourceTree = "<group>"; };
+		775C22E71E66BCE400CA67DF /* SpiritualComfortChildVCViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpiritualComfortChildVCViewController.swift; sourceTree = "<group>"; };
+		775C22EA1E66C30800CA67DF /* SpiritualComfortChildVCTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpiritualComfortChildVCTableViewCell.swift; sourceTree = "<group>"; };
+		775C22EB1E66C30800CA67DF /* SpiritualComfortChildVCTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SpiritualComfortChildVCTableViewCell.xib; sourceTree = "<group>"; };
 		775CD0D81E553A58000B5564 /* Happy9.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Happy9.xcdatamodel; sourceTree = "<group>"; };
+		775D12DE1E6E376A0061C9E5 /* AddAdressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddAdressViewController.swift; sourceTree = "<group>"; };
+		775D12E01E6E37DF0061C9E5 /* AddAdressTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddAdressTableViewCell.swift; sourceTree = "<group>"; };
+		775D12E11E6E37DF0061C9E5 /* AddAdressTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddAdressTableViewCell.xib; sourceTree = "<group>"; };
+		775D12F61E6EA4570061C9E5 /* ChatWithVideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatWithVideoViewController.swift; sourceTree = "<group>"; };
+		775D12F91E6EA77F0061C9E5 /* CallManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallManager.swift; sourceTree = "<group>"; };
 		7760E2EE1E4AF7E1007C57E3 /* OutpatientClinicForCommunityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OutpatientClinicForCommunityViewController.swift; sourceTree = "<group>"; };
 		7760E2F11E4AF88E007C57E3 /* ALLOutpatientClinicTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ALLOutpatientClinicTableViewCell.swift; sourceTree = "<group>"; };
 		7760E2F21E4AF88E007C57E3 /* ALLOutpatientClinicTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ALLOutpatientClinicTableViewCell.xib; sourceTree = "<group>"; };
@@ -451,8 +516,17 @@
 		7761CFAD1E51478D00E9A30E /* SecurityAndOlderCareChildVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecurityAndOlderCareChildVC.swift; sourceTree = "<group>"; };
 		7761CFB11E514DCE00E9A30E /* SecurityAndOlderCareChildVCTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecurityAndOlderCareChildVCTableViewCell.swift; sourceTree = "<group>"; };
 		7761CFB21E514DCE00E9A30E /* SecurityAndOlderCareChildVCTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SecurityAndOlderCareChildVCTableViewCell.xib; sourceTree = "<group>"; };
+		7762430A1E6D38960040D3BF /* RightsAndInterestsEnsureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RightsAndInterestsEnsureViewController.swift; sourceTree = "<group>"; };
+		7762430D1E6D39820040D3BF /* LawHelpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LawHelpViewController.swift; sourceTree = "<group>"; };
+		776243141E6D3BD70040D3BF /* LawHelpTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LawHelpTableViewCell.swift; sourceTree = "<group>"; };
+		776243151E6D3BD70040D3BF /* LawHelpTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LawHelpTableViewCell.xib; sourceTree = "<group>"; };
+		776243181E6D4BE40040D3BF /* InfoSetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoSetViewController.swift; sourceTree = "<group>"; };
+		7762431A1E6D4ED40040D3BF /* AdressEditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdressEditViewController.swift; sourceTree = "<group>"; };
+		7762431D1E6D50990040D3BF /* AdressEditTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdressEditTableViewCell.swift; sourceTree = "<group>"; };
+		7762431E1E6D50990040D3BF /* AdressEditTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AdressEditTableViewCell.xib; sourceTree = "<group>"; };
 		77640FF71DEEB8FF0044F03C /* VedioChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VedioChatViewController.swift; sourceTree = "<group>"; };
 		77640FF81DEEB8FF0044F03C /* VedioChatViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VedioChatViewController.xib; sourceTree = "<group>"; };
+		77648AB51E6560A90023566A /* SpiritualComfortViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpiritualComfortViewController.swift; sourceTree = "<group>"; };
 		7764D1421DDEA64600634618 /* WisdomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WisdomTableViewCell.swift; sourceTree = "<group>"; };
 		776506AC1E231DAB0018E2A6 /* AppRequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppRequestManager.swift; sourceTree = "<group>"; };
 		776506AF1E23670C0018E2A6 /* JQBounceSpot1Animation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JQBounceSpot1Animation.h; sourceTree = "<group>"; };
@@ -483,6 +557,8 @@
 		77724D231E2C67970067B24F /* FoodTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FoodTableViewCell.xib; sourceTree = "<group>"; };
 		777E11CF1DC0B99F00ABA9C6 /* GXAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GXAlertView.h; sourceTree = "<group>"; };
 		777E11D01DC0B99F00ABA9C6 /* GXAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GXAlertView.m; sourceTree = "<group>"; };
+		778C4EAE1E5C2264001FEF4C /* ServerInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerInfoViewController.swift; sourceTree = "<group>"; };
+		778C4EB11E5C2DDF001FEF4C /* InfoForServerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoForServerViewController.swift; sourceTree = "<group>"; };
 		77A0596F1DE2D281006363FD /* OC-Swift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "OC-Swift.swift"; path = "Mine/Controller/OC-Swift.swift"; sourceTree = "<group>"; };
 		77A95D371E45BFFD0033A5EE /* BaseVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
 		77E2DCE01DC7393D00CDC80A /* CommunityIntroductionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommunityIntroductionViewController.swift; sourceTree = "<group>"; };
@@ -618,6 +694,7 @@
 		77FBABFE1DC89A620068F995 /* OutpatientTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OutpatientTableViewCell.swift; sourceTree = "<group>"; };
 		77FBABFF1DC89A630068F995 /* OutpatientTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OutpatientTableViewCell.xib; sourceTree = "<group>"; };
 		77FBAC051DC89B100068F995 /* WisdomControllerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WisdomControllerViewController.swift; sourceTree = "<group>"; };
+		77FCEB101E5C2F5000FDD43D /* EvaluateListForServerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EvaluateListForServerViewController.swift; sourceTree = "<group>"; };
 		8292DDBF88AC8F918B0E7214 /* Pods_HPY9PastureTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HPY9PastureTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9548703CE33FDD94A4D23B41 /* Pods-HPY9Pasture.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HPY9Pasture.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HPY9Pasture/Pods-HPY9Pasture.debug.xcconfig"; sourceTree = "<group>"; };
 		CB8512551405374B4FD6770F /* Pods-HPY9Pasture.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HPY9Pasture.release.xcconfig"; path = "Pods/Target Support Files/Pods-HPY9Pasture/Pods-HPY9Pasture.release.xcconfig"; sourceTree = "<group>"; };
@@ -630,13 +707,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				774F2C961E63D356005BC3DE /* Hyphenate.framework in Frameworks */,
+				774F2C931E63BF81005BC3DE /* libiconv.tbd in Frameworks */,
+				774F2C911E63BF66005BC3DE /* libstdc++.6.0.9.tbd in Frameworks */,
+				774F2C8F1E63BF43005BC3DE /* ImageIO.framework in Frameworks */,
+				774F2C8D1E63BF34005BC3DE /* MobileCoreServices.framework in Frameworks */,
+				77F8DB3B1E0D0FAD004508E6 /* AudioToolbox.framework in Frameworks */,
+				77F8DB2F1E0D0F1F004508E6 /* CoreMedia.framework in Frameworks */,
 				7708A6ED1DC082F6005573D2 /* SystemConfiguration.framework in Frameworks */,
 				7708A6EF1DC0830B005573D2 /* CoreTelephony.framework in Frameworks */,
 				7752151B1E2721FE007F09FE /* libsqlite3.tbd in Frameworks */,
 				775215021E271594007F09FE /* libresolv.tbd in Frameworks */,
 				77F8DB3F1E0D0FC9004508E6 /* CoreAudio.framework in Frameworks */,
 				77F8DB3D1E0D0FB7004508E6 /* MediaPlayer.framework in Frameworks */,
-				77F8DB3B1E0D0FAD004508E6 /* AudioToolbox.framework in Frameworks */,
 				77F8DB391E0D0FA0004508E6 /* VideoToolbox.framework in Frameworks */,
 				77F8DB371E0D0F8D004508E6 /* OpenGLES.framework in Frameworks */,
 				7750CE0A1E31AE9C00301DAC /* libLechangeSDK.a in Frameworks */,
@@ -644,9 +727,9 @@
 				77F8DB351E0D0F81004508E6 /* MediaAccessibility.framework in Frameworks */,
 				77F8DB331E0D0F3B004508E6 /* CoreVideo.framework in Frameworks */,
 				77F8DB311E0D0F2F004508E6 /* AVFoundation.framework in Frameworks */,
-				77F8DB2F1E0D0F1F004508E6 /* CoreMedia.framework in Frameworks */,
 				7708A6F31DC0831C005573D2 /* CFNetwork.framework in Frameworks */,
 				7708A6F11DC08313005573D2 /* CoreFoundation.framework in Frameworks */,
+				774F2C971E63D5AE005BC3DE /* Hyphenate.framework in Frameworks */,
 				7708A6EB1DC082EE005573D2 /* CoreGraphics.framework in Frameworks */,
 				7708A6E91DC082E0005573D2 /* Foundation.framework in Frameworks */,
 				775215231E272589007F09FE /* AlicloudUtils.framework in Frameworks */,
@@ -690,6 +773,10 @@
 		3A6EEA03FB63EFA68094407E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				774F2C921E63BF81005BC3DE /* libiconv.tbd */,
+				774F2C901E63BF66005BC3DE /* libstdc++.6.0.9.tbd */,
+				774F2C8E1E63BF43005BC3DE /* ImageIO.framework */,
+				774F2C8C1E63BF34005BC3DE /* MobileCoreServices.framework */,
 				775215031E2715BB007F09FE /* libsqlite3.tbd */,
 				775215011E271594007F09FE /* libresolv.tbd */,
 				77F8DB3E1E0D0FC9004508E6 /* CoreAudio.framework */,
@@ -769,9 +856,9 @@
 				7708A61D1DC08137005573D2 /* AppDelegate.swift */,
 				7708A61E1DC08137005573D2 /* Assets.xcassets */,
 				7708A6331DC08137005573D2 /* HPY9Pasture－Bridging－Header.h */,
-				775CD0D71E553A58000B5564 /* Happy9.xcdatamodeld */,
 				77A0596F1DE2D281006363FD /* OC-Swift.swift */,
 				7708A6341DC08137005573D2 /* HPYRootController.swift */,
+				775CD0D71E553A58000B5564 /* Happy9.xcdatamodeld */,
 				7708A6351DC08137005573D2 /* happyInfo.plist */,
 			);
 			path = HPY9Pasture;
@@ -885,6 +972,7 @@
 		7708A6391DC08137005573D2 /* VideoHall */ = {
 			isa = PBXGroup;
 			children = (
+				775D12F81E6EA75D0061C9E5 /* Model */,
 				7708A63A1DC08137005573D2 /* Controller */,
 			);
 			path = VideoHall;
@@ -894,6 +982,7 @@
 			isa = PBXGroup;
 			children = (
 				7708A63B1DC08137005573D2 /* HPYVideoController.swift */,
+				775D12F61E6EA4570061C9E5 /* ChatWithVideoViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -919,8 +1008,8 @@
 		7708A6531DC081D0005573D2 /* Third_part_lib */ = {
 			isa = PBXGroup;
 			children = (
+				774F2C941E63D356005BC3DE /* HyphenateFullSDK */,
 				7752151E1E27255A007F09FE /* alipush */,
-				77FCAF921E1251820000461D /* 网易云信 */,
 				77F8DAF81E0D0E2F004508E6 /* 大华SDK */,
 				77FBABF21DC884810068F995 /* FXLabel */,
 				7708A6541DC081D0005573D2 /* AliPay */,
@@ -1098,6 +1187,14 @@
 				7708A6DA1DC08290005573D2 /* QuartzCore.framework */,
 			);
 			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		772BE6771E7132A0005FB875 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				772BE6781E7132BA005FB875 /* TimeSelector.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		7734D77A1E077C370084B50E /* Wisdom */ = {
@@ -1279,6 +1376,42 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		774F2C941E63D356005BC3DE /* HyphenateFullSDK */ = {
+			isa = PBXGroup;
+			children = (
+				774F2C951E63D356005BC3DE /* Hyphenate.framework */,
+			);
+			path = HyphenateFullSDK;
+			sourceTree = "<group>";
+		};
+		774F2C991E63F50A005BC3DE /* CareForHospital */ = {
+			isa = PBXGroup;
+			children = (
+				774F2C9C1E63F7BA005BC3DE /* HospitalCareChildVC */,
+				774F2C9A1E63F68D005BC3DE /* CareForHospitalViewController.swift */,
+			);
+			path = CareForHospital;
+			sourceTree = "<group>";
+		};
+		774F2C9C1E63F7BA005BC3DE /* HospitalCareChildVC */ = {
+			isa = PBXGroup;
+			children = (
+				774F2CA11E642848005BC3DE /* View */,
+				774F2C9D1E63F7EA005BC3DE /* SelfHelpServerViewController.swift */,
+				774F2C9F1E63F815005BC3DE /* AssignSeverForHosViewController.swift */,
+			);
+			path = HospitalCareChildVC;
+			sourceTree = "<group>";
+		};
+		774F2CA11E642848005BC3DE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				774F2CA21E642860005BC3DE /* InfoHeaderViewTableViewCell.swift */,
+				774F2CA31E642860005BC3DE /* InfoHeaderViewTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		7751A47D1E5291C80066A6ED /* InvoiceChildVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -1305,6 +1438,40 @@
 				775215221E272589007F09FE /* UTMini.framework */,
 			);
 			path = alipush;
+			sourceTree = "<group>";
+		};
+		775778911E723F3C0094A857 /* Toolbox */ = {
+			isa = PBXGroup;
+			children = (
+				775778921E723F4F0094A857 /* ToolboxViewController.swift */,
+			);
+			path = Toolbox;
+			sourceTree = "<group>";
+		};
+		775B7F941E5D1C8000DDC465 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				775B7F951E5D1CA300DDC465 /* EvaluateListTableViewCell.swift */,
+				775B7F961E5D1CA300DDC465 /* EvaluateListTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		775C22E91E66C2EA00CA67DF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				775C22EA1E66C30800CA67DF /* SpiritualComfortChildVCTableViewCell.swift */,
+				775C22EB1E66C30800CA67DF /* SpiritualComfortChildVCTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		775D12F81E6EA75D0061C9E5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				775D12F91E6EA77F0061C9E5 /* CallManager.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		7760E2ED1E4AF7BA007C57E3 /* OutpatientClinicForCommunity */ = {
@@ -1452,6 +1619,47 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		776243091E6D38860040D3BF /* RightsAndInterestsEnsure */ = {
+			isa = PBXGroup;
+			children = (
+				7762430C1E6D38AF0040D3BF /* ChildVC */,
+				7762430A1E6D38960040D3BF /* RightsAndInterestsEnsureViewController.swift */,
+			);
+			path = RightsAndInterestsEnsure;
+			sourceTree = "<group>";
+		};
+		7762430C1E6D38AF0040D3BF /* ChildVC */ = {
+			isa = PBXGroup;
+			children = (
+				772BE6771E7132A0005FB875 /* Model */,
+				776243131E6D3BC20040D3BF /* View */,
+				7762430D1E6D39820040D3BF /* LawHelpViewController.swift */,
+				7758B7BE1E70EE9400F90D8D /* EquityProtectServerDetailedViewController.swift */,
+				7758B7C01E70FB1100F90D8D /* EquityProtectGoAppViewController.swift */,
+			);
+			path = ChildVC;
+			sourceTree = "<group>";
+		};
+		776243131E6D3BC20040D3BF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				776243141E6D3BD70040D3BF /* LawHelpTableViewCell.swift */,
+				776243151E6D3BD70040D3BF /* LawHelpTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7762431C1E6D50880040D3BF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7762431D1E6D50990040D3BF /* AdressEditTableViewCell.swift */,
+				7762431E1E6D50990040D3BF /* AdressEditTableViewCell.xib */,
+				775D12E01E6E37DF0061C9E5 /* AddAdressTableViewCell.swift */,
+				775D12E11E6E37DF0061C9E5 /* AddAdressTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		77640FF61DEEB8BB0044F03C /* VedioChat */ = {
 			isa = PBXGroup;
 			children = (
@@ -1459,6 +1667,25 @@
 				77640FF81DEEB8FF0044F03C /* VedioChatViewController.xib */,
 			);
 			path = VedioChat;
+			sourceTree = "<group>";
+		};
+		77648AB41E6560990023566A /* SpiritualComfort */ = {
+			isa = PBXGroup;
+			children = (
+				77648AB71E6560C30023566A /* ChildVC */,
+				77648AB51E6560A90023566A /* SpiritualComfortViewController.swift */,
+			);
+			path = SpiritualComfort;
+			sourceTree = "<group>";
+		};
+		77648AB71E6560C30023566A /* ChildVC */ = {
+			isa = PBXGroup;
+			children = (
+				775C22E91E66C2EA00CA67DF /* View */,
+				775C22E71E66BCE400CA67DF /* SpiritualComfortChildVCViewController.swift */,
+				774B87EB1E6907D800E1BB89 /* AppointmentInfoForSpiritViewController.swift */,
+			);
+			path = ChildVC;
 			sourceTree = "<group>";
 		};
 		776506AE1E23670C0018E2A6 /* JQIndicatorView */ = {
@@ -1485,7 +1712,11 @@
 		776508401E28684A007E85AB /* ChildVC */ = {
 			isa = PBXGroup;
 			children = (
+				7762431C1E6D50880040D3BF /* View */,
 				776508411E286912007E85AB /* ChangePhoneViewController.swift */,
+				776243181E6D4BE40040D3BF /* InfoSetViewController.swift */,
+				7762431A1E6D4ED40040D3BF /* AdressEditViewController.swift */,
+				775D12DE1E6E376A0061C9E5 /* AddAdressViewController.swift */,
 			);
 			path = ChildVC;
 			sourceTree = "<group>";
@@ -1546,7 +1777,9 @@
 		776AFC8C1E56809300D05840 /* FamilyCareChildVC */ = {
 			isa = PBXGroup;
 			children = (
+				778C4EB01E5C2C83001FEF4C /* ServerInfoViewControllerChildVC */,
 				776AFC8D1E56849D00D05840 /* AppointmentTimeViewController.swift */,
+				778C4EAE1E5C2264001FEF4C /* ServerInfoViewController.swift */,
 			);
 			path = FamilyCareChildVC;
 			sourceTree = "<group>";
@@ -1560,9 +1793,23 @@
 			path = GXAlertView;
 			sourceTree = "<group>";
 		};
+		778C4EB01E5C2C83001FEF4C /* ServerInfoViewControllerChildVC */ = {
+			isa = PBXGroup;
+			children = (
+				775B7F941E5D1C8000DDC465 /* View */,
+				778C4EB11E5C2DDF001FEF4C /* InfoForServerViewController.swift */,
+				77FCEB101E5C2F5000FDD43D /* EvaluateListForServerViewController.swift */,
+			);
+			path = ServerInfoViewControllerChildVC;
+			sourceTree = "<group>";
+		};
 		7795FC1B1E486C460023BB8B /* FamilyOlderCare */ = {
 			isa = PBXGroup;
 			children = (
+				775778911E723F3C0094A857 /* Toolbox */,
+				776243091E6D38860040D3BF /* RightsAndInterestsEnsure */,
+				77648AB41E6560990023566A /* SpiritualComfort */,
+				774F2C991E63F50A005BC3DE /* CareForHospital */,
 				7761CFA91E5146B000E9A30E /* SecurityAndOlderCare */,
 				7761CF7D1E51466100E9A30E /* HealthRecords */,
 				7761CF6E1E5145D400E9A30E /* FamilyServer */,
@@ -1878,13 +2125,6 @@
 			path = WisdomController;
 			sourceTree = "<group>";
 		};
-		77FCAF921E1251820000461D /* 网易云信 */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "网易云信";
-			sourceTree = "<group>";
-		};
 		8A9594E3691BE505D0DD3348 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -2015,6 +2255,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7765084A1E28B63E007E85AB /* FamilyKitTableViewCell.xib in Resources */,
+				775C22ED1E66C30800CA67DF /* SpiritualComfortChildVCTableViewCell.xib in Resources */,
 				7761CFA61E51466100E9A30E /* HeaderPhotoTableViewCell.xib in Resources */,
 				774D32601DC3526200DC0401 /* RetireRecordTableViewCell.xib in Resources */,
 				774D325C1DC3523600DC0401 /* RetireTableViewCell.xib in Resources */,
@@ -2028,6 +2269,7 @@
 				7765084E1E28C427007E85AB /* FamilyKitHeaderView.xib in Resources */,
 				77F8DB2C1E0D0E58004508E6 /* cert.pem in Resources */,
 				774AF9601E4C1B5A003CFC7E /* DoctorInfoForMedicalCareVCCell.xib in Resources */,
+				775D12E31E6E37DF0061C9E5 /* AddAdressTableViewCell.xib in Resources */,
 				7708A6421DC08137005573D2 /* Assets.xcassets in Resources */,
 				77FBAC031DC89A630068F995 /* OutpatientTableViewCell.xib in Resources */,
 				7734D7811E07BB120084B50E /* CommunityOlderCareTableViewCell.xib in Resources */,
@@ -2038,9 +2280,13 @@
 				7708A6D81DC08237005573D2 /* README.txt in Resources */,
 				7761CF9A1E51466100E9A30E /* KindVCTableViewCell.xib in Resources */,
 				7761CF7B1E51460700E9A30E /* FamilyCareForChildTableViewCell.xib in Resources */,
+				776243201E6D50990040D3BF /* AdressEditTableViewCell.xib in Resources */,
+				776243171E6D3BD70040D3BF /* LawHelpTableViewCell.xib in Resources */,
 				773C57951E0BAA9D00B43F1E /* 民族——nations.json in Resources */,
 				776A876C1E1B771C00F54B75 /* PropertyTableViewCell.xib in Resources */,
 				7708A6D71DC08237005573D2 /* read_me.txt in Resources */,
+				774F2CA51E642860005BC3DE /* InfoHeaderViewTableViewCell.xib in Resources */,
+				775B7F981E5D1CA300DDC465 /* EvaluateListTableViewCell.xib in Resources */,
 				776A87721E1B885B00F54B75 /* DetailsTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2219,33 +2465,41 @@
 			buildActionMask = 2147483647;
 			files = (
 				77F8DBA01E0D1B6F004508E6 /* DeviceViewController.m in Sources */,
+				774F2C9B1E63F68D005BC3DE /* CareForHospitalViewController.swift in Sources */,
 				7708A64B1DC08137005573D2 /* ImageAndTextTableViewCell.swift in Sources */,
 				7708A6C51DC081D0005573D2 /* NSDataEx.m in Sources */,
 				77F8DB831E0D13A1004508E6 /* LCOpenApi_FreeBuffer.cpp in Sources */,
 				7764D1431DDEA64600634618 /* WisdomTableViewCell.swift in Sources */,
 				7761CFA21E51466100E9A30E /* PersonalMessagesRecordsViewController.swift in Sources */,
+				7762430E1E6D39820040D3BF /* LawHelpViewController.swift in Sources */,
 				776508501E28C47F007E85AB /* FamilyKitchenDetailsViewController.swift in Sources */,
 				7708A6C41DC081D0005573D2 /* MD5DataSigner.m in Sources */,
 				777E11D11DC0B99F00ABA9C6 /* GXAlertView.m in Sources */,
+				7762431F1E6D50990040D3BF /* AdressEditTableViewCell.swift in Sources */,
+				775D12E21E6E37DF0061C9E5 /* AddAdressTableViewCell.swift in Sources */,
 				7761CF9F1E51466100E9A30E /* AddDoctorOrderViewController.swift in Sources */,
 				7734D7801E07BB120084B50E /* CommunityOlderCareTableViewCell.swift in Sources */,
+				775C22EC1E66C30800CA67DF /* SpiritualComfortChildVCTableViewCell.swift in Sources */,
 				77FBABF71DC899F10068F995 /* HPYHomeController.swift in Sources */,
 				773CA6BF1DC34C8F0062D6D3 /* RetireServerViewController.swift in Sources */,
 				7752152C1E27670E007F09FE /* EditInformationViewController.swift in Sources */,
 				7734D77C1E077C6C0084B50E /* CommunityOlderCareViewController.swift in Sources */,
 				7765084D1E28C427007E85AB /* FamilyKitHeaderView.swift in Sources */,
 				77363E071DC8679F00893521 /* HealthRecordsViewController.swift in Sources */,
+				7762431B1E6D4ED40040D3BF /* AdressEditViewController.swift in Sources */,
 				7708A6411DC08137005573D2 /* AppDelegate.swift in Sources */,
 				776508421E286912007E85AB /* ChangePhoneViewController.swift in Sources */,
 				773CA6B21DC33B380062D6D3 /* PublicTableViewController.swift in Sources */,
 				7761CF9E1E51466100E9A30E /* AddAllergyRecordsViewController.swift in Sources */,
 				776AFC8E1E56849D00D05840 /* AppointmentTimeViewController.swift in Sources */,
 				7761CFB31E514DCE00E9A30E /* SecurityAndOlderCareChildVCTableViewCell.swift in Sources */,
+				775B7F971E5D1CA300DDC465 /* EvaluateListTableViewCell.swift in Sources */,
 				7761CF971E51466100E9A30E /* PersonalMessagesViewController.swift in Sources */,
 				77A95D381E45BFFD0033A5EE /* BaseVC.swift in Sources */,
 				774D325F1DC3526200DC0401 /* RetireRecordTableViewCell.swift in Sources */,
 				7761CFAE1E51478D00E9A30E /* SecurityAndOlderCareChildVC.swift in Sources */,
 				77F8DB791E0D13A1004508E6 /* LCOpenApi_md5.cpp in Sources */,
+				774B87EC1E6907D800E1BB89 /* AppointmentInfoForSpiritViewController.swift in Sources */,
 				7761CF991E51466100E9A30E /* KindVCTableViewCell.swift in Sources */,
 				7768FBEB1DC9E781008586F6 /* ColorfulNameLabel.m in Sources */,
 				7761CFA31E51466100E9A30E /* DoubleLabelTableViewCell.swift in Sources */,
@@ -2263,15 +2517,25 @@
 				7708A6501DC08137005573D2 /* HPYFgetPasswordCtrler.swift in Sources */,
 				7761CFAB1E51475400E9A30E /* SecurityAndOlderCareViewController.swift in Sources */,
 				77F8DB801E0D13A1004508E6 /* LCOpenApi_ClientSdk.cpp in Sources */,
+				77648AB61E6560A90023566A /* SpiritualComfortViewController.swift in Sources */,
 				7708A6C81DC081D0005573D2 /* RSADataVerifier.m in Sources */,
+				774F2C9E1E63F7EA005BC3DE /* SelfHelpServerViewController.swift in Sources */,
 				77F8DB7F1E0D13A1004508E6 /* cJSON.cpp in Sources */,
+				774F2CA41E642860005BC3DE /* InfoHeaderViewTableViewCell.swift in Sources */,
+				774F2CA01E63F815005BC3DE /* AssignSeverForHosViewController.swift in Sources */,
 				77E2DCE11DC7393D00CDC80A /* CommunityIntroductionViewController.swift in Sources */,
 				7761CF791E51460700E9A30E /* FamilyServerForChildVC.swift in Sources */,
 				77FBAC021DC89A630068F995 /* OutpatientTableViewCell.swift in Sources */,
+				775778931E723F4F0094A857 /* ToolboxViewController.swift in Sources */,
 				7708A64E1DC08137005573D2 /* HPYMineController.swift in Sources */,
+				775C22E81E66BCE400CA67DF /* SpiritualComfortChildVCViewController.swift in Sources */,
 				7708A6C01DC081D0005573D2 /* Order.m in Sources */,
+				7762430B1E6D38960040D3BF /* RightsAndInterestsEnsureViewController.swift in Sources */,
+				775D12FA1E6EA77F0061C9E5 /* CallManager.swift in Sources */,
+				77FCEB111E5C2F5000FDD43D /* EvaluateListForServerViewController.swift in Sources */,
 				776506B41E23670C0018E2A6 /* JQBounceSpot1Animation.m in Sources */,
 				77F8DB841E0D13A1004508E6 /* LCOpenApi_Reflection.cpp in Sources */,
+				776243191E6D4BE40040D3BF /* InfoSetViewController.swift in Sources */,
 				77F8DBB61E0D1EF3004508E6 /* DeviceOperationViewController.m in Sources */,
 				7708A6C21DC081D0005573D2 /* DataSigner.m in Sources */,
 				77F8DBAD1E0D1CA9004508E6 /* RestApiService.mm in Sources */,
@@ -2285,6 +2549,7 @@
 				7708A6441DC08137005573D2 /* UIBounceButton.m in Sources */,
 				7708A6C61DC081D0005573D2 /* openssl_wrapper.m in Sources */,
 				7761CF9C1E51466100E9A30E /* FamilyMessagesViewController.swift in Sources */,
+				775D12DF1E6E376A0061C9E5 /* AddAdressViewController.swift in Sources */,
 				77F8DB7D1E0D13A1004508E6 /* UserBindSms.cpp in Sources */,
 				7761CF961E51466100E9A30E /* KindVC.swift in Sources */,
 				77640FF91DEEB8FF0044F03C /* VedioChatViewController.swift in Sources */,
@@ -2303,6 +2568,7 @@
 				7761CF981E51466100E9A30E /* RecordsVC.swift in Sources */,
 				7761CFA11E51466100E9A30E /* AddPhysicalExaminationViewController.swift in Sources */,
 				7761CF781E51460700E9A30E /* FamilyCareForChildVC.swift in Sources */,
+				772BE6791E7132BA005FB875 /* TimeSelector.swift in Sources */,
 				77F8DBB01E0D1E93004508E6 /* AddDeviceViewController.m in Sources */,
 				7761CF7A1E51460700E9A30E /* FamilyCareForChildTableViewCell.swift in Sources */,
 				7751A4831E5295C00066A6ED /* InvoiceViewController.swift in Sources */,
@@ -2311,12 +2577,14 @@
 				773C57911E0B783B00B43F1E /* PublicTextEditViewController.swift in Sources */,
 				77F8DB7A1E0D13A1004508E6 /* LCOpenApi_sha1.cpp in Sources */,
 				7708A64C1DC08137005573D2 /* HPYRootController.swift in Sources */,
+				776243161E6D3BD70040D3BF /* LawHelpTableViewCell.swift in Sources */,
 				77FBABF51DC884810068F995 /* FXLabel.m in Sources */,
 				7761CF7C1E51460700E9A30E /* FamilyServerVC.swift in Sources */,
 				774AF9581E4C10E5003CFC7E /* MainMedicalCareViewController.swift in Sources */,
 				7708A64F1DC08137005573D2 /* HPYVideoController.swift in Sources */,
 				77F8DBA31E0D1B6F004508E6 /* VideoPlay.m in Sources */,
 				774AF95F1E4C1B5A003CFC7E /* DoctorInfoForMedicalCareVCCell.swift in Sources */,
+				7758B7BF1E70EE9400F90D8D /* EquityProtectServerDetailedViewController.swift in Sources */,
 				7708A6511DC08137005573D2 /* HPYLoginController.swift in Sources */,
 				7768FBDB1DC98EB7008586F6 /* PublicTableViewCell.swift in Sources */,
 				776506AD1E231DAB0018E2A6 /* AppRequestManager.swift in Sources */,
@@ -2326,6 +2594,7 @@
 				776508451E2875D9007E85AB /* FamilyKitchenViewController.swift in Sources */,
 				77F8DB821E0D13A1004508E6 /* LCOpenApi_ConstString.cpp in Sources */,
 				7761CFA01E51466100E9A30E /* AddMedicationMessagesViewController.swift in Sources */,
+				778C4EB21E5C2DDF001FEF4C /* InfoForServerViewController.swift in Sources */,
 				7761CF9D1E51466100E9A30E /* HealthRecordsAndKindViewController.swift in Sources */,
 				77F8DBB31E0D1EBA004508E6 /* RecordViewController.m in Sources */,
 				7761CFA51E51466100E9A30E /* HeaderPhotoTableViewCell.swift in Sources */,
@@ -2335,6 +2604,9 @@
 				7708A6431DC08137005573D2 /* MainImageAndTextButton.swift in Sources */,
 				77F8DBA71E0D1BD5004508E6 /* DownloadPicture.m in Sources */,
 				77F8DBAC1E0D1CA9004508E6 /* RestApiInfo.m in Sources */,
+				775D12F71E6EA4570061C9E5 /* ChatWithVideoViewController.swift in Sources */,
+				778C4EAF1E5C2264001FEF4C /* ServerInfoViewController.swift in Sources */,
+				7758B7C11E70FB1100F90D8D /* EquityProtectGoAppViewController.swift in Sources */,
 				7760E2F61E4B1024007C57E3 /* OutpatientClinicDetailsViewController.swift in Sources */,
 				774D325B1DC3523600DC0401 /* RetireTableViewCell.swift in Sources */,
 				7760E2F31E4AF88E007C57E3 /* ALLOutpatientClinicTableViewCell.swift in Sources */,
@@ -2496,6 +2768,7 @@
 					"$(PROJECT_DIR)/HPY9Pasture/Third_part_lib",
 					"$(PROJECT_DIR)/HPY9Pasture/Third_part_lib/阿里云push",
 					"$(PROJECT_DIR)/HPY9Pasture/Third_part_lib/alipush",
+					"$(PROJECT_DIR)/HPY9Pasture/Third_part_lib/HyphenateFullSDK",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2510,6 +2783,7 @@
 					"${PODS_ROOT}",
 					"$(PROJECT_DIR)/HPY9Pasture/Third_part_lib/大华SDK/OpenApi/Src",
 					"$(SRCROOT)/HPY9Pasture/Third_part_lib/大华SDK/ios_sdk",
+					"\"$(SRCROOT)/HPY9Pasture/Third_part_lib/HyphenateFullSDK/Hyphenate.framework\"",
 				);
 				INFOPLIST_FILE = HPY9Pasture/happyInfo.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -2521,6 +2795,7 @@
 					"$(PROJECT_DIR)/HPY9Pasture/Third_part_lib/AliplayLib",
 					"$(PROJECT_DIR)/HPY9Pasture/Third_part_lib",
 					"$(PROJECT_DIR)/HPY9Pasture/Third_part_lib/大华SDK/ios_sdk",
+					"\"$(SRCROOT)/HPY9Pasture/Third_part_lib/HyphenateFullSDK/Hyphenate.framework\"",
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = xiaocool.happy9;
@@ -2547,6 +2822,7 @@
 					"$(PROJECT_DIR)/HPY9Pasture/Third_part_lib",
 					"$(PROJECT_DIR)/HPY9Pasture/Third_part_lib/阿里云push",
 					"$(PROJECT_DIR)/HPY9Pasture/Third_part_lib/alipush",
+					"$(PROJECT_DIR)/HPY9Pasture/Third_part_lib/HyphenateFullSDK",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2561,6 +2837,7 @@
 					"${PODS_ROOT}",
 					"$(PROJECT_DIR)/HPY9Pasture/Third_part_lib/大华SDK/OpenApi/Src",
 					"$(SRCROOT)/HPY9Pasture/Third_part_lib/大华SDK/ios_sdk",
+					"\"$(SRCROOT)/HPY9Pasture/Third_part_lib/HyphenateFullSDK/Hyphenate.framework\"",
 				);
 				INFOPLIST_FILE = HPY9Pasture/happyInfo.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -2572,6 +2849,7 @@
 					"$(PROJECT_DIR)/HPY9Pasture/Third_part_lib/AliplayLib",
 					"$(PROJECT_DIR)/HPY9Pasture/Third_part_lib",
 					"$(PROJECT_DIR)/HPY9Pasture/Third_part_lib/大华SDK/ios_sdk",
+					"\"$(SRCROOT)/HPY9Pasture/Third_part_lib/HyphenateFullSDK/Hyphenate.framework\"",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = xiaocool.happy9;
 				PRODUCT_NAME = "$(TARGET_NAME)";

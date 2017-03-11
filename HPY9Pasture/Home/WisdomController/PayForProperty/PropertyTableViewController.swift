@@ -52,7 +52,7 @@ class PropertyTableViewController: UIViewController,UITableViewDataSource,UITabl
                 self.userinfo = userInfo1["data"].array!
                 self.mytableView.reloadData()
             }else{
-              alert("数据加载错误！", delegate: self)
+              Alert.shareManager.alert("数据加载错误！", delegate: self)
             }
         }
     }
